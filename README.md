@@ -1,8 +1,10 @@
 -----------
 Integrantes
 
-- Pedro Morgade
-- Angelina Bruzoni
-- Nicolás Ariel
-- Natalia Fernández
-- Luciano Otonelli
+let presentacion = {
+    - Pedro Morgade
+    - Angelina Bruzoni
+    - Nicolás Ariel
+    - Natalia Fernández
+    - Luciano Otonelli
+}
