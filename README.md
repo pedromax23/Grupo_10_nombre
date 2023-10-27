@@ -1,1 +1,4 @@
-Este es el readme
+-----------
+Integrantes
+
+- Pedro Morgade
