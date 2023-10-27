@@ -5,4 +5,4 @@ Integrantes
 - Angelina Bruzoni
 - Nicolás Ariel
 - Natalia Fernández
-- 
+- Luciano Otonelli
