@@ -8,5 +8,3 @@ Integrantes
 - Natalia Fernández
 - Luciano Otonelli
 - Vanesa Paschetta
-
-Hola, Pedro como estás?
