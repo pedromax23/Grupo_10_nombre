@@ -7,3 +7,4 @@ Integrantes
 - Nicolás Ariel
 - Natalia Fernández
 - Luciano Otonelli
+- Vanesa Paschetta
