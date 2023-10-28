@@ -6,5 +6,5 @@ Integrantes
 - Angelina Bruzoni : Tengo 32 años
 - Nicolás Ariel
 - Natalia Fernández
-- Luciano Otonelli
+- Luciano Otonelli: Tengo 29 años.
 - Vanesa Paschetta
