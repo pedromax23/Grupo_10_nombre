@@ -17,7 +17,7 @@ Integrantes
 Tematica:
 
 Crearemos un sitio web orientado a la venta mayorista de cervezas artesanales 
-El publico objetivo: bares, restaurantes y afines. Para estar incluido en l acartera de clientes se deberan cumplir los siguientes requisitos:
+El publico objetivo: bares, restaurantes y afines. Para estar incluido en la cartera de clientes se deberan cumplir los siguientes requisitos:
 
 - Mayor de 18 años.
 - Comercio habilitado para la venta de bebidas alcoholicas.
