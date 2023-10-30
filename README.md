@@ -12,7 +12,7 @@ Integrantes
 
 -Luciano Otonelli: Tengo 29 años, y vivo en la Ciudad de Buenos Aires. Me gradué de médico en 2020, año en el que asomaba la pandemia por covid-19, la cual me hizo relfexionar en muchos aspectos y comencé a aprender por mi cuenta programación. Actualmente estoy en tercer año de la residencia médica en Diagnóstico por Imágenes, en la cual estamos en proyectos de inteligencia artificial como herramienta soporte en imágenes, y con todo el entusiasmo en este nuevo proyecto de Full Stack por DH.
 
-- Vanesa Paschetta
+- Vanesa Paschetta: Soy Vane, tengo 41 años, y una hermosa familia con dos bellos niños. Vivo en Río Cuarto Córdoba (nací aqué pero vivi 7 años en Córdoba Capital, 11 en Rosario, y desde este año volví a mi ciudad). Soy Comunicadora Social con orientación en medios de comunicación. Desde hace 11 años trabajo en mi propio emprendimiento que es una fábrica de uniformes, eso me alejó un poco de la comunicación que es mi pasión; de igual modo siempre seguí capacitándome en lo que me gusta, hice cursos de redes cociales, marketing digital y hasta programación, vi algo de HTML y CCS. Hoy retomé actividades en el ámbito de la comunicación con marketing digital, y emprender este desafío de programar me encanta!!!
 
 Tematica:
 
