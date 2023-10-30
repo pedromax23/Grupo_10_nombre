@@ -2,7 +2,7 @@
 Integrantes
 
 
-- Pedro Morgade : Tengo 19 años
+- Pedro Morgade : Empecé a estudiar programación a principios de este año de forma autodidacta, experimentando con diferentes ramas en el lenguaje de Python. Luego me incliné hacia el desarrollo web, y aquí estoy, muy motivado por este curso.
 
 - Angelina Bruzoni : Tengo 32 años, y vivo en el partido de Ramallo, Buenos Aires. Me gradué en 2016 de Técnico Superior en Análisis de Sistemas Informáticos. Actualmente estoy en 3er año de Ingeniería Electrónica en  Facultad Regional San Nicolás de los Arroyos (Universidad Tecnológica Nacional), doy clases de forma online y con muchas expectativas de lo que dejará este curso en mi formación.
 
