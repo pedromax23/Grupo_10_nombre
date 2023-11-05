@@ -6,7 +6,7 @@ Integrantes
 
 - Angelina Bruzoni : Tengo 32 años, y vivo en el partido de Ramallo, Buenos Aires. Me gradué en 2016 de Técnico Superior en Análisis de Sistemas Informáticos. Actualmente estoy en 3er año de Ingeniería Electrónica en  Facultad Regional San Nicolás de los Arroyos (Universidad Tecnológica Nacional), doy clases de forma online y con muchas expectativas de lo que dejará este curso en mi formación.
 
-- Nicolás Ariel
+- Nicolás Ariel: Tengo 28 años, y vivo en la ciudad de Córdoba. Estoy actualmente cursando 3er año de la carrera de ingenieria en sistemas en la UTN.FRC, actualmente tambien estoy trabajando como analista de soporte de aplicaciones N2 para la Siglo 21. Mi primer trabajo fue ser desarrollador de aplicaciones de escritorio en la empresa Recursos Informaticos. Estoy muy motivado por el curso y mi objetivo es convertime en desarrollador back end. 
 
 - Natalia Fernández: Tengo 39 años, soy Uruguaya. Me recibí de Lic en Enfermería por la UDELAR hace 13 años y actualmente trabajo en el Hospital de Clínicas, en el sector de transplante renal. Buscando nuevas experiencias en el ámbito profesional fue que di con este maravilloso mundo del cual quiero conocer más.
 
