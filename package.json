@@ -1,0 +1,15 @@
+{
+  "name": "grupo---10---proyectodh",
+  "version": "1.0.0",
+  "description": "-----------\r Integrantes",
+  "main": "app.js",
+  "scripts": {
+    "test": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
