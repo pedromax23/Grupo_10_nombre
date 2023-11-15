@@ -53,3 +53,12 @@ Nos han inspirado en el desarrollo del proyecto y en la variedad de cervezas ofr
 - https://ratsel.com.ar/
 - https://cheverry.com.ar/
 - https://www.mundocervecero.com/
+
+
+Links
+
+Trello: 
+https://trello.com/w/grupo10proyectodigitalhouse
+
+GitHub
+https://github.com/pedromax23/Grupo_10_nombre
