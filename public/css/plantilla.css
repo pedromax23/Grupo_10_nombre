@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Header */
+.header-principal{
+    background-color: brown;
+}
+.logo-top {
+    width: 30%;
+}
+.titulo-cerveza {
+    width: 70%;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+/* Footer */
+.logo-bot {
+    width: 15%;
+}
