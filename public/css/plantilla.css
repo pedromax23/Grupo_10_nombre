@@ -8,15 +8,49 @@
     background-color: #8B4513;
 }
 .logo-top {
+    margin-bottom: 5%;
     width: 30%;
 }
 .titulo-cerveza {
-    width: 70%;
+    width: 65%;
 }
-.menu ul li a {
+nav {
+    padding-bottom: 10px;
+}
+
+.menu-superior {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+.menu-superior li {
+    padding: 3px;
+    background-color: #FFD700;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    
+}
+.menu-superior a {
     text-decoration: none;
     color: black;
-    
+    font-size: 20px;
+}
+.menu-inferior {
+    justify-content: space-evenly;
+    margin: auto;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+.menu-inferior li {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #FFD700;
+    font-size: 30px;
 }
 
 /* Footer */

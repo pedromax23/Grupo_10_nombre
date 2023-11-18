@@ -62,3 +62,11 @@ https://trello.com/w/grupo10proyectodigitalhouse
 
 GitHub
 https://github.com/pedromax23/Grupo_10_nombre
+
+Colores:
+
+#FFD700
+#8B4513
+#006400
+#FFFFFF
+#333333
