@@ -9,6 +9,7 @@
 }
 
 .header-top {
+    align-items: center;
     justify-content: space-evenly;
     display: flex;
 }
@@ -16,7 +17,7 @@
     width: 30%;
 }
 .titulo-cerveza {
-    padding-left: 40px;
+    padding-left: 15%;
     width: 65%;
     color: #F5DEB3;
 }
@@ -70,4 +71,9 @@ nav {
     display: none;
     width: 30%;
     background-color: #8B4513;
+}
+@media (min-width: 768px) {
+    .titulo-cerveza {
+        font-size: 50px;
+    }
 }
