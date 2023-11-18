@@ -7,12 +7,18 @@
 .header-principal{
     background-color: #8B4513;
 }
+
+.header-top {
+    justify-content: space-evenly;
+    display: flex;
+}
 .logo-top {
-    margin-bottom: 5%;
     width: 30%;
 }
 .titulo-cerveza {
+    padding-left: 40px;
     width: 65%;
+    color: #F5DEB3;
 }
 nav {
     padding-bottom: 10px;
@@ -29,14 +35,13 @@ nav {
 }
 .menu-superior li {
     padding: 3px;
-    background-color: #FFD700;
+    background-color: #7D3C10;
     margin-bottom: 5px;
     border-radius: 10px;
-    
 }
 .menu-superior a {
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
     font-size: 20px;
 }
 .menu-inferior {
@@ -49,7 +54,7 @@ nav {
 .menu-inferior li {
     padding: 5px;
     border-radius: 10px;
-    background-color: #FFD700;
+    background-color: #7D3C10;
     font-size: 30px;
 }
 
