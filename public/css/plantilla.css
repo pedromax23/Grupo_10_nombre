@@ -5,7 +5,7 @@
 
 /* Header */
 .header-principal{
-    background-color: brown;
+    background-color: #8B4513;
 }
 .logo-top {
     width: 30%;
@@ -20,6 +20,15 @@
 }
 
 /* Footer */
+.main-footer {
+    background-color: #8B4513;
+}
+.copyright {
+    display: inline;
+    width: 60%;
+}
 .logo-bot {
-    width: 15%;
+    display: none;
+    width: 30%;
+    background-color: #8B4513;
 }
