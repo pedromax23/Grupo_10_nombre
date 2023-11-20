@@ -5,7 +5,7 @@
 
 /* Header */
 .header-principal{
-    background-color: #8B4513;
+    background-color: #7D3C10;
 }
 
 .header-top {
@@ -33,7 +33,7 @@ nav {
     width: 50%;
     padding: 0;
     text-align: center;
-    list-style-type: none;
+    list-style: none ;
 }
 .menu-superior li {
     padding: 3px;
@@ -45,6 +45,7 @@ nav {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 20px;
+
 }
 .menu-inferior {
     justify-content: space-evenly;
@@ -52,6 +53,7 @@ nav {
     display: flex;
     padding: 0;
     list-style-type: none;
+    
 }
 .menu-inferior li {
     padding: 5px;
@@ -60,13 +62,53 @@ nav {
     font-size: 30px;
 }
 
+ .fa-user,.fa-cart-shopping{
+color:#FFFFFF;
+ }
+ 
+.ayuda{
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-right: 50px;
+    color:#FFFFFF;
+
+}
+/* body */
+
+body{
+    font-family: 'Roboto';
+}
 /* Footer */
+footer{
+    color: white;
+}
+.lista-footer-right{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+   
+}
+.lista-footer-left{
+    
+    list-style: none;
+
+} 
 .main-footer {
     background-color: #8B4513;
 }
+.seguinos{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    margin-top: 70px ;
+}
+
 .copyright {
+   font-size:12px ;
     display: inline;
     width: 60%;
+   text-align: center;
 }
 .logo-bot {
     display: none;
