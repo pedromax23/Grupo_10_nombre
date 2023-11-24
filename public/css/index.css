@@ -9,20 +9,32 @@
 }
 
 .header-top {
-    align-items: center;
-    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+.header-top a {
+    text-align: center;
+}
+
 .logo-top {
-    width: 35%;
+    width: 50%;
+    text-align: center;
 }
+
 .titulo-cerveza {
     text-align: center;
     width: 90%;
     color: #F5DEB3;
 }
-nav {
+
+.nav-padre {
+    display: flex;
+    width: 90%;
+    margin: auto;
     padding-bottom: 10px;
 }
 
@@ -37,11 +49,12 @@ nav {
 }
 .menu-superior li {
     padding: 3px;
-    background-color: #7D3C10;
+    background-color: #8B4513;
     margin-bottom: 5px;
     border-radius: 10px;
 }
 .menu-superior a {
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
     font-size: 20px;
@@ -61,9 +74,9 @@ nav {
     font-size: 30px;
 }
 
- .fa-user,.fa-cart-shopping{
+.fa-user,.fa-cart-shopping{
 color:#FFFFFF;
- }
+}
  
 .ayuda{
     display:flex;
@@ -114,8 +127,29 @@ footer{
     width: 30%;
     background-color: #8B4513;
 }
+
+
 @media (min-width: 768px) {
+    .header-top {
+        flex-direction: row;
+    }
+    
+    .header-top img {
+        width: 70%;
+    }
+
     .titulo-cerveza {
-        font-size: 50px;
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-superior {
+        flex-direction: row;
+    }
+
+    .menu-superior li {
+        padding: 10px;
+        margin-right: 20px;
     }
 }
