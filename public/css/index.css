@@ -6,10 +6,21 @@ body{
     font-family: 'Roboto';
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
 /* Header */
 .header-principal{
     background-color: #ffc07f;
-   
 }
 
 .header-top {
@@ -18,27 +29,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header-top a {
     text-align: center;
 }
 
-.logo-top {
-    width: 50%;
-    text-align: center;
-    transition: width 1s;
+.header-top img {
+    width: 250px;
 }
 
-.logo-top:hover {
-    width: 55%;
-}
-
-.titulo-cerveza {
-    text-align: center;
-    width: 90%;
+.header-top h2,
+.header-top h1 {
     color: #f15156;
-    padding: 2%; 
+    margin-top: 0;
 }
 
 .nav-padre {
@@ -52,10 +53,8 @@ body{
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 50%;
     padding: 0;
     text-align: center;
-    list-style: none ;
 }
 
 .menu-superior li {
@@ -63,23 +62,17 @@ body{
     background-color: #f15156;
     margin-bottom: 5px;
     border-radius: 10px;
- 
-}
-
-.menu {
     width: 100%;
     transition: width 0.5s;
 }
 
-.menu:hover {
+.menu-superior li:hover {
     width: 120%;
 }
 
 .menu-superior a {
-    display: block;
-    text-decoration: none;
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 25px;
 }
 
 .menu-inferior {
@@ -87,8 +80,6 @@ body{
     margin: auto;
     display: flex;
     padding: 0;
-    list-style-type: none;
-    
 }
 
 .menu-inferior li {
@@ -96,10 +87,10 @@ body{
     border-radius: 10px;
     background-color:  #f15156;
     font-size: 30px;
-    margin: 5px;
+    margin-left: 15px;
 }
 
-.fa-user,.fa-cart-shopping{
+.menu-inferior i{
 color:#FFFFFF;
 transition: color 1ms;
 }
@@ -115,26 +106,23 @@ transition: color 1ms;
     text-align: center;
 }
 
+.main-footer section {
+    width: 90%;
+    margin: auto;
+}
+
 .secciones-footer {
     display: flex;
     flex-direction: column;
 }
 
 .secciones-footer h3 {
-    font-size: 20px;
+    font-size: 25px;
+    color: #721121;
 }
 
 .secciones-footer a {
-    text-decoration: none;
     color: black;
-}
-
-.secciones-footer li {
-    list-style: none;
-}
-
-.secciones-footer ul {
-    padding: 0;
 }
 
 .redes {
@@ -142,23 +130,11 @@ transition: color 1ms;
     justify-content: center;  
 }
 
-.fa-square-instagram, .fa-square-facebook, .fa-square-twitter {
+.seguinos i {
     font-size: 1.5rem;
     margin: 5px;
 }
 
-h3 {
-    color: #721121;
-} 
-
-a {
-    color: black; 
-    transition: color 1s;
-}
-
-a:hover {
-    color: #721121;
-}
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
@@ -176,12 +152,33 @@ a:hover {
 @media (min-width: 1200px) {
     .menu-superior {
         flex-direction: row;
+        width: 70%;
     }
 
     .menu-superior li {
         padding: 10px;
-        margin-right: 20px;
+        margin-right: 20px;        
     }
 
-   
+    .secciones-footer {
+        flex-direction: row;
+    }
+
+    .secciones-footer section {
+        width: 90%;
+        margin: 0;
+    }
+
+    .ayuda {
+        border-right: 1px solid black;
+    }
+
+    .seguinos {
+        border-left: 1px solid black;
+    }
+
+    .copyright {
+        border-top: 1px solid black;
+        margin: auto;
+    }
 }
