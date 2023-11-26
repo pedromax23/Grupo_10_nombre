@@ -135,6 +135,7 @@ transition: color 1ms;
     margin: 5px;
 }
 
+
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
@@ -181,4 +182,33 @@ transition: color 1ms;
         border-top: 1px solid black;
         margin: auto;
     }
+
+    .carousel-inner{
+        width: 80%;
+        margin: auto;
+        /* max-height: 400px; */
+    }
+
+    .carousel-inner img{
+        object-fit: cover;
+        height: 600px;
+        width: 100%;
+    }
+/* 
+    .carousel-control-prev{
+        background-color: #ffc07f;
+
+    } */
+
+    body{
+        background-color: #ffc07f;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        height: 2rem;
+        width: 2rem;
+
+    }
 }
+
+
