@@ -1,0 +1,106 @@
+body{
+    background-color: #aa8200;
+  }
+
+  .formulario1 {
+      display:flex;
+      justify-content: left;
+      margin-bottom:15px;
+
+    }
+    .formulario2 {
+        display:flex;
+        justify-content: left;
+        margin-bottom:15px;
+  
+      }
+     .formulario3  {
+        display:flex;
+        justify-content: left;
+        margin-bottom:15px;
+  
+      }
+     .formulario4  {
+        display:flex;
+        justify-content: left;
+        margin-bottom:15px;
+  
+      }
+     .formulario5 {
+        display:flex;
+        justify-content: left;
+        margin-bottom:15px;
+  
+      }
+    
+      .formulario1 input{
+        padding: 4px;
+        margin-left:12px
+       }
+       .formulario2 input{
+        padding: 4px;
+        margin-left:0px
+       }
+       .formulario3 input{
+        padding: 4px;
+        margin-left:100px
+       }
+       .formulario4 input{
+        padding: 4px;
+        margin-left:12px
+       }
+       .formulario5 input{
+        padding: 4px;
+        margin-left:75px
+       }
+       textarea#comment{
+        margin-left: 100px;
+        margin-bottom: 15px;
+       }
+      div.comentario{
+        margin-bottom: 20px;
+      }
+    .formulario label{
+      display:flex;
+      margin-bottom: 5px;
+      margin-left:30px;
+      font-style: 'roboto'; 
+      display:block;
+    }
+     
+     .button-register:hover .button-enviar{           
+      background-color:#00aa1c;
+     } 
+    
+     .button-register{
+      display:flex;
+      justify-content: center;
+      padding-left: 35px;
+     }
+  
+    .button-enviar{
+      width:200px;
+      background-color:rgb(233, 151, 18);
+      transition:background-color 450ms;
+      color:#1e1d1d;
+      margin-bottom: 20px;
+    }
+  
+    .button-registro{
+      display:flex;
+      justify-content: center;
+      padding-left: 35px;
+    }
+    .button-borrar{
+        display:flex;
+        justify-content: center;
+        padding-left: 35px;
+      }
+      .formulario .button{
+        display:inline-block;
+        border:none;
+        border-radius:10px;
+        font-size: 20px;
+        background-color: white;
+        margin-left: 20px;
+       } 
