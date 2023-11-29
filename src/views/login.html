@@ -34,22 +34,20 @@
     </header>
 
     <main class="loguear">     
-        <form action="/login" method="post">                        
-            <div class="formulario">
-                <label for="name"></label>
-                <input type="text" name="Nombre Usuario"  placeholder="Nombre de usuari@">
+        <form action="/login" method="post" class="formulario">                        
+            <div>
+                <input type="text" name="nombre-usuario"  placeholder="Nombre de usuari@">
             </div>
 
-            <div class="formulario">
-                <label for="password"></label>
-                <input type="password" name="Clave"  placeholder="Introduce tu contraseña">       
+            <div>
+                <input type="password" name="clave"  placeholder="Introduce tu contraseña">       
             </div>
 
-            <div class="button-enviar">
+            <div>
                 <button class="button-login" type="submit">Enviar</button> 
             </div>
         
-            <div class="button-registro">
+            <div>
                 <button class="button-register" type="submit">Regístrate</a></button> <!-- que nos lleve a la pagina register -->
             </div>
         </form>

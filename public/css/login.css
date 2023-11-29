@@ -1,62 +1,45 @@
 body{
-  background-color: #aa8200;
+  background-color: #721121;
 }
+
+.loguear {
+  margin: 10px 0;
+}
+
 .formulario{
-    display:flex;
-    justify-content: center;
-    margin-bottom:15px;
-  }
-  
-  .formulario label{
-    display:flex;
-    margin-bottom: 5px;
-    margin-left:30px;
-    font-style: 'roboto'; 
-    display:block;
-  }
-   .formulario input{
-    padding: 8px;
-    margin-left:4px
-   }
-  
-   .button-enviar:hover .button-login{           
-    background-color:#00aa1c;
-   } 
-  
-   .button-enviar{
-    display:flex;
-    justify-content: center;
-    padding-left: 35px;
-   }
+  font-style: 'roboto'; 
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .button-login{
-    width:200px;
-    background-color:rgb(233, 151, 18);
-    transition:background-color 450ms;
-    color:#1e1d1d;
-    margin-bottom: 20px;
-  }
+.formulario div {
+  margin: 5px 0;
+}
 
-  .button-registro{
-    display:flex;
-    justify-content: center;
-    padding-left: 35px;
-  }
-  .button-register{
-    width:200px;
-    background-color:rgb(233, 151, 18);
-    transition:background-color 450ms;
-    color:#1e1d1d;
-    margin-bottom: 20px;
-  }
-  .button-registro:hover .button-register{           
-    background-color:#00aa1c;
-   } 
-    .formulario .button{
-      display:inline-block;
-      border:none;
-      border-radius:10px;
-      font-size: 20px;
-      background-color: white;
-      margin-left: 20px;
-     } 
+.formulario input {
+  padding: 8px;
+}
+  
+.button-enviar {
+  display:flex;
+  justify-content: center;
+}
+
+.button-login {
+  width:200px;
+  background-color:rgb(233, 151, 18);
+  transition:background-color 450ms;
+  color:#1e1d1d;
+}
+
+.button-registro {
+  display:flex;
+  justify-content: center;
+}
+
+.button-register {
+  width:200px;
+  background-color:rgb(233, 151, 18);
+  color:#1e1d1d;
+}

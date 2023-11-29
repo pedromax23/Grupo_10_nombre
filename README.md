@@ -65,8 +65,8 @@ https://github.com/pedromax23/Grupo_10_nombre
 
 Colores:
 
-#FFD700
-#8B4513
-#006400
-#FFFFFF
-#333333
+#721121
+#A5402D
+#F15156
+#FFC07F
+#FFCF99

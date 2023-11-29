@@ -2,16 +2,16 @@ const express = require ("express");
 const app =express();
 const path = require("path");
 
-app.use(express.static(path.resolve(__dirname, "../public")))
+app.use(express.static(path.resolve(__dirname, "../public")));
 
-app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://localhost:3030/"))
+app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://localhost:3030/"));
 
-app.get("/", (req, res) => res.sendFile(path.join(__dirname, "./views/index.html")))
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "./views/index.html")));
 
-app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")))
+app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")));
+
 app.post("/login", (req,res) => {
-    let htmlPath = path.join(__dirname,"./views/register.html"); /* hace que el button enviar del login me lleve a la pagina ppal o index */
-    res.sendFile(htmlPath)
+    res.sendFile(path.join(__dirname,"./views/register.html"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
 });
 
 

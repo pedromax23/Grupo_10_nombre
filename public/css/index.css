@@ -21,6 +21,7 @@ ul {
 /* Header */
 .header-principal{
     background-color: #ffc07f;
+    border-bottom: solid 1px #721121;
 }
 
 .header-top {
@@ -39,7 +40,7 @@ ul {
 
 .header-top h2,
 .header-top h1 {
-    color: #f15156;
+    color: #721121;
     margin-top: 0;
 }
 
@@ -59,17 +60,14 @@ ul {
 }
 
 .menu-superior li {
-    padding: 3px;
-    background-color: #f15156;
+    padding: 5px;
+    border: 1px solid #721121;
+    background-color: #A5402D;
     margin-bottom: 5px;
-    border-radius: 10px;
-    width: 100%;
-    transition: width 0.5s;
+    border-radius: 3px;
 }
 
-.menu-superior li:hover {
-    width: 120%;
-}
+
 
 .menu-superior a {
     color: #FFFFFF;
@@ -85,19 +83,20 @@ ul {
 
 .menu-inferior li {
     padding: 5px;
-    border-radius: 10px;
-    background-color:  #f15156;
+    border-radius: 3px;
+    border: 1px solid #721121;
+    background-color:  #A5402D;
     font-size: 30px;
     margin-left: 15px;
 }
 
 .menu-inferior i{
-color:#FFFFFF;
-transition: color 1ms;
+    color:#FFFFFF;
+    transition: all 200ms;
 }
 
-.fa-user:hover, .fa-cart-shopping:hover {
-    color: #ffcf99;
+.menu-inferior i:hover {
+    color: #721121;
 }
 
 /* Main */
@@ -120,6 +119,7 @@ body{
 }
 
 .secciones-footer section {
+    border-bottom: 1px solid #721121;
     width: 90%;
     margin: auto;
 }
@@ -150,10 +150,14 @@ body{
 
 .carousel-inner img{
     margin: 10px 0;
-    border: 1px #721121 solid;
     object-fit: cover;
     max-height: 600px;
     width: 100%;
+}
+
+.copyright {
+    width: 90%;
+    margin: auto;
 }
 
 @media (min-width: 768px) {
@@ -177,26 +181,37 @@ body{
 }
 
 @media (min-width: 1200px) {
+    
+    .header-top {
+        justify-content: space-around;
+    }
+
     .menu-superior {
         flex-direction: row;
         width: 70%;
     }
-
+    
+    .menu-superior li {
+        padding: 10px;
+        margin-right: 20px;
+        width: 100%;
+        transition: all 500ms;
+    }
+    
+    .menu-superior li:hover {
+        width: 110%;
+    }
     .titulos-top {
         display: flex;
-
         text-align: center;
     }
 
     .titulos-top h2,
     .titulos-top h1 {
+        font-size: 40px;
         padding-right: 60px;
     }
 
-    .menu-superior li {
-        padding: 10px;
-        margin-right: 20px;        
-    }
 
     .carousel-inner{
         width: 80%;
@@ -224,20 +239,13 @@ body{
         margin: auto;
     }
 
-    
-/* 
-    .carousel-control-prev{
-        background-color: #ffc07f;
-
-    } */
-
-    
-
     .carousel-control-next-icon, .carousel-control-prev-icon{
         height: 2rem;
         width: 2rem;
 
     }
+
+    
 }
 
 
