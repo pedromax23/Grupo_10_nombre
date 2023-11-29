@@ -23,7 +23,9 @@ app.get("/contacto", (req, res) => res.sendFile(path.join(__dirname, "./views/co
 app.get("/hace-tu-pedido", (req, res) => res.sendFile(path.join(__dirname, "./views/hace-tu-pedido.html")))
 app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "./views/login.html")))
 app.get("/politica-devolucion", (req, res) => res.sendFile(path.join(__dirname, "./views/politica-devolucion.html")))
+
 app.get("/preguntas", (req, res) => res.sendFile(path.join(__dirname, "./views/preguntas.html")))
+
 app.get("/productos", (req, res) => res.sendFile(path.join(__dirname, "./views/productos.html")))
 app.get("/terminos", (req, res) => res.sendFile(path.join(__dirname, "./views/terminos.html")))
 
