@@ -1,12 +1,12 @@
 body{
-  background-color: #721121;
+  background-color: #FFCF99;
 }
 
 .loguear {
   margin: 10px 0;
 }
 
-.formulario{
+.formulario {
   font-style: 'roboto'; 
   display:flex;
   flex-direction: column;
@@ -18,28 +18,16 @@ body{
 }
 
 .formulario input {
+  border: none;
+  border-radius: 3px;
   padding: 8px;
 }
-  
-.button-enviar {
-  display:flex;
-  justify-content: center;
-}
 
-.button-login {
-  width:200px;
-  background-color:rgb(233, 151, 18);
-  transition:background-color 450ms;
-  color:#1e1d1d;
-}
-
-.button-registro {
-  display:flex;
-  justify-content: center;
-}
-
-.button-register {
-  width:200px;
-  background-color:rgb(233, 151, 18);
-  color:#1e1d1d;
+.formulario button {
+  background-color: #A5402D;
+  border: 1px solid #721121;
+  border-radius: 3px;
+  width: 200px;
+  color: white;
+  padding: 5px;
 }

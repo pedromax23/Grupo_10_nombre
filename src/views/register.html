@@ -35,46 +35,92 @@
     </header>
 
     <main class="registro">
-        <form action="/register" method="POST"> 
+        <form class="formulario" action="/register" method="POST"> 
 
-            <div class="formulario1"> 
-                <label for="name">Nombre y apellido</label>
-                <input type="text" required name="name" minlength="3"/>
+            <div> 
+                <input placeholder="Nombre y apellido" type="text" required name="name" minlength="3"/>
             </div>
     
-            <div class="formulario2">
-                <label for="nombre-usuario">Nombre de usuari@</label>
-                <input type="text" required name="nombre-usuario"/>
+            <div>
+                <input placeholder="Nombre de usuari@" type="text" required name="nombre-usuario"/>
             </div>
     
-            <div class="formulario3">
-                <label for="email">Email</label>
-                <input type="email" required name="email"/>
+            <div>
+                <input placeholder="Email" type="email" required name="email"/>
             </div>
     
-            <div class="formulario4">
+            <div class="fecha-nacimiento">
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
                 <input type="date" required name="fecha-nacimiento"/>
             </div>
 
-            <div class="formulario5">
-                <label for="domicilio">Domicilio</label>
-                <input type="text" required name="domicilio"/>
+            <div>
+                <input placeholder="Domicilio" type="text" required name="domicilio"/>
             </div>
 
-            <div class="comentario">
-                <label for="comment">Comentario</label>
-                <textarea name="comment" id="comment" rows="5" cols="10" maxlength="20" placeholder="Escriba su comentario"></textarea>
+            <div>
+                <textarea name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
             </div>
 
-            <div class="button-register">
-                <button class="button-enviar" type="submit">Enviar </button> 
+            <div>
+                <button type="submit">Enviar</button> 
             </div>
-            <div class="button-borrar">
-                    <button class="borrar" type="reset">Borrar</button> 
-                </div>
+
+            <div>
+                <button type="reset">Borrar</button> 
             </div>
-    
-            
-            </form>
+
+        </form>
     </main>
+
+    <footer class="main-footer">
+        
+        <div class="secciones-footer">
+            <section class="ayuda">
+                <h3>Ayuda</h3>
+                <nav>
+                    <ul>
+                        <li><a href="./preguntas"></a>Preguntas frecuentes</li>
+                        <li><a href="./como-comprar"></a>Como comprar</li>
+                        <li><a href="./politica-devolucion"></a>Políticas de devolución</li>
+                        <li><a href="./terminos"></a>Terminos & Condiciones</li>
+                    </ul>
+                </nav> 
+            </section>
+    
+            <section class="la-volada">
+                <h3>La Volada</h3>
+                <nav>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Sustentabilidad</a></li>
+                </nav>
+            </section>
+    
+            <section class="seguinos">
+                <h3>Seguinos en</h3>
+                <nav >
+                    <ul class ="redes">
+                        <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                    </ul>
+                </nav>    
+                <nav>
+                    <ul>
+                        <li><i class="fa-brands fa-whatsapp"></i> 22333333</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 12 de Octubre 7749. Mar del Plata, Buenos Aires, Argentina.</li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i> info@lavolada.com.ar</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+
+        <div class="copyright">
+            <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
+            <p>Copyright @ La Volada cervezas artesanales</p> 
+        </div>
+    </footer>
+
+</body>
+
+</html>
