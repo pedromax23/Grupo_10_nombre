@@ -163,7 +163,7 @@ transition: color 1ms;
 
     .secciones-footer {
         flex-direction: row;
-    }
+       
 
     .secciones-footer section {
         width: 90%;
@@ -210,5 +210,4 @@ transition: color 1ms;
 
     }
 }
-
-
+}
