@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>La Cerveza</title>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="header-top">
+            <a href="./"><img class="logo-top" src="/img/la_volada_logo.png" alt=""></a>
+            <h1 class="titulo-cerveza">CERVEZA ARTESANAL</h1>
+        </div>
+        
+        
+        <nav class="nav-padre">
+            <ul class="menu-superior">
+                <li><a href="./quienes-somos">Quienes somos</a></li>
+                <li><a href="./productos">Productos</a></li>
+                <li><a href="./hace-tu-pedido">Hace tu pedido</a></li>
+                <li><a href="./contacto">Contacto</a></li>
+            </ul>
+            <ul class="menu-inferior">
+                <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="registro">
+        <form action="/register" method="POST"> 
+
+            <div class="formulario1"> 
+                <label for="name">Nombre y apellido</label>
+                <input type="text" required name="name" minlength="3"/>
+            </div>
+    
+            <div class="formulario2">
+                <label for="nombre-usuario">Nombre de usuari@</label>
+                <input type="text" required name="nombre-usuario"/>
+            </div>
+    
+            <div class="formulario3">
+                <label for="email">Email</label>
+                <input type="email" required name="email"/>
+            </div>
+    
+            <div class="formulario4">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" required name="fecha-nacimiento"/>
+            </div>
+
+            <div class="formulario5">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" required name="domicilio"/>
+            </div>
+
+            <div class="comentario">
+                <label for="comment">Comentario</label>
+                <textarea name="comment" id="comment" rows="5" cols="10" maxlength="20" placeholder="Escriba su comentario"></textarea>
+            </div>
+
+            <div class="button-register">
+                <button class="button-enviar" type="submit">Enviar </button> 
+            </div>
+            <div class="button-borrar">
+                    <button class="borrar" type="reset">Borrar</button> 
+                </div>
+            </div>
+    
+            
+            </form>
+    </main>

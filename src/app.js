@@ -9,7 +9,13 @@ app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://loca
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "./views/index.html")))
 
 app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")))
+app.post("/login", (req,res) => {
+    let htmlPath = path.join(__dirname,"./views/register.html"); /* hace que el button enviar del login me lleve a la pagina ppal o index */
+    res.sendFile(htmlPath)
+});
 
+
+/* que el boton registar del login me lleve a register.html */
 
 app.get("/carrito-de-compras", (req, res) => res.sendFile(path.join(__dirname, "./views/carrito-de-compras.html")))
 app.get("/como-comprar", (req, res) => res.sendFile(path.join(__dirname, "./views/como-comprar.html")))
