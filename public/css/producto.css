@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Roboto';
+    background-color: #ffcf99;
 }
 
 a {
@@ -18,7 +19,7 @@ ul {
     padding: 0;
 }
 
-/* Header */
+/****************** Header ******************/
 .header-principal{
     background-color: #ffc07f;
     border-bottom: solid 1px #721121;
@@ -103,15 +104,44 @@ ul {
     color: #721121;
 }
 
+/****************** Main ******************/
+main{
+    width:100%;    
+}
 
+.detalleProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem;
+}
 
-/* Main */
-body{
-    /* background-color: #ffcf99; */
-    background-color: #721121;
-    }
+.detalleProducto div{
+    width:40%;
+    padding: 1rem;
+}
 
-/* Footer */
+#imagenImperialIpa{
+    width: 90%;
+    border-radius: 15%;
+}
+
+.descripcionCerveza{
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcionCerveza span{
+    text-align: center;
+    padding-bottom: 1.5rem;
+    color: #A5402D;  
+}
+
+.descripcionCerveza div{
+    width: 100%;
+    text-align: center;
+}
+/****************** Footer ******************/
 .main-footer {
     border-top: solid 1px #721121;
     background-color: #ffc07f;
@@ -166,47 +196,6 @@ body{
     width: 90%;
     margin: auto;
 }
-
-/* productos detalle en el index  https://www.youtube.com/watch?v=7HPsdVQhpRw */
-.wrapper{
-    max-width: 80%;
-    margin: auto;
-    position: relative;
-}
-
-.wrapper .carousel-productos{
-    white-space: nowrap;
-    cursor: pointer;
-     font-size: 0px;
-     overflow: hidden; 
-}
-
-.carousel-productos img{
-    margin-left: 10px;
-    height: 5%;
-    object-fit: cover; 
-    width: calc(100%/3);
-} 
-
-.carousel-productos img:first-child{
-     margin-left: 0px;
-}
-
-.wrapper .carousel-control-prev-icon{
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-}
-
-.wrapper .carousel-control-prev-icon:first-child{
-    left: -23px
-}
-
-.wrapper .carousel-control-prev-icon:last-child{
-    right: -23px
-}
-
-.img-productos:first-child{}
 
 @media (min-width: 768px) {
     .header-top {
