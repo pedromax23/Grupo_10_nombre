@@ -133,8 +133,9 @@ main{
 
 .descripcionCerveza span{
     text-align: center;
-    padding-bottom: 1.5rem;
-    color: #A5402D;  
+    padding-bottom: 1rem;
+    color: #721121;
+    text-decoration: underline;  
 }
 
 .descripcionCerveza div{
@@ -145,9 +146,20 @@ main{
 .cantidad{
   width: 10%;  
 }
-.btn i::before{
-    content:;
+
+.btn{
+    width: 45%;
+    background-color: #A5402D;
+    border: 2px solid #721121;
 }
+.btn i::after{
+    content:'AGREGAR AL PEDIDO';
+    font-family: 'roboto';
+}
+
+/*.descripcionCerveza btn{
+    
+}*/
 /****************** Footer ******************/
 .main-footer {
     border-top: solid 1px #721121;
