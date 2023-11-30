@@ -101,7 +101,8 @@ ul {
 
 /* Main */
 body{
-    background-color: #ffcf99;
+    /* background-color: #ffcf99; */
+    background-color: #721121;
     }
 
 /* Footer */
@@ -159,6 +160,47 @@ body{
     width: 90%;
     margin: auto;
 }
+
+/* productos detalle en el index  https://www.youtube.com/watch?v=7HPsdVQhpRw */
+.wrapper{
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.wrapper .carousel-productos{
+    white-space: nowrap;
+    cursor: pointer;
+     font-size: 0px;
+     overflow: hidden; 
+}
+
+.carousel-productos img{
+    margin-left: 10px;
+    height: 5%;
+    object-fit: cover; 
+    width: calc(100%/3);
+} 
+
+.carousel-productos img:first-child{
+     margin-left: 0px;
+}
+
+.wrapper .carousel-control-prev-icon{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.wrapper .carousel-control-prev-icon:first-child{
+    left: -23px
+}
+
+.wrapper .carousel-control-prev-icon:last-child{
+    right: -23px
+}
+
+.img-productos:first-child{}
 
 @media (min-width: 768px) {
     .header-top {
