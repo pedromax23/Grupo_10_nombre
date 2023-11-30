@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
             <h1 class="titulo-cerveza">CERVEZA ARTESANAL</h1>
         </div>
         
+        
         <nav class="nav-padre">
             <ul class="menu-superior">
                 <li><a href="./quienes-somos">Quienes somos</a></li>
@@ -28,28 +29,47 @@
             </ul>
             <ul class="menu-inferior">
                 <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li>
-           </ul>
+                <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
+            </ul>
         </nav>
     </header>
 
-    <main class="loguear">     
-        <form action="/login" method="post" class="formulario">                        
+    <main class="registro">
+        <form class="formulario" action="/register" method="POST"> 
+
+            <div> 
+                <input placeholder="Nombre y apellido" type="text" required name="name" minlength="3"/>
+            </div>
+    
             <div>
-                <input type="text" name="nombre-usuario"  placeholder="Nombre de usuari@">
+                <input placeholder="Nombre de usuari@" type="text" required name="nombre-usuario"/>
+            </div>
+    
+            <div>
+                <input placeholder="Email" type="email" required name="email"/>
+            </div>
+    
+            <div class="fecha-nacimiento">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" required name="fecha-nacimiento"/>
             </div>
 
             <div>
-                <input type="password" name="clave"  placeholder="Introduce tu contraseña">       
+                <input placeholder="Domicilio" type="text" required name="domicilio"/>
+            </div>
+
+            <div>
+                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
             </div>
 
             <div>
                 <button type="submit">Enviar</button> 
             </div>
-        
+
             <div>
-                <button type="submit">Regístrate</a></button> <!-- que nos lleve a la pagina register -->
+                <button type="reset">Borrar</button> 
             </div>
+
         </form>
     </main>
 
@@ -100,5 +120,7 @@
             <p>Copyright @ La Volada cervezas artesanales</p> 
         </div>
     </footer>
-    
+
 </body>
+
+</html>

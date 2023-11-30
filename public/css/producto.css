@@ -67,6 +67,8 @@ ul {
     border-radius: 3px;
 }
 
+
+
 .menu-superior a {
     color: #FFFFFF;
     font-size: 25px;
@@ -77,12 +79,6 @@ ul {
     margin: auto;
     display: flex;
     padding: 0;
-}
-
-.menu-superior li a {
-    color: #FFFFFF;
-    font-size: 25px;
-    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
 }
 
 .menu-inferior li {
@@ -103,14 +99,49 @@ ul {
     color: #721121;
 }
 
+/****************** Main ******************/
+main{
+    width:100%;    
+}
+
+.detalleProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.detalleProducto div{
+    width:40%;
+    padding: 1rem;
+}
+
+#imagenImperialIpa{
+    width: 100%;
+    border-radius: 15%;
+}
+
+.descripcionCerveza{
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcionCerveza span{
+    text-align: center;
+    padding-bottom: 3rem;
+    color: #A5402D;  
+}
+
+.descripcionCerveza div{
+    width: 100%;
+    text-align: center;
+}
 
 
-/* Main */
-body{
-    background-color: #ffcf99;
-    }
 
-/* Footer */
+
+
+/****************** Footer ******************/
 .main-footer {
     border-top: solid 1px #721121;
     background-color: #ffc07f;
@@ -170,13 +201,19 @@ body{
     .header-top {
         flex-direction: row;
     }
-
+    
+    .header-top div,
     .header-top div {
         margin: 0;
     }
 
     .header-top img {
         width: 70%;
+    }
+
+    .titulo-cerveza {
+        margin-bottom: 0;
+        font-size: 2.5rem;
     }
 }
 
@@ -192,6 +229,7 @@ body{
     }
     
     .menu-superior li {
+        padding: 10px;
         margin-right: 20px;
         width: 100%;
         transition: all 500ms;
