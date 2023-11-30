@@ -67,8 +67,6 @@ ul {
     border-radius: 3px;
 }
 
-
-
 .menu-superior a {
     color: #FFFFFF;
     font-size: 25px;
@@ -79,6 +77,12 @@ ul {
     margin: auto;
     display: flex;
     padding: 0;
+}
+
+.menu-superior li a {
+    color: #FFFFFF;
+    font-size: 25px;
+    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
 }
 
 .menu-inferior li {
@@ -98,6 +102,8 @@ ul {
 .menu-inferior i:hover {
     color: #721121;
 }
+
+
 
 /* Main */
 body{
@@ -164,19 +170,13 @@ body{
     .header-top {
         flex-direction: row;
     }
-    
-    .header-top div,
+
     .header-top div {
         margin: 0;
     }
 
     .header-top img {
         width: 70%;
-    }
-
-    .titulo-cerveza {
-        margin-bottom: 0;
-        font-size: 2.5rem;
     }
 }
 
@@ -192,7 +192,6 @@ body{
     }
     
     .menu-superior li {
-        padding: 10px;
         margin-right: 20px;
         width: 100%;
         transition: all 500ms;
