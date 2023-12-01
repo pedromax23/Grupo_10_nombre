@@ -107,8 +107,8 @@ ul {
 
 /* Main */
 body{
-    /* background-color: #ffcf99; */
-    background-color: #721121;
+    background-color: #ffcf99;
+    /* background-color: #721121; */
     }
 
 /* Footer */
@@ -149,6 +149,15 @@ body{
     font-size: 1.5rem;
     margin: 5px;
 }
+
+.copyright {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
 .carousel-inner{
     width: 100%;
     margin: auto;
@@ -162,10 +171,8 @@ body{
     width: 100%;
 }
 
-.copyright {
-    width: 90%;
-    margin: auto;
-}
+
+
 
 /* productos detalle en el index  https://www.youtube.com/watch?v=7HPsdVQhpRw */
 .wrapper{
@@ -198,13 +205,14 @@ body{
     transform: translateY(-50%);
 }
 
-.wrapper .carousel-control-prev-icon:first-child{
+
+/* .wrapper .carousel-control-prev-icon:first-child{
     left: -23px
 }
 
-.wrapper .carousel-control-prev-icon:last-child{
+.wrapper .carousel-control-next-icon:last-child{
     right: -23px
-}
+} */
 
 .img-productos:first-child{}
 
@@ -279,13 +287,49 @@ body{
         margin: auto;
     }
 
-    .carousel-control-next-icon, .carousel-control-prev-icon{
-        height: 2rem;
-        width: 2rem;
+    /* .carousel-control-next-icon, .carousel-control-prev-icon{
+        height: 1.3rem;
+        width: 1.3rem;
+    } */
 
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        width: 40px;
+        font-size: 10px;
+    }
+    
+    .carousel-control-next, .carousel-control-prev{
+        width: 3%;
+        height: 5%;
+        top:47%;
+    }
+    
+    .carousel-control-next{
+        right:3.5%;
+    }
+    
+    .carousel-control-prev{
+        left:3.5%;
+    }
+    
+    .contenedor-icono-prev{
+        background-color: black;
+        padding: 7px;
+        padding-right: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
+    
+    .contenedor-icono-next{
+        background-color: black;
+        padding: 7px;
+        padding-left: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
     }
 
-    
+ 
+
+
 }
 
 
