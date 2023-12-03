@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
     <title>La Cerveza</title>
 </head>
 <body>
@@ -69,25 +70,25 @@
             </button>
           </div> 
           
-          <div class="contenedor-detalle-productos">          
-            <button class="carousel-products-control-prev" type="button">
-                <div class="contenedor-producto-icono-prev">
+          <div class="contenedor-detalle-productos" >          
+            <button class="carousel-products-control-prev" type="button" id="left" >
+                <div class="contenedor-producto-icono-prev" >
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </div>
             </button>
           <div class="wrapper">
             <div class="carousel-productos">
-                <img  src="./img/cerveza-colimita.jpg" alt="imagen">
-                <img  src="./img/cerveza-piedra-liza.jpg" alt="imagen">
-                <img  src="./img/ceveza-paraiso.jpg" alt="imagen">
-                <img  src="./img/cerveza-coralito.jpg" alt="imagen">
+                <img  src="./img/cerveza-colimita.jpg" alt="imagen" draggable="false">
+                <img  src="./img/cerveza-piedra-liza.jpg" alt="imagen" draggable="false">
+                <img  src="./img/ceveza-paraiso.jpg" alt="imagen" draggable="false">
+                <img  src="./img/cerveza-coralito.jpg" alt="imagen" draggable="false" >
             </div>
           </div>
-          <button class="carousel-products-control-next" type="button">
-            <div class="contenedor-producto-icono-next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <button class="carousel-products-control-next" type="button" id="right">
+            <div class="contenedor-producto-icono-next" >
+                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
             </div>
-        </button>
+          </button>
         </div>
 
     </main>
