@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Roboto';
+    background-color: #FFCF99;
 }
 
 a {
@@ -103,12 +104,6 @@ ul {
     color: #721121;
 }
 
-/* Main */
-body{
-    background-color: #ffcf99;
-    /* background-color: #721121; */
-    }
-
 /* Footer */
 .main-footer {
     margin-top: 10px;
@@ -154,9 +149,6 @@ body{
     margin: auto;
 }
 
-
-
-
 .carousel-inner{
     width: 100%;
     margin: auto;
@@ -171,13 +163,12 @@ body{
 }
 
 
-/* productos detalle en el index  https://www.youtube.com/watch?v=7HPsdVQhpRw */
 .wrapper{
     max-width: 80%;
     margin: auto;
 }
 
-.wrapper .carousel-productos{
+.wrapper div {
     white-space: nowrap;
     cursor: pointer;
     font-size: 0px;
@@ -185,48 +176,16 @@ body{
     scroll-behavior: smooth;
 }
 
-.carousel-productos img{
+.wrapper img{
      margin-left: 10px;
     height: 5%; 
     object-fit: cover; 
     width: 100%; 
 } 
 
-.carousel-productos img:first-child{
+.wrapper img:first-child{
      margin-left: 0px;
-}
-
-.carousel-productos.dragging{
-    cursor: grab;
-    scroll-behavior: auto;
-};
-
-.carousel-productos.dragging img{
-    pointer-events: none;
-};  
-
-
-.wrapper .carousel-control-prev-icon{
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-}
-
-.contenedor-producto-icono-prev{
-    background-color: black;
-    padding: 7px;
-    padding-right: 9.5px;
-    padding-top: 10px;
-    border-radius: 50%;
-}
-
-.contenedor-producto-icono-next{
-    background-color: black;
-    padding: 7px;
-    padding-right: 9.5px;
-    padding-top: 10px;
-    border-radius: 50%;
-}
+} 
 
 .contenedor-detalle-productos{
     position: relative;
