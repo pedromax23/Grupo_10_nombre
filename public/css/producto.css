@@ -1,0 +1,75 @@
+body{
+    background-color: #ffcf99;
+}
+
+/****************** Main ******************/
+main{
+    width:100%;    
+}
+
+.detalleProducto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalleProducto h2 {
+    color: #721121;
+    text-decoration: underline;
+}
+
+.imagen-titulo {
+    width: 90%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.imagen-titulo img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descripcion-cerveza {
+    text-align: center;
+}
+
+.descripcion-cerveza div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.cantidad{
+    width: 10%;  
+}
+
+.boton {
+    margin-top: 5px;
+    width: 45%;
+    padding: 5px;
+    background-color: #A5402D;
+    border: 2px solid #721121;
+    border-radius: 5px;
+}
+
+.boton i::after{
+    content:'AGREGAR AL PEDIDO';
+    font-family: 'roboto';
+}
+
+@media (min-width: 768px) {
+    .imagen-titulo {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .imagen-titulo {
+        width: 20%;
+    }
+
+    .detalleProducto {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+}

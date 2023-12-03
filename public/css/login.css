@@ -31,3 +31,13 @@ body{
   color: white;
   padding: 5px;
 }
+
+@media (min-width: 1200px) {
+  .formulario input {
+    width: 400px;
+  }
+
+  .formulario button {
+    width: 400px;
+  }
+}
