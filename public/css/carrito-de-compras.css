@@ -104,10 +104,12 @@ transition: color 1ms;
 body {
     background-color: #ffcf99;
 }
-.detalle-productos {
+main {
     margin: 10px;
     padding: 10px;
+    display: flex;
 }
+
 
 /* En media querie
 
@@ -126,12 +128,13 @@ body {
     box-shadow: 2px 4px 8px -1px rgba(0,0,0,0.75);
     display: flex;
     align-items: flex-start;
+    height: 200px;
 
 }
 .imagen-producto {
     text-align: left;
-    width: 30%;
-    height: auto;
+    height: 90%;
+    width: auto;
 }
 
 .input-cantidad {
@@ -159,6 +162,24 @@ body {
     margin-bottom: 10px;
 }
 
+/* Resumen de compra */
+.resumen-compra {
+    display: block;
+}
+
+.detalle-del-total {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: solid 1px black;
+    box-shadow: 2px 4px 8px -1px rgba(0,0,0,0.75);
+}
+.button-resumen-compra {
+    border: solid 1px;
+    background-color: #f15156;
+    color: #f8f9fa;
+    height: 40px;
+}
 
 /* Footer */
 .main-footer {
@@ -228,6 +249,16 @@ body {
     .titulo-cerveza {
         margin-bottom: 0;
         font-size: 2.5rem;
+    }
+    .contenedor-principal {
+        display: flex;
+        align-items: flex-start;
+    }
+    .detalle-productos {
+    width: 50%;
+    }
+    .resumen-compra {
+    width: 50%;
     }
 }
 

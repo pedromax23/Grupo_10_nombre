@@ -39,9 +39,10 @@
     </header>
 
    <main>
+    <div class="contenedor-principal">
     <!--Detalles de productos agregados al carrito - en margen izquierdo-->
-    <h2>Detalle de productos</h2>
     <section class="detalle-productos">
+        <h2>Detalle de productos</h2>
         <div class="productos-agregados">
             <img class="imagen-producto" src="/img/cerveza-golden.png" alt="imagen del producto">
             <div class="caja-descripcion">
@@ -104,12 +105,33 @@
         </div>
     </section>
 
-    <!--Resumen total de la compra - en margen derecho-->
+    <!--Resumen total de la compra - en margen derecho cuando res > 768-->
 
     <section class="resumen-compra">
         <h2>Resumen de compra</h2>
+        <div class="detalle-del-total">
+            <div>
+                <h4>Detalle de productos agregados</h4>
+                <p>Nombre del producto 1</p>
+                <p>Nombre del producto 2</p>
+                <p>Nombre del producto 3</p>
+                <p>Nombre del producto 4</p>
+                <p>Nombre del producto 5</p>
+            </div>
+            <div>
+                <p>Subtotal: </p>
+                <p>Envío: </p>
+                <h4>Total: </h4>
+            </div>
+            <div>
+                <button class="button-resumen-compra" type="submit">Proceder al pago </button>
+                <button class="button-resumen-compra" type="reset">Vaciar carrito </button>
+            </div>
+        </div>
 
     </section>
+
+    </div>
 
    </main>
     <footer class="main-footer">  
