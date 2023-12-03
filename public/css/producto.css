@@ -151,10 +151,21 @@ main{
     width: 45%;
     background-color: #A5402D;
     border: 2px solid #721121;
+    border-radius: 8%;
 }
 .btn i::after{
     content:'AGREGAR AL PEDIDO';
     font-family: 'roboto';
+}
+
+.agregarCarrito div{
+    
+}
+
+.agregarCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
 }
 
 /*.descripcionCerveza btn{
