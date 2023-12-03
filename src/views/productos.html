@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
 </head>
@@ -38,78 +39,85 @@
     </header>
     <main>
         <section class="detalleProducto">
-            <div>
-                <img id="imagenImperialIpa"src="/img/imperial_ipa_losch.jpg" alt="Aquí va imágen pack de cerveza Golden en lata">
+            
+
+            <div class="imagen-titulo">
+                <h2>Imperial Ipa Losch</h2>
+                <img src="/img/imperial_ipa_losch.jpg" alt="Aquí va imágen pack de cerveza Golden en lata">
             </div>   
             
-            <div class="descripcionCerveza">
-                <span><h2>Imperial Ipa Losch</h2></span>
-                <p>Si sos de esos a los que les gusta las cervezas potentes, esta birra es para vos💪</p>
-                <p>Una explosión de lúpulo 🤯 que se equilibra con sus 8,5% de alcohol, lo que la hace una verdadera bomba💣</p>
+            <div class="descripcion-cerveza">
+
+                <div>
+                    <p>Si sos de esos a los que les gusta las cervezas potentes, esta birra es para vos💪</p>
+                    <p>Una explosión de lúpulo 🤯 que se equilibra con sus 8,5% de alcohol, lo que la hace una verdadera bomba💣</p>
+                </div>
+                
                 <div>
                     <p>1 Bulto: 12 latas x 473 ml</p>
                     <strong><p>Precio de lista: $ 575,40</p></strong>
                     <p>Vencimiento: 07/08/2024</p>
                 </div>
-                <div class="contadorPack">
-                    <input type="button" class="menos" data-value="imperial_ipa_losch" value="-">
+
+                <div>
+                    <input type="button" data-value="imperial_ipa_losch" value="-">
                     <input type="text" class="cantidad"  data-default="1" data-stock="50" name="cantidad" value="1" min="1" step="1">
-                    <input type="button" class="mas" data-value="imperial_ipa_losch" value="+">
+                    <input type="button" data-value="imperial_ipa_losch" value="+">
                 </div>
-                <button class="btn" id="btn_agregar" type="button" title="buscar">
+
+                <button class="boton" id="btn_agregar" type="button" title="buscar">
                     <i class="fa fa-cart-plus"></i>
                 </button>
             </div>         
-        </section>
-        
+        </section> 
     </main>
 
-        <footer class="main-footer">
+    <footer class="main-footer">
         
-            <div class="secciones-footer">
-                <section class="ayuda">
-                    <h3>Ayuda</h3>
-                    <nav>
-                        <ul>
-                            <li><a href="/preguntas"></a>Preguntas frecuentes</li>
-                            <li><a href="/como-comprar"></a>Como comprar</li>
-                            <li><a href="/politica-devolucion"></a>Políticas de devolución</li>
-                            <li><a href="/terminos"></a>Terminos & Condiciones</li>
-                        </ul>
-                    </nav> 
-                </section>
-        
-                <section class="la-volada">
-                    <h3>La Volada</h3>
-                    <nav>
-                        <li><a href="#">Quiénes somos</a></li>
-                        <li><a href="#">Sustentabilidad</a></li>
-                    </nav>
-                </section>
-        
-                <section class="seguinos">
-                    <h3>Seguinos en</h3>
-                    <nav >
-                        <ul class ="redes">
-                            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
-                        </ul>
-                    </nav>    
-                    <nav>
-                        <ul>
-                            <li><i class="fa-brands fa-whatsapp"></i> 22333333</li>
-                            <li><i class="fa-solid fa-location-dot"></i> 12 de Octubre 7749. Mar del Plata, Buenos Aires, Argentina.</li>
-                            <li><a href=""><i class="fa-solid fa-envelope"></i> info@lavolada.com.ar</a></li>
-                        </ul>
-                    </nav>
-                </section>
-            </div>
+        <div class="secciones-footer">
+            <section class="ayuda">
+                <h3>Ayuda</h3>
+                <nav>
+                    <ul>
+                        <li><a href="/preguntas"></a>Preguntas frecuentes</li>
+                        <li><a href="/como-comprar"></a>Como comprar</li>
+                        <li><a href="/politica-devolucion"></a>Políticas de devolución</li>
+                        <li><a href="/terminos"></a>Terminos & Condiciones</li>
+                    </ul>
+                </nav> 
+            </section>
     
-            <div class="copyright">
-                <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
-                <p>Copyright @ La Volada cervezas artesanales</p> 
-            </div>
-        </footer>
+            <section class="la-volada">
+                <h3>La Volada</h3>
+                <nav>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Sustentabilidad</a></li>
+                </nav>
+            </section>
+        
+            <section class="seguinos">
+                <h3>Seguinos en</h3>
+                <nav >
+                    <ul class ="redes">
+                        <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                    </ul>
+                </nav>    
+                <nav>
+                    <ul>
+                        <li><i class="fa-brands fa-whatsapp"></i> 22333333</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 12 de Octubre 7749. Mar del Plata, Buenos Aires, Argentina.</li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i> info@lavolada.com.ar</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+
+        <div class="copyright">
+            <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
+            <p>Copyright @ La Volada cervezas artesanales</p> 
+        </div>
+    </footer>
 </body>
 </html>

@@ -103,8 +103,6 @@ ul {
     color: #721121;
 }
 
-
-
 /* Main */
 body{
     background-color: #ffcf99;
@@ -113,6 +111,7 @@ body{
 
 /* Footer */
 .main-footer {
+    margin-top: 10px;
     border-top: solid 1px #721121;
     background-color: #ffc07f;
     text-align: center; 
@@ -178,43 +177,17 @@ body{
 .wrapper{
     max-width: 80%;
     margin: auto;
-    position: relative;
 }
 
-.wrapper .carousel-productos{
-    white-space: nowrap;
-    cursor: pointer;
-     font-size: 0px;
-     overflow: hidden; 
+.carousel-productos{
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-productos img{
-    margin-left: 10px;
-    height: 5%;
-    object-fit: cover; 
-    width: calc(100%/3);
+    width: 100%;
+    margin-bottom: 10px;
 } 
-
-.carousel-productos img:first-child{
-     margin-left: 0px;
-}
-
-.wrapper .carousel-control-prev-icon{
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-}
-
-
-/* .wrapper .carousel-control-prev-icon:first-child{
-    left: -23px
-}
-
-.wrapper .carousel-control-next-icon:last-child{
-    right: -23px
-} */
-
-.img-productos:first-child{}
 
 @media (min-width: 768px) {
     .header-top {
@@ -228,6 +201,16 @@ body{
     .header-top img {
         width: 70%;
     }
+
+    .carousel-productos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .carousel-productos img{
+        width: 45%;
+    } 
 }
 
 @media (min-width: 1200px) {
@@ -287,11 +270,6 @@ body{
         margin: auto;
     }
 
-    /* .carousel-control-next-icon, .carousel-control-prev-icon{
-        height: 1.3rem;
-        width: 1.3rem;
-    } */
-
     .carousel-control-prev-icon, .carousel-control-next-icon{
         width: 40px;
         font-size: 10px;
@@ -327,8 +305,9 @@ body{
         border-radius: 50%;
     }
 
- 
-
+    .carousel-productos img{
+        width: 23%;
+    } 
 
 }
 
