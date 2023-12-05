@@ -168,27 +168,43 @@ ul {
     margin: auto;
 }
 
-.wrapper div {
+.carousel-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 0px;
     overflow: hidden; 
     scroll-behavior: smooth;
 }
 
-.wrapper img{
-     margin-left: 10px;
-    height: 5%; 
-    object-fit: cover; 
-    width: 100%; 
-} 
+.carousel-productos.dragging{
+    cursor:grab;
+    scroll-behavior: auto;
+}
 
-.wrapper img:first-child{
+.carousel-productos.dragging img{
+    pointer-events: none;
+}
+
+.wrapper article:first-child{
      margin-left: 0px;
 } 
 
 .contenedor-detalle-productos{
     position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.contenedor-detalle-productos img{
+    width: 400px;
+    height: 400px;
+}
+
+.detalle-producto{
+    margin-left: 10px;
 }
 
 .carousel-products-control-prev {
@@ -243,6 +259,39 @@ ul {
     filter: invert(1) grayscale(100)
 }
 
+.descripcion-producto{
+    border-top: 1px solid #ebebeb;;
+     /* white; */
+     background-color:#721121;
+    padding: 15px;
+    position: relative;
+    color: white;
+    font-size: 16px;
+}
+
+.precio-cerveza, .nombre-cerveza{
+    display: inline;
+}
+
+.precio-cerveza{
+    color: #ffc07f;
+}
+
+main{
+    padding-top: 3%;
+}
+
+.carousel-caption-description{
+    text-shadow: 1px 0 #721121, -1px 0 #721121, 0 1px #721121, 0 -1px #721121,
+                   1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
+}
+
+.carousel-caption-description-detail{
+    text-shadow: 1px 0 #721121, -1px 0 #721121, 0 1px #721121, 0 -1px #721121,
+    1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
+
+}
+
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
@@ -256,15 +305,28 @@ ul {
         width: 70%;
     }
 
-    .carousel-productos{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    .descripcion-producto{
+        font-size: 20px;
     }
 
-    .carousel-productos img{
-        width: 45%;
-    } 
+    .carousel-caption-description{
+        font-size: 40px;
+        color: white;
+        font-weight: 500;
+        /* text-shadow: 2px 0 #ffc07f, -2px 0 #ffc07f, 0 2px #ffc07f, 0 -2px #ffc07f,
+                   1px 1px #ffc07f, -1px -1px #ffc07f, 1px -1px #ffc07f, -1px 1px #ffc07f */
+    
+    }
+    
+    .carousel-caption-description-detail{
+        font-size: 25px;
+        color: white;
+        font-weight: 500;
+
+    }
+
+
+
 }
 @media (min-width: 1200px) {
     
@@ -296,7 +358,6 @@ ul {
         font-size: 40px;
         padding-right: 60px;
     }
-
 
     .carousel-inner{
         width: 80%;
@@ -358,10 +419,6 @@ ul {
         border-radius: 50%;
     }
 
-    .carousel-productos img{
-        width: calc(100%/3);
-    }
-
     .carousel-products-control-next{
         filter: invert(0)
     }
@@ -388,8 +445,20 @@ ul {
 
     }
 
+    .contenedor-detalle-productos{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
 
- 
+    .contenedor-detalle-productos img{
+        width: 500px;
+        height: 500px;
+    }
+
+    main{
+        padding-top: 2%;
+    }
+
 
 
 }

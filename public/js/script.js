@@ -1,5 +1,5 @@
 const carousel = document.querySelector(".carousel-productos");
-const firstImg = carousel.querySelectorAll("img")[0];
+const firstImg = carousel.querySelectorAll(".detalle-producto img")[0];
 const arrowIcons = document.querySelectorAll(".contenedor-detalle-productos button");
 
 
@@ -50,7 +50,7 @@ const dragStop = () => {
     autoSlide();
 }
 
-carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousedown", dragStart); 
 carousel.addEventListener("touchstart", dragStart);
 
 carousel.addEventListener("mousemove", dragging);
