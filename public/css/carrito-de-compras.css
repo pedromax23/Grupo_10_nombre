@@ -1,0 +1,78 @@
+main {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.productos-agregados {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: solid 1px black;
+    box-shadow: 2px 4px 8px -1px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: flex-start;
+    height: 200px;
+
+}
+.imagen-producto {
+    text-align: left;
+    height: 90%;
+    width: auto;
+}
+
+.input-cantidad {
+    width: 15%;
+    text-align: center;
+}
+.button-cantidad {
+    width: 15%;
+    height: 25px;
+    text-align: center;
+    border: solid 1px;
+}
+.caja-descripcion {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.form-cantidad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Resumen de compra */
+.resumen-compra {
+    display: block;
+}
+
+.detalle-del-total {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: solid 1px black;
+    box-shadow: 2px 4px 8px -1px rgba(0,0,0,0.75);
+}
+.button-resumen-compra {
+    border: solid 1px;
+    background-color: #A5402D;
+    color: #f8f9fa;
+    height: 40px;
+}
+@media (min-width: 768px) {
+    .contenedor-principal {
+        display: flex;
+        align-items: flex-start;
+    }
+    .detalle-productos {
+    width: 50%;
+    }
+    .resumen-compra {
+    width: 50%;
+    }
+}

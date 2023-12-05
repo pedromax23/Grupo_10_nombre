@@ -1,0 +1,116 @@
+/************Mobile************/
+main{
+    width:100%;
+    font-size: 1.2rem;
+}
+
+.detalleProducto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalleProducto h2 {
+    color: #A5402D;
+    text-decoration: underline;
+    text-shadow: -1px  2px  0px #721121 ;
+}
+
+.imagen-titulo {
+    width: 90%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.imagen-titulo img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 9px -1px rgba(0, 0, 0, 0.75); 
+    animation-name: titilando;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+}
+
+@keyframes titilando{
+    0% {opacity: 0%;}
+    50%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+@keyframes creciendo {
+    0% {width: 0%;}
+
+    100%{width: 85%;} 
+}
+.cont-PorcentajecAlcohol{
+    display: flex;
+    background-color: #d7d7d7;
+    opacity: 1;
+    border-radius: 3px;
+}
+
+.cont-PorcentajecAlcohol input{
+    border: none;
+    background-color: #ff9900;
+    color:#fff;
+    font-size: 1.2rem;
+    animation-name: creciendo;
+    animation-duration: 3s;
+    animation-name: creciendo;
+    animation-duration: 3s;   
+    width:85%;   
+}
+
+.descripcion-cerveza {
+    text-align: center;
+}
+
+.descripcion-cerveza div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.cantidad{
+    width: 10%;  
+}
+
+.boton {
+    width: 35%;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #A5402D;
+    border: 2px solid #721121;
+    border-radius: 5px;
+    font-size: 12px;
+    color:#FFFFFF;
+}
+
+.boton i::after{
+    content:'AGREGAR AL PEDIDO';  
+}
+
+.boton:hover{
+    color: #721121;
+    transition: all 2seg;
+}
+
+/************TABLETS************/
+@media (min-width: 768px) {
+    .imagen-titulo {
+        width: 50%;
+    }
+}
+
+/***************PC***************/
+@media (min-width: 1200px) {
+    .imagen-titulo {
+        width: 20%;
+    }
+
+    .detalleProducto {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+}

@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Roboto';
+    background-color: #FFCF99;
 }
 
 a {
@@ -21,6 +22,7 @@ ul {
 /* Header */
 .header-principal{
     background-color: #ffc07f;
+    border-bottom: solid 1px #721121;
 }
 
 .header-top {
@@ -39,7 +41,7 @@ ul {
 
 .header-top h2,
 .header-top h1 {
-    color: #f15156;
+    color: #721121;
     margin-top: 0;
 }
 
@@ -59,16 +61,11 @@ ul {
 }
 
 .menu-superior li {
-    padding: 3px;
-    background-color: #f15156;
+    padding: 5px;
+    border: 1px solid #721121;
+    background-color: #A5402D;
     margin-bottom: 5px;
-    border-radius: 10px;
-    width: 100%;
-    transition: width 0.5s;
-}
-
-.menu-superior li:hover {
-    width: 120%;
+    border-radius: 3px;
 }
 
 .menu-superior a {
@@ -83,30 +80,33 @@ ul {
     padding: 0;
 }
 
+.menu-superior li a {
+    color: #FFFFFF;
+    font-size: 25px;
+    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
+}
+
 .menu-inferior li {
     padding: 5px;
-    border-radius: 10px;
-    background-color:  #f15156;
+    border-radius: 3px;
+    border: 1px solid #721121;
+    background-color:  #A5402D;
     font-size: 30px;
     margin-left: 15px;
 }
 
 .menu-inferior i{
-color:#FFFFFF;
-transition: color 1ms;
+    color:#FFFFFF;
+    transition: all 200ms;
 }
 
-.fa-user:hover, .fa-cart-shopping:hover {
-    color: #ffcf99;
+.menu-inferior i:hover {
+    color: #721121;
 }
-
-/* Main */
-body{
-    background-color: #ffcf99;
-    }
 
 /* Footer */
 .main-footer {
+    margin-top: 10px;
     border-top: solid 1px #721121;
     background-color: #ffc07f;
     text-align: center; 
@@ -120,6 +120,7 @@ body{
 }
 
 .secciones-footer section {
+    border-bottom: 1px solid #721121;
     width: 90%;
     margin: auto;
 }
@@ -142,6 +143,12 @@ body{
     font-size: 1.5rem;
     margin: 5px;
 }
+
+.copyright {
+    width: 90%;
+    margin: auto;
+}
+
 .carousel-inner{
     width: 100%;
     margin: auto;
@@ -150,18 +157,146 @@ body{
 
 .carousel-inner img{
     margin: 10px 0;
-    border: 1px #721121 solid;
     object-fit: cover;
     max-height: 600px;
     width: 100%;
+}
+
+
+.wrapper{
+    max-width: 80%;
+    margin: auto;
+}
+
+.carousel-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+}
+
+.carousel-productos.dragging{
+    cursor:grab;
+    scroll-behavior: auto;
+}
+
+.carousel-productos.dragging img{
+    pointer-events: none;
+}
+
+.wrapper article:first-child{
+     margin-left: 0px;
+} 
+
+.contenedor-detalle-productos{
+    position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.contenedor-detalle-productos img{
+    width: 400px;
+    height: 400px;
+}
+
+.detalle-producto{
+    margin-left: 10px;
+}
+
+.carousel-products-control-prev {
+    position: absolute;
+    bottom: 45%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    left:3.5%;
+    transition: opacity .15s ease;
+}
+
+.carousel-products-control-next {
+    position: absolute;
+    bottom: 45%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    right:3.5%;
+    transition: opacity .15s ease;
+}
+
+.carousel-products-control-next:hover{
+    opacity: 1;
+}
+
+.carousel-products-control-prev:hover{
+    opacity: 1;
+}
+
+.carousel-products-control-next{
+    filter: invert(1) grayscale(100)
+}
+
+.carousel-products-control-prev{
+    filter: invert(1) grayscale(100)
+}
+
+.descripcion-producto{
+    border-top: 1px solid #ebebeb;;
+     /* white; */
+     background-color:#721121;
+    padding: 15px;
+    position: relative;
+    color: white;
+    font-size: 16px;
+}
+
+.precio-cerveza, .nombre-cerveza{
+    display: inline;
+}
+
+.precio-cerveza{
+    color: #ffc07f;
+}
+
+main{
+    padding-top: 3%;
+}
+
+.carousel-caption-description{
+    text-shadow: 1px 0 #721121, -1px 0 #721121, 0 1px #721121, 0 -1px #721121,
+                   1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
+}
+
+.carousel-caption-description-detail{
+    text-shadow: 1px 0 #721121, -1px 0 #721121, 0 1px #721121, 0 -1px #721121,
+    1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
+
 }
 
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
     }
-    
-    .header-top div,
+
     .header-top div {
         margin: 0;
     }
@@ -170,32 +305,58 @@ body{
         width: 70%;
     }
 
-    .titulo-cerveza {
-        margin-bottom: 0;
-        font-size: 2.5rem;
+    .descripcion-producto{
+        font-size: 20px;
     }
-}
 
+    .carousel-caption-description{
+        font-size: 40px;
+        color: white;
+        font-weight: 500;
+        /* text-shadow: 2px 0 #ffc07f, -2px 0 #ffc07f, 0 2px #ffc07f, 0 -2px #ffc07f,
+                   1px 1px #ffc07f, -1px -1px #ffc07f, 1px -1px #ffc07f, -1px 1px #ffc07f */
+    
+    }
+    
+    .carousel-caption-description-detail{
+        font-size: 25px;
+        color: white;
+        font-weight: 500;
+
+    }
+
+
+
+}
 @media (min-width: 1200px) {
+    
+    .header-top {
+        justify-content: space-around;
+    }
+
     .menu-superior {
         flex-direction: row;
         width: 70%;
     }
-
+    
+    .menu-superior li {
+        margin-right: 20px;
+        width: 100%;
+        transition: all 500ms;
+    }
+    
+    .menu-superior li:hover {
+        width: 110%;
+    }
     .titulos-top {
         display: flex;
-
         text-align: center;
     }
 
     .titulos-top h2,
     .titulos-top h1 {
+        font-size: 40px;
         padding-right: 60px;
-    }
-
-    .menu-superior li {
-        padding: 10px;
-        margin-right: 20px;        
     }
 
     .carousel-inner{
@@ -220,23 +381,85 @@ body{
     }
 
     .copyright {
-        border-top: 1px solid #721121;
         margin: auto;
     }
 
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        width: 40px;
+        font-size: 10px;
+    }
     
-/* 
+    .carousel-control-next, .carousel-control-prev{
+        width: 3%;
+        height: 5%;
+        top:47%;
+    }
+    
+    .carousel-control-next{
+        right:3.5%;
+    }
+    
     .carousel-control-prev{
-        background-color: #ffc07f;
-
-    } */
-
+        left:3.5%;
+    }
     
+    .contenedor-icono-prev{
+        background-color: black;
+        padding: 7px;
+        padding-right: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
+    
+    .contenedor-icono-next{
+        background-color: black;
+        padding: 7px;
+        padding-left: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
 
-    .carousel-control-next-icon, .carousel-control-prev-icon{
-        height: 2rem;
-        width: 2rem;
+    .carousel-products-control-next{
+        filter: invert(0)
+    }
+    
+    .carousel-products-control-prev{
+        filter: invert(0)
+    }
+
+    .contenedor-producto-icono-prev{
+        background-color: black;
+        padding: 7px;
+        padding-right: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
 
     }
+    
+    .contenedor-producto-icono-next{
+        background-color: black;
+        padding: 7px;
+        padding-left: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+
+    }
+
+    .contenedor-detalle-productos{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .contenedor-detalle-productos img{
+        width: 500px;
+        height: 500px;
+    }
+
+    main{
+        padding-top: 2%;
+    }
+
+
+
 }
 }
