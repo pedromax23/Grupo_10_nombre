@@ -1,5 +1,5 @@
 main{
-    width:100%;    
+    width:100%;
 }
 
 .detalleProducto {
@@ -9,8 +9,9 @@ main{
 }
 
 .detalleProducto h2 {
-    color: #721121;
+    color: #A5402D;
     text-decoration: underline;
+    text-shadow: -1px  2px  0px #721121 ;
 }
 
 .imagen-titulo {
@@ -22,6 +23,7 @@ main{
 .imagen-titulo img{
     width: 100%;
     border-radius: 10px;
+    box-shadow: 3px 4px 9px -1px rgba(0,0,0,0.75); ;
 }
 
 .descripcion-cerveza {
@@ -40,16 +42,22 @@ main{
 
 .boton {
     margin-top: 5px;
-    width: 45%;
+    width: 35%;
     padding: 5px;
     background-color: #A5402D;
     border: 2px solid #721121;
     border-radius: 5px;
+    font-size: 12px;
+}
+
+.boton i{
+    color: #fff;
 }
 
 .boton i::after{
     content:'AGREGAR AL PEDIDO';
-    font-family: 'roboto';
+    color: #fff;
+    
 }
 
 @media (min-width: 768px) {
