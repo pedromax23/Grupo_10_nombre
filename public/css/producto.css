@@ -2,6 +2,7 @@
 main{
     width:100%;
     font-size: 1.2rem;
+    position: relative;
 }
 
 .detalleProducto {
@@ -26,15 +27,28 @@ main{
     width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
-    box-shadow: 3px 4px 9px -1px rgba(0, 0, 0, 0.75); ;
+    box-shadow: 3px 4px 9px -1px rgba(0, 0, 0, 0.75); 
+    animation-name: titilando;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
 }
 
+@keyframes titilando{
+    0% {opacity: 0%;}
+    50%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+@keyframes creciendo {
+    0% {width: 0%;}
+
+    100%{width: 85%;} 
+}
 .cont-PorcentajecAlcohol{
     display: flex;
     background-color: #d7d7d7;
     opacity: 1;
     border-radius: 3px;
-    
 }
 
 .cont-PorcentajecAlcohol input{
@@ -42,6 +56,10 @@ main{
     background-color: #ff9900;
     color:#fff;
     font-size: 1.2rem;
+    animation-name: creciendo;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    width:85%;   
 }
 
 .descripcion-cerveza {
