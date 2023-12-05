@@ -2,7 +2,6 @@
 main{
     width:100%;
     font-size: 1.2rem;
-    position: relative;
 }
 
 .detalleProducto {
@@ -58,7 +57,8 @@ main{
     font-size: 1.2rem;
     animation-name: creciendo;
     animation-duration: 3s;
-    animation-iteration-count: 1;
+    animation-name: creciendo;
+    animation-duration: 3s;   
     width:85%;   
 }
 
@@ -77,23 +77,23 @@ main{
 }
 
 .boton {
-    margin-top: 10px;
     width: 35%;
+    margin-top: 10px;
     padding: 5px;
     background-color: #A5402D;
     border: 2px solid #721121;
     border-radius: 5px;
     font-size: 12px;
-}
-
-.boton i{
-    color: #fff;
+    color:#000;
 }
 
 .boton i::after{
-    content:'AGREGAR AL PEDIDO';
-    color: #fff;
-    
+    content:'AGREGAR AL PEDIDO';  
+}
+
+.boton:hover{
+    color: #FFFFFF;
+    transition: all 2seg;
 }
 
 /************TABLETS************/
