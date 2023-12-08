@@ -18,7 +18,7 @@ app.use('/', mainRuoter);
 
 // Product Ruta
 const productRouter = require("./routes/productRouter");
-app.use('/', productRouter);
+app.use('/productos', productRouter);
 
 
 app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")));
