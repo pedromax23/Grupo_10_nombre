@@ -2,11 +2,24 @@ const express = require ("express");
 const app =express();
 const path = require("path");
 
+// Archvos estaticos
 app.use(express.static(path.resolve(__dirname, "../public")));
 
+// Iniciando el servidor
 app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://localhost:3030/"));
 
-app.get("/", (req, res) => res.sendFile(path.join(__dirname, "./views/index.html")));
+// Configurando EJS
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, "views"));
+
+// Main Ruta
+const mainRuoter = require("./routes/mainRouter");
+app.use('/', mainRuoter);
+
+// Product Ruta
+const productRouter = require("./routes/productRouter");
+app.use('/', productRouter);
+
 
 app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")));
 
@@ -28,7 +41,3 @@ app.get("/preguntas", (req, res) => res.sendFile(path.join(__dirname, "./views/p
 
 app.get("/productos", (req, res) => res.sendFile(path.join(__dirname, "./views/productos.html")))
 app.get("/terminos", (req, res) => res.sendFile(path.join(__dirname, "./views/terminos.html")))
-
-
-
-
