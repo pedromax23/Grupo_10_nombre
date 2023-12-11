@@ -20,24 +20,16 @@ app.use('/', mainRuoter);
 const productRouter = require("./routes/productRouter");
 app.use('/productos', productRouter);
 
+// Login Ruta
+const loginRouter = require("./routes/loginRouter")
+app.use('/login', loginRouter)
 
-app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.ejs")));
+// Carrito de compras Ruta
+const carritoRouter = require("./routes/carritoRouter")
+app.use('/carrito-de-compras', carritoRouter)
+
+
 
 app.post("/login", (req,res) => {
     res.sendFile(path.join(__dirname,"./views/register.ejs"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
 });
-
-
-/* que el boton registar del login me lleve a register.html */
-
-app.get("/carrito-de-compras", (req, res) => res.sendFile(path.join(__dirname, "./views/carrito-de-compras.html")))
-app.get("/como-comprar", (req, res) => res.sendFile(path.join(__dirname, "./views/como-comprar.html")))
-app.get("/contacto", (req, res) => res.sendFile(path.join(__dirname, "./views/contacto.html")))
-app.get("/hace-tu-pedido", (req, res) => res.sendFile(path.join(__dirname, "./views/hace-tu-pedido.html")))
-app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "./views/login.html")))
-app.get("/politica-devolucion", (req, res) => res.sendFile(path.join(__dirname, "./views/politica-devolucion.html")))
-
-app.get("/preguntas", (req, res) => res.sendFile(path.join(__dirname, "./views/preguntas.html")))
-
-app.get("/productos", (req, res) => res.sendFile(path.join(__dirname, "./views/productos.html")))
-app.get("/terminos", (req, res) => res.sendFile(path.join(__dirname, "./views/terminos.html")))
