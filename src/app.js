@@ -1,4 +1,4 @@
-const express = require ("express"); 
+const express = require ("express");
 const app =express();
 const path = require("path");
 
@@ -21,14 +21,12 @@ const productRouter = require("./routes/productRouter");
 app.use('/productos', productRouter);
 
 // Login Ruta
-const loginRouter = require("./routes/loginRouter")
-app.use('/login', loginRouter)
+const loginRouter = require("./routes/loginRouter");
+app.use('/login', loginRouter);
 
 // Carrito de compras Ruta
-const carritoRouter = require("./routes/carritoRouter")
-app.use('/carrito-de-compras', carritoRouter)
-
-
+const carritoRouter = require("./routes/carritoRouter");
+app.use('/carrito-de-compras', carritoRouter);
 
 app.post("/login", (req,res) => {
     res.sendFile(path.join(__dirname,"./views/register.ejs"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
