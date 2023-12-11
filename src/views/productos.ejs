@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head', {estilos:"producto", titulo: "La cerveza - Productos"})%>
+<body>
+
+    <%- include('./partials/hedear')%>
+
+    <main>
+        <section class="detalleProducto">
+            
+
+            <div class="imagen-titulo">
+                <h2>Imperial Ipa Losch</h2>
+                <img src="/img/imperial_ipa_losch.jpg" alt="Aquí va imágen Imperial Ipa Losch">
+                <div class="cont-PorcentajecAlcohol">
+                    <input type="text" name="porcentajeAlcohol" value="Alcohol 8.5 %" readonly>
+                </div>
+            </div>   
+            
+            <div class="descripcion-cerveza">
+
+                <div>
+                    <p>Si sos de esos a los que les gusta las cervezas potentes, esta birra es para vos💪</p>
+                    <p>Una explosión de lúpulo 🤯, lo que la hace una verdadera bomba💣</p>
+                    <p>¿Qué esperas para conseguir la tuya?</p>
+                </div>
+                
+                <div>
+                    <p>1 Bulto: 12 latas x 473 ml</p>
+                    <strong><p>Precio de lista: $ 575,40</p></strong>
+                    <p>Vencimiento: 07/08/2024</p>
+                </div>
+
+                <div>
+                    <input type="button" data-value="imperial_ipa_losch" value="-">
+                    <input type="text" class="cantidad"  data-default="1" data-stock="50" name="cantidad" value="1" min="1" step="1">
+                    <input type="button" data-value="imperial_ipa_losch" value="+">
+                </div>
+
+                <button type="button" class="boton" name="botonAgregar" id="btn_agregar"  title="buscar">
+                    <i class="fa fa-cart-plus"></i>
+                </button>
+            </div>         
+        </section> 
+    </main>
+
+    <%- include('./partials/footer')%>
+
+</body>
+</html>

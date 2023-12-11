@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+
+<%- include('./partials/head')%>
+
+ <!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/producto.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
-</head>
+    <script src="./js/script.js" defer></script>
+    <title>La Cerveza</title>
+</head>  -->
 <body>
-    <header class="header-principal">
+
+   
+   <header class="header-principal">
         <div class="header-top">
             <a href="./"><img src="/img/la_volada_logo.png" alt=""></a>
             <div class="titulos-top">
                 <h2>Distribuidora de</h2>
                 <h1>CERVEZA ARTESANAL</h1>
             </div>
-            
         </div>
         
         <nav class="nav-padre">
@@ -34,50 +38,15 @@
             <ul class="menu-inferior">
                 <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
-            </ul>
+             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="detalleProducto">
-            
-
-            <div class="imagen-titulo">
-                <h2>Imperial Ipa Losch</h2>
-                <img src="/img/imperial_ipa_losch.jpg" alt="Aquí va imágen Imperial Ipa Losch">
-                <div class="cont-PorcentajecAlcohol">
-                    <input type="text" name="porcentajeAlcohol" value="Alcohol 8.5 %" readonly>
-                </div>
-            </div>   
-            
-            <div class="descripcion-cerveza">
-
-                <div>
-                    <p>Si sos de esos a los que les gusta las cervezas potentes, esta birra es para vos💪</p>
-                    <p>Una explosión de lúpulo 🤯, lo que la hace una verdadera bomba💣</p>
-                    <p>¿Qué esperas para conseguir la tuya?</p>
-                </div>
-                
-                <div>
-                    <p>1 Bulto: 12 latas x 473 ml</p>
-                    <strong><p>Precio de lista: $ 575,40</p></strong>
-                    <p>Vencimiento: 07/08/2024</p>
-                </div>
-
-                <div>
-                    <input type="button" data-value="imperial_ipa_losch" value="-">
-                    <input type="text" class="cantidad"  data-default="1" data-stock="50" name="cantidad" value="1" min="1" step="1">
-                    <input type="button" data-value="imperial_ipa_losch" value="+">
-                </div>
-
-                <button type="button" class="boton" name="botonAgregar" id="btn_agregar"  title="buscar">
-                    <i class="fa fa-cart-plus"></i>
-                </button>
-            </div>         
-        </section> 
+        <h1>Proximamente</h1>
     </main>
 
     <footer class="main-footer">
-        
         <div class="secciones-footer">
             <section class="ayuda">
                 <h3>Ayuda</h3>
@@ -98,7 +67,7 @@
                     <li><a href="#">Sustentabilidad</a></li>
                 </nav>
             </section>
-        
+    
             <section class="seguinos">
                 <h3>Seguinos en</h3>
                 <nav >
