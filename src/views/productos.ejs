@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <%- include('./partials/head', {cssSheet: "producto"})%>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
@@ -12,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
-</head>
+</head> -->
 <body>
-    <header class="header-principal">
+
+    <%- include('./partials/hedear')%>
+    <!-- <header class="header-principal">
         <div class="header-top">
             <a href="./"><img src="/img/la_volada_logo.png" alt=""></a>
             <div class="titulos-top">
@@ -34,9 +37,10 @@
             <ul class="menu-inferior">
                 <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
-            </ul>
+           <!--  </ul>
         </nav>
-    </header>
+    </header>  -->
+
     <main>
         <section class="detalleProducto">
             
@@ -76,7 +80,9 @@
         </section> 
     </main>
 
-    <footer class="main-footer">
+    <%- include('./partials/footer')%>
+
+    <!-- <footer class="main-footer">
         
         <div class="secciones-footer">
             <section class="ayuda">
@@ -122,6 +128,6 @@
             <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
             <p>Copyright @ La Volada cervezas artesanales</p> 
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

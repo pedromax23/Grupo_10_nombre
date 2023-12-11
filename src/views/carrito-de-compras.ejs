@@ -1,42 +1,12 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/carrito-de-compras.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>La Cerveza</title>
-</head>
+<html>
+
+    <%- include('./partials/head', {cssSheet: "carrito-de-compras"})%>
+
 <body>
-    <header class="header-principal">
-        <div class="header-top">
-            <a href="./"><img src="/img/la_volada_logo.png" alt=""></a>
-            <div class="titulos-top">
-                <h2>Distribuidora de</h2>
-                <h1>CERVEZA ARTESANAL</h1>
-            </div>
-            
-        </div>
-        
-        <nav class="nav-padre">
-            <ul class="menu-superior">
-                <li class="menu"><a href="./quienes-somos">Quienes somos</a></li>
-                <li class="menu"><a href="./productos">Productos</a></li>
-                <li class="menu"><a href="./hace-tu-pedido">Hace tu pedido</a></li>
-                <li class="menu"><a href="./contacto">Contacto</a></li>
-            </ul>
-            <ul class="menu-inferior">
-                <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
-            </ul>
-        </nav>
-    </header>
+    
+    <%- include('./partials/hedear')%>
 
    <main>
     <div class="contenedor-principal">
@@ -134,52 +104,9 @@
     </div>
 
    </main>
-    <footer class="main-footer">  
-        <div class="secciones-footer">
-            <section class="ayuda">
-                <h3>Ayuda</h3>
-                <nav>
-                    <ul>
-                        <li><a href="/preguntas"></a>Preguntas frecuentes</li>
-                        <li><a href="/como-comprar"></a>Como comprar</li>
-                        <li><a href="/politica-devolucion"></a>Políticas de devolución</li>
-                        <li><a href="/terminos"></a>Terminos & Condiciones</li>
-                    </ul>
-                </nav> 
-            </section>
 
-            <section class="la-volada">
-                <h3>La Volada</h3>
-                <nav>
-                    <li><a href="#">Quiénes somos</a></li>
-                    <li><a href="#">Sustentabilidad</a></li>
-                </nav>
-            </section>
+   <%- include('./partials/footer')%>
 
-            <section class="seguinos">
-                <h3>Seguinos en</h3>
-                <nav >
-                    <ul class ="redes">
-                        <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
-                    </ul>
-                </nav>    
-                <nav>
-                    <ul>
-                        <li><i class="fa-brands fa-whatsapp"></i> 22333333</li>
-                        <li><i class="fa-solid fa-location-dot"></i> 12 de Octubre 7749. Mar del Plata, Buenos Aires, Argentina.</li>
-                        <li><a href=""><i class="fa-solid fa-envelope"></i> info@lavolada.com.ar</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </div>
-
-        <div class="copyright">
-            <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
-            <p>Copyright @ La Volada cervezas artesanales</p> 
-        </div>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <%- include('./partials/head', {cssSheet: "login"})%>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
@@ -12,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
     <title>La Cerveza</title>
-</head>
+</head> -->
 <body>
-    <header class="header-principal">
+   <!--  <header class="header-principal">
         <div class="header-top">
             <a href="./"><img src="/img/la_volada_logo.png" alt=""></a>
             <div class="titulos-top">
@@ -33,9 +34,11 @@
             <ul class="menu-inferior">
                 <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
-            </ul>
+            <!-- </ul>
         </nav>
-    </header>
+    </header>  -->
+
+    <%- include('./partials/hedear')%>
 
     <main class="loguear">     
         <form action="/login" method="post" class="formulario">                        
@@ -57,7 +60,7 @@
         </form>
     </main>
 
-    <footer class="main-footer">
+    <!-- <footer class="main-footer">
         
         <div class="secciones-footer">
             <section class="ayuda">
@@ -103,6 +106,6 @@
             <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
             <p>Copyright @ La Volada cervezas artesanales</p> 
         </div>
-    </footer>
-    
+    </footer> -->
+    <%- include('./partials/footer')%>
 </body>

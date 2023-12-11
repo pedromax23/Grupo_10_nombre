@@ -21,10 +21,10 @@ const productRouter = require("./routes/productRouter");
 app.use('/productos', productRouter);
 
 
-app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.html")));
+app.get("/quienes-somos", (req, res) => res.sendFile(path.join(__dirname, "./views/quienes-somos.ejs")));
 
 app.post("/login", (req,res) => {
-    res.sendFile(path.join(__dirname,"./views/register.html"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
+    res.sendFile(path.join(__dirname,"./views/register.ejs"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
 });
 
 

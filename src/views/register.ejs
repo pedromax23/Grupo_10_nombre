@@ -1,56 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+
+<%- include('./partials/head')%>
+
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/511b878d3a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="./js/script.js" defer></script>
     <title>La Cerveza</title>
-</head>
+</head> -->
 <body>
-    <header class="header-principal">
+
+    <%- include('./partials/hedear')%>
+    <!-- <header class="header-principal">
         <div class="header-top">
-            <a href="./"><img src="/img/la_volada_logo.png" alt=""></a>
-            <div class="titulos-top">
-                <h2>Distribuidora de</h2>
-                <h1>CERVEZA ARTESANAL</h1>
-            </div>
+            <a href="./"><img class="logo-top" src="/img/la_volada_logo.png" alt=""></a>
+            <h1 class="titulo-cerveza">CERVEZA ARTESANAL</h1>
         </div>
+        
         
         <nav class="nav-padre">
             <ul class="menu-superior">
-                <li class="menu"><a href="./quienes-somos">Quienes somos</a></li>
-                <li class="menu"><a href="./productos">Productos</a></li>
-                <li class="menu"><a href="./hace-tu-pedido">Hace tu pedido</a></li>
-                <li class="menu"><a href="./contacto">Contacto</a></li>
+                <li><a href="./quienes-somos">Quienes somos</a></li>
+                <li><a href="./productos">Productos</a></li>
+                <li><a href="./hace-tu-pedido">Hace tu pedido</a></li>
+                <li><a href="./contacto">Contacto</a></li>
             </ul>
             <ul class="menu-inferior">
                 <li><a href="./login"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="./carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
-            </ul>
+            <!-- </ul>
         </nav>
-    </header>
+    </header> -->
+ 
+    <main class="registro">
+        <form class="formulario" action="/register" method="POST"> 
 
-    <main>
-        <h1>Proximamente</h1>
+            <div> 
+                <input placeholder="Nombre y apellido" type="text" required name="name" minlength="3"/>
+            </div>
+    
+            <div>
+                <input placeholder="Nombre de usuari@" type="text" required name="nombre-usuario"/>
+            </div>
+    
+            <div>
+                <input placeholder="Email" type="email" required name="email"/>
+            </div>
+    
+            <div class="fecha-nacimiento">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" required name="fecha-nacimiento"/>
+            </div>
+
+            <div>
+                <input placeholder="Domicilio" type="text" required name="domicilio"/>
+            </div>
+
+            <div>
+                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button> 
+            </div>
+
+            <div>
+                <button type="reset">Borrar</button> 
+            </div>
+
+        </form>
     </main>
 
-    <footer class="main-footer">
+    <%- include('./partials/footer')%>
+
+    <!-- <footer class="main-footer">
+        
         <div class="secciones-footer">
             <section class="ayuda">
                 <h3>Ayuda</h3>
                 <nav>
                     <ul>
-                        <li><a href="/preguntas"></a>Preguntas frecuentes</li>
-                        <li><a href="/como-comprar"></a>Como comprar</li>
-                        <li><a href="/politica-devolucion"></a>Políticas de devolución</li>
-                        <li><a href="/terminos"></a>Terminos & Condiciones</li>
+                        <li><a href="./preguntas"></a>Preguntas frecuentes</li>
+                        <li><a href="./como-comprar"></a>Como comprar</li>
+                        <li><a href="./politica-devolucion"></a>Políticas de devolución</li>
+                        <li><a href="./terminos"></a>Terminos & Condiciones</li>
                     </ul>
                 </nav> 
             </section>
@@ -86,7 +127,8 @@
             <p>Beber con moderación. Prohibida su venta a menores de 18 años.</p>
             <p>Copyright @ La Volada cervezas artesanales</p> 
         </div>
-    </footer>
+    </footer> -->
 
 </body>
+
 </html>
