@@ -277,10 +277,6 @@ ul {
     color: #ffc07f;
 }
 
-main{
-    padding-top: 3%;
-}
-
 .carousel-caption-description{
     text-shadow: 1px 0 #721121, -1px 0 #721121, 0 1px #721121, 0 -1px #721121,
                    1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
@@ -454,12 +450,6 @@ main{
         width: 500px;
         height: 500px;
     }
-
-    main{
-        padding-top: 2%;
-    }
-
-
 
 }
 
