@@ -1,8 +1,3 @@
-/************Mobile************/
-main{
-    width:100%;
-    font-size: 1.2rem;
-}
 
 .detalleProducto {
     display: flex;
@@ -10,16 +5,16 @@ main{
     align-items: center;
 }
 
-.detalleProducto h2 {
-    color: #A5402D;
-    text-decoration: underline;
-    text-shadow: -1px  2px  0px #721121 ;
-}
-
 .imagen-titulo {
     width: 90%;
     text-align: center;
     padding: 10px 0;
+}
+
+.imagen-titulo h2 {
+    color: #A5402D;
+    text-decoration: underline;
+    text-shadow: -1px  2px  0px #721121 ;
 }
 
 .imagen-titulo img{
@@ -29,7 +24,7 @@ main{
     box-shadow: 3px 4px 9px -1px rgba(0, 0, 0, 0.75); 
     animation-name: titilando;
     animation-duration: 3s;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
 }
 
 @keyframes titilando{
@@ -40,9 +35,10 @@ main{
 
 @keyframes creciendo {
     0% {width: 0%;}
-
     100%{width: 85%;} 
 }
+
+
 .cont-PorcentajecAlcohol{
     display: flex;
     background-color: #d7d7d7;
@@ -61,12 +57,22 @@ main{
 }
 
 .descripcion-cerveza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descripcion {
+    width: 90%;
+    margin: auto;
     text-align: center;
 }
 
-.descripcion-cerveza div{
-    width: 90%;
-    margin: auto;
+.informacion {
+    text-align: center;
+}
+
+.botones {
     text-align: center;
 }
 
@@ -94,6 +100,7 @@ main{
     transition: all 2.5s;
 }
 
+
 /************TABLETS************/
 @media (min-width: 768px) {
     .imagen-titulo {
@@ -110,5 +117,12 @@ main{
     .detalleProducto {
         flex-direction: row-reverse;
         justify-content: center;
+    }
+
+    .descripcion-cerveza {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
     }
 }

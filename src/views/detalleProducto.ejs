@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head', {estilos:"detalleProducto", titulo: "La cerveza - Productos"})%>
+<body>
+
+    <%- include('./partials/hedear')%>
+
+    <main>
+        <section class="detalleProducto">
+
+            <div class="imagen-titulo">
+                <h2><%= producto.nombre %></h2>
+                <img src="/img/<%= producto.img %>" alt="Aquí va imágen Imperial Ipa Losch">
+                <div class="cont-PorcentajecAlcohol">
+                    <input type="text" name="porcentajeAlcohol" value="Alcohol 8.5 %" readonly>
+                </div>
+            </div>   
+            
+            <div class="descripcion-cerveza">
+                <div class="descripcion">
+                    <p> <%= producto.descripcion %> </p>
+                </div>
+                
+                <div class="informacion">
+                    <p>1 Bulto: 12 latas x 473 ml</p>
+                    <strong><p><%= "$ " +  producto.precio %></p></strong>
+                    <p>Vencimiento: 07/08/2024</p>
+                </div>
+
+                <div class="botones">
+                    <input type="button" data-value="imperial_ipa_losch" value="-">
+                    <input type="text" class="cantidad"  data-default="1" data-stock="50" name="cantidad" value="1" min="1" step="1">
+                    <input type="button" data-value="imperial_ipa_losch" value="+">
+                </div>
+
+                <button type="button" class="boton" name="botonAgregar" id="btn_agregar"  title="buscar">
+                    <i class="fa fa-cart-plus"></i>
+                </button>
+            </div>         
+        </section> 
+    </main>
+
+    <%- include('./partials/footer')%>
+
+</body>
+</html>
