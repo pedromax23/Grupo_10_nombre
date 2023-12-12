@@ -41,7 +41,7 @@ const productos = [
 
 const controller = {
     index: function(req, res) {
-        res.render('productos', {productos}) //Pase el objeto productos para recibir la informacion en el ejs
+        res.render('products/productos', {productos}) //Pase el objeto productos para recibir la informacion en el ejs
     },
 
     // Cree el metodo para mostrar el detalle del producto
@@ -53,13 +53,13 @@ const controller = {
         let productoIndex = productos.findIndex(producto => producto.id === idProducto);
 
         // Renderizo la vista y ademas paso la informacion del producto
-        res.render('detalleProducto', {producto: productos[productoIndex]})
+        res.render('products/detalleProducto', {producto: productos[productoIndex]})
     },
     crear: (req,res)=>{
-        res.render('crearProducto');
+        res.render('products/crearProducto');
     },
     editar: (req,res)=>{
-        res.render("editarProducto");
+        res.render("products/editarProducto");
     }
 }
 
