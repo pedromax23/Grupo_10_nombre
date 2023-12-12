@@ -1,26 +1,3 @@
-.wrapper{
-    max-width: 80%;
-    margin: auto;
-}
-.carousel-productos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    white-space: nowrap;
-    cursor: pointer;
-    overflow: hidden; 
-    scroll-behavior: smooth;
-}
-.carousel-productos.dragging{
-    cursor:grab;
-    scroll-behavior: auto;
-}
-.carousel-productos.dragging img{
-    pointer-events: none;
-}
-.wrapper article:first-child{
-     margin-left: 0px;
-} 
 .contenedor-detalle-productos{
     position: relative;
     width: 100%;
@@ -30,9 +7,6 @@
 .contenedor-detalle-productos img{
     width: 400px;
     height: 400px;
-}
-.detalle-producto{
-    margin-left: 10px;
 }
 .carousel-products-control-prev {
     position: absolute;
@@ -50,6 +24,44 @@
     opacity: .5;
     left:3.5%;
     transition: opacity .15s ease;
+}
+.carousel-products-control-prev:hover{
+    opacity: 1;
+}
+.carousel-products-control-prev{
+    filter: invert(1) grayscale(100)
+}
+.wrapper{
+    max-width: 80%;
+    margin: auto;
+}
+.wrapper article:first-child{
+    margin-left: 0px;
+} 
+.carousel-productos.dragging{
+    cursor:grab;
+    scroll-behavior: auto;
+}
+.carousel-productos.dragging img{
+    pointer-events: none;
+}
+.carousel-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+}
+.detalle-producto{
+    margin-left: 10px;
+}
+.precio-cerveza, .nombre-cerveza{
+    display: inline;
+}
+.precio-cerveza{
+    color: #ffc07f;
 }
 .carousel-products-control-next {
     position: absolute;
@@ -71,20 +83,8 @@
 .carousel-products-control-next:hover{
     opacity: 1;
 }
-.carousel-products-control-prev:hover{
-    opacity: 1;
-}
 .carousel-products-control-next{
     filter: invert(1) grayscale(100)
-}
-.carousel-products-control-prev{
-    filter: invert(1) grayscale(100)
-}
-.precio-cerveza, .nombre-cerveza{
-    display: inline;
-}
-.precio-cerveza{
-    color: #ffc07f;
 }
 
 @media (min-width: 1200px) {
