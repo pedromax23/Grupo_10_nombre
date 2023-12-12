@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Prodcuto</title>
-</head>
+    <!------------Head-------------->
+    <%- include('../partials/head', {estilos: "", titulo: "La cerveza - Crear producto"})%>
 <body>
-    
+    <!-----------Header------------->
+    <%- include('../partials/hedear')%>
+    <!-----------Main------------->
+    <main class="crearProducto">
+        <h1>Página de creación de productos</h1>
+        <section>
+                <form action="/crearProducto" method="post" id="crearProductoForm">
+                    <div>
+                        <label for="nombre">Nombre del Producto</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="IPA" required>
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripción</label>
+                        <textarea name="descripcion" id="descripcion" placeholder="Descripción del producto" required></textarea>
+                    </div>
+                    <div>
+                        <label for="imagenCerveza">Imágen</label>
+                        <input type="file" name="imagenCerveza" id="imagenCerveza"  accept=".jpg, .png, .svg" multiple required>
+                    </div>
+                    <div>
+                        <label for="categoriaCerveza">Categorías</label>
+                        <select name="categoriaCerveza" id="categoriaCerveza" required>
+                            <option disabled selected hidden> Selecciona una categoría</option>
+                            <option value="Golden">Golden</option>
+                            <option value="Honey">Honey</option>
+                            <option value="IPA">IPA</option>
+                            <option value="Amber Ale">Amber Ale</option>
+                            <option value="Stout">Stout</option>
+                          </select>
+                    </div>
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="number" name="precio" id="precio" min="0" placeholder="100.00" step="0.01" required>
+                    </div>
+                    <div>
+                        <button type="submit">Crear Producto</button> 
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+
+            </section>
+
+                
+    </main>
+    <!------------Footer----------->
+    <%- include('../partials/footer')%>
 </body>
 </html>

@@ -46,6 +46,7 @@ app.use('/quienes-somos', quienesSomosRouter)
 
 
 
+
 app.post("/login", (req,res) => {
     res.sendFile(path.join(__dirname,"./views/register.ejs"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
 });

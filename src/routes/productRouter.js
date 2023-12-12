@@ -13,11 +13,5 @@ router.get('/', productController.index); //Estaría el listado del producto
 // Detalle del producto
 router.get('/:id', productController.detalleProducto);
 
-//Procesamos el pedido GET con ruta /crearProducto
-router.get('/crearProducto',productController.crear);
 
-//Procesamos el pedido GET con ruta /editarProducto
-router.get('/editarProducto',productController.editar);
-
-//Exportamos la variables Router para ser requerida
 module.exports = router;
