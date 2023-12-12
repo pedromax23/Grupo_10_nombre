@@ -1,0 +1,119 @@
+.wrapper{
+    max-width: 80%;
+    margin: auto;
+}
+.carousel-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+}
+.carousel-productos.dragging{
+    cursor:grab;
+    scroll-behavior: auto;
+}
+.carousel-productos.dragging img{
+    pointer-events: none;
+}
+.wrapper article:first-child{
+     margin-left: 0px;
+} 
+.contenedor-detalle-productos{
+    position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.contenedor-detalle-productos img{
+    width: 400px;
+    height: 400px;
+}
+.detalle-producto{
+    margin-left: 10px;
+}
+.carousel-products-control-prev {
+    position: absolute;
+    bottom: 45%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    left:3.5%;
+    transition: opacity .15s ease;
+}
+.carousel-products-control-next {
+    position: absolute;
+    bottom: 45%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    right:3.5%;
+    transition: opacity .15s ease;
+}
+.carousel-products-control-next:hover{
+    opacity: 1;
+}
+.carousel-products-control-prev:hover{
+    opacity: 1;
+}
+.carousel-products-control-next{
+    filter: invert(1) grayscale(100)
+}
+.carousel-products-control-prev{
+    filter: invert(1) grayscale(100)
+}
+.precio-cerveza, .nombre-cerveza{
+    display: inline;
+}
+.precio-cerveza{
+    color: #ffc07f;
+}
+
+@media (min-width: 1200px) {
+    .carousel-products-control-next{
+        filter: invert(0)
+    }
+    .carousel-products-control-prev{
+        filter: invert(0)
+    }
+    .contenedor-producto-icono-prev{
+        background-color: black;
+        padding: 7px;
+        padding-right: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
+    .contenedor-producto-icono-next{
+        background-color: black;
+        padding: 7px;
+        padding-left: 9.5px;
+        padding-top: 10px;
+        border-radius: 50%;
+    }
+    .contenedor-detalle-productos{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .contenedor-detalle-productos img{
+        width: 500px;
+        height: 500px;
+    }
+}
