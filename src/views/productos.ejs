@@ -7,6 +7,7 @@
 
     <main>
         <section class="productos">
+            <!-- Cree un bucle para mostrar cada producto -->
             <% productos.forEach(producto => { %>
                 <article>
                     <a href="productos/<%= producto.id %>">
@@ -19,6 +20,7 @@
                     <p class="precio"><%= "$" + producto.precio %></p>
                 </article>
             <% }) %>
+            <!-- Fin del bucle -->
         </section>
     </main>
 
