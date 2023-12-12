@@ -1,7 +1,7 @@
 //Creamos el objeto literal correspondiente al recurso Quienes sOMOS-Capa controlador 
 const controller = {
     index: function(req, res) {
-        res.render('quienes-somos');
+        res.render('main/quienes-somos');
     }
 
 }

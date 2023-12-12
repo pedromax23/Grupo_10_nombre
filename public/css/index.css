@@ -361,7 +361,7 @@ ul {
 
     .secciones-footer {
         flex-direction: row;
-    }
+       
 
     .secciones-footer section {
         width: 90%;
@@ -452,5 +452,4 @@ ul {
     }
 
 }
-
-
+}
