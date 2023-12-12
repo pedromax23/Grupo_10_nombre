@@ -56,9 +56,7 @@ main{
     color:#fff;
     font-size: 1.2rem;
     animation-name: creciendo;
-    animation-duration: 3s;
-    animation-name: creciendo;
-    animation-duration: 3s;   
+    animation-duration: 5s;   
     width:85%;   
 }
 
@@ -93,7 +91,7 @@ main{
 
 .boton:hover{
     color: #721121;
-    transition: all 2seg;
+    transition: all 2.5s;
 }
 
 /************TABLETS************/

@@ -1,4 +1,4 @@
-const express = require ("express"); 
+const express = require ("express");
 const app =express();
 const path = require("path");
 
@@ -21,12 +21,28 @@ const productRouter = require("./routes/productRouter");
 app.use('/productos', productRouter);
 
 // Login Ruta
-const loginRouter = require("./routes/loginRouter")
-app.use('/login', loginRouter)
+const loginRouter = require("./routes/loginRouter");
+app.use('/login', loginRouter);
 
 // Carrito de compras Ruta
 const carritoRouter = require("./routes/carritoRouter")
 app.use('/carrito-de-compras', carritoRouter)
+
+// Hace tu pedido ruta
+const haceTuPedidoRouter = require("./routes/haceTuPedidoRouter")
+app.use('/hace-tu-pedido', haceTuPedidoRouter)
+
+// Contacto ruta
+const contactoRouter = require("./routes/contactoRouter")
+app.use('/contacto', contactoRouter)
+
+// Quienes Somos ruta
+const quienesSomosRouter = require("./routes/quienesSomosRouter")
+app.use('/quienes-somos', quienesSomosRouter)
+
+
+
+
 
 
 
