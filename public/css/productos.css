@@ -9,14 +9,14 @@
     border: 1px #F15156 solid;
     border-radius: 10px;
     background-color: #A5402D;
-    width: 90%;
+    width: 300px;
     margin: 20px 0;
+    text-align: center;
 }
 
 .titulo-imagen img {
     border-radius: 10px;
-    padding: 5px;
-    width: 100%;
+    width: 90%;
 }
 
 .titulo-imagen h3 {
@@ -43,6 +43,10 @@
 }
 
 @media (min-width: 1200px) {
+    .productos {
+        align-items: flex-start;
+    }
+
     .productos article {
         width: 23%;
     }
