@@ -53,7 +53,7 @@ const controller = {
         let productoIndex = productos.findIndex(producto => producto.id === idProducto);
 
         // Renderizo la vista y ademas paso la informacion del producto
-        res.render('products/detalleProducto', {producto: productos[productoIndex]})
+        res.render('products/detalleProducto', {producto: productos[productoIndex]});
     },
     crear: function(req, res) {
         // Renderizo la vista crearProducto
