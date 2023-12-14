@@ -50,10 +50,11 @@ const controller = {
         let idProducto = parseInt(req.params.id);
 
         // Segun el ID de la URL busco el producto
-        let productoIndex = productos.findIndex(producto => producto.id === idProducto);
+        let productoIndex = productos.findIndex(producto => producto.id === idProducto);//retorna el indice del objeto que cumple con la condicion
 
         // Renderizo la vista y ademas paso la informacion del producto
         res.render('products/detalleProducto', {producto: productos[productoIndex]});
+        
     },
     crear: function(req, res) {
         // Renderizo la vista crearProducto
