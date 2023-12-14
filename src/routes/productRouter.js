@@ -11,7 +11,13 @@ const productController = require("../controllers/productController");
 router.get('/', productController.index); //Estaría el listado del producto
 
 // Detalle del producto
-router.get('/:id', productController.detalleProducto);
+router.get('/:id?', productController.detalleProducto);
+
+//Procesamos el pedido GET con ruta /:id?/crearProducto
+router.get('/:id?/crearProducto',productController.crear); //Ver
+
+//Procesamos el pedido GET con ruta /:id?/editarProducto
+router.get('/:id?/editarProducto',productController.editar);
 
 
 module.exports = router;

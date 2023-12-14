@@ -39,8 +39,9 @@ const productos = [
 
 const controller = {
     index: function(req, res) {
-        res.render('main/index', {productos})
+        res.render('main/index', {productos});
     }
+
 }
 
 module.exports = controller;

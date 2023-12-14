@@ -54,6 +54,14 @@ const controller = {
 
         // Renderizo la vista y ademas paso la informacion del producto
         res.render('products/detalleProducto', {producto: productos[productoIndex]})
+    },
+    crear: function(req, res) {
+        // Renderizo la vista crearProducto
+        res.render('products/crearProducto');
+    },
+    editar: function(req, res) {
+        // Renderizo la vista editarProducto
+        res.render('products/editarProducto');
     }
 }
 
