@@ -53,8 +53,16 @@ const controller = {
         let productoIndex = productos.findIndex(producto => producto.id === idProducto);
 
         // Renderizo la vista y ademas paso la informacion del producto
-        res.render('products/detalleProducto', {producto: productos[productoIndex]})
-    }
+        res.render('products/detalleProducto', {producto: productos[productoIndex]});
+    },
+    // metodo para crear productos
+    crearProducto: function(req, res) {
+        res.render('products/crearProducto');
+    },
+     // metodo para editar productos
+     editarProducto: function(req, res) {
+        res.render('products/editarProducto');
+    },
 }
 
 //Exportamos controller para requerirlo en productRouter.js

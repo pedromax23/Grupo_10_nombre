@@ -11,7 +11,13 @@ const productController = require("../controllers/productController");
 router.get('/', productController.index); //Estaría el listado del producto
 
 // Detalle del producto
-router.get('/:id', productController.detalleProducto);
+// Le añadi un /detalle para que nos deje ejecutar el /crearProducto y /editarProducto. Si no nos daba error.
+router.get('/detalle/:id?', productController.detalleProducto);
 
+//Procesamos el pedido GET con ruta /crearProducto
+router.get('/crearProducto',productController.crearProducto);
+
+//Procesamos el pedido GET con ruta /editarProducto
+router.get('/editarProducto',productController.editarProducto);
 
 module.exports = router;
