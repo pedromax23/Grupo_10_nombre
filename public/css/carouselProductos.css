@@ -5,7 +5,7 @@
     padding-bottom: 3%;
 }
 .contenedor-detalle-productos img{
-    width: 400px;
+    width: 200px;
     height: 400px;
 }
 .carousel-products-control-prev {
@@ -113,7 +113,7 @@
         padding-bottom: 2%;
     }
     .contenedor-detalle-productos img{
-        width: 500px;
-        height: 500px;
+        width: 425px;
+        height: 670px;
     }
 }
