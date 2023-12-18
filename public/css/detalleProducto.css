@@ -89,7 +89,7 @@
 }
 
 .boton {
-    width: 30%;
+    width: 150px;
     margin-top: 10px;
     padding: 5px;
     background-color: #A5402D;
@@ -104,10 +104,10 @@
     width: 35%;
 }
 
-.boton:hover{
+/*.boton:hover{
     color: #721121;
     transition: all 2.5s;
-}
+}*/
 
 .boton a {
     font-size: 1rem;
