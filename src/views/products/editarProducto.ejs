@@ -13,15 +13,15 @@
         <h1>Pagina de edicion de productos</h1>
         <section class="caja-edicion">
             <div class="caja-form1">
-                <form action="/productos/editarProducto" method="POST" class="edicion-form">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST" class="edicion-form">
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
-                    <input placeholder="Actualizar nombre del producto" type="text" name="nombre-producto" id="nombre-producto"/>
+                    <input value="<%=productoAEditar.nombre%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre-producto" id="nombre-producto"/>
                 </div>
     
                 <div> 
                     <label for="precio-producto">Precio</label> <br>
-                    <input placeholder="Nuevo precio" type="number" name="precio-producto" id="precio-producto"/>
+                    <input value="<%=productoAEditar.precio%>" placeholder="Nuevo precio" type="number" name="precio-producto" id="precio-producto"/>
                 </div>
     
                 <div> 
@@ -39,15 +39,15 @@
             </div>
                
             <div class="caja-form2">
-                <form action="/productos/editarProducto" method="POST" class="edicion-form">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST" class="edicion-form">
                     <div> 
                         <label for="stock-producto">Stock disponible</label> <br>
-                        <input placeholder="1" type="number" name="stock-producto" id="stock-producto"/>
+                        <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock-producto" id="stock-producto"/>
                     </div>
         
                     <div>
                         <label for="descripcion-producto">Descripción</label> <br>
-                        <textarea class="comentario" name="descripcion-producto" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"></textarea>
+                        <textarea class="comentario" name="descripcion-producto" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.descripcion%></textarea>
                     </div>
     
                     <div> 
@@ -60,7 +60,7 @@
         </section>
    
            <section class="edicion-buttons">
-                <form action="/productos/editarProducto" method="POST">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST">
                     <div>
                         <button type="submit">Actualizar datos</button> 
                     </div>

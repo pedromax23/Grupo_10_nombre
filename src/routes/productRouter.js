@@ -14,7 +14,7 @@ router.get('/', productController.index); //Estaría el listado del producto
 router.get('/crearProducto',productController.crear); 
 
 //Procesamos el pedido GET con ruta /:id?/editarProducto
-router.get('/editarProducto',productController.editar);
+router.get('/editarProducto/:id?',productController.editar);
 
 // Detalle del producto
 router.get('/:id?', productController.detalleProducto);
