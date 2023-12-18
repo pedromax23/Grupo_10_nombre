@@ -19,6 +19,7 @@ ul {
 .header-principal{
     background-color: #ffc07f;
     border-bottom: solid 1px #721121;
+
 }
 .header-top {
     width: 90%;
@@ -42,6 +43,7 @@ ul {
     width: 90%;
     margin: auto;
     padding-bottom: 10px;
+    
 }
 .menu-superior {
     margin: auto;
@@ -265,8 +267,8 @@ ul {
     }
 
      .nav-padre {
-        width: 80%;
-        justify-content: space-between;
+        /*width: 80%;*/ /*Elimino el ancho del nav-padre para que tome el 100% del contenedor*/
+        justify-content: space-evenly; /*Modifico el space-between por el space-evenly*/
     }
 
     .menu-inferior {

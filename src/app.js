@@ -28,9 +28,6 @@ app.use('/login', loginRouter);
 const carritoRouter = require("./routes/carritoRouter")
 app.use('/carrito-de-compras', carritoRouter)
 
-// Hace tu pedido ruta
-const haceTuPedidoRouter = require("./routes/haceTuPedidoRouter")
-app.use('/hace-tu-pedido', haceTuPedidoRouter)
 
 // Contacto ruta
 const contactoRouter = require("./routes/contactoRouter")

@@ -10,14 +10,16 @@ const productController = require("../controllers/productController");
 //Procesamos el pedido GET con ruta /
 router.get('/', productController.index); //Estaría el listado del producto
 
+//Procesamos el pedido GET con ruta /:id?/crearProducto
+router.get('/crearProducto',productController.crear); 
+
+//Procesamos el pedido GET con ruta /:id?/editarProducto
+router.get('/editarProducto',productController.editar);
+
 // Detalle del producto
 router.get('/:id?', productController.detalleProducto);
 
-//Procesamos el pedido GET con ruta /:id?/crearProducto
-router.get('/:id?/crearProducto',productController.crear); //Ver
 
-//Procesamos el pedido GET con ruta /:id?/editarProducto
-router.get('/:id?/editarProducto',productController.editar);
 
 
 module.exports = router;
