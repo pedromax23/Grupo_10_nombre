@@ -63,6 +63,9 @@ const controller = {
     editar: function(req, res) {
         // Renderizo la vista editarProducto
         res.render('products/editarProducto');
+    },
+    carritoCompras: function(req, res) {
+        res.render('products/carrito-de-compras')
     }
 }
 

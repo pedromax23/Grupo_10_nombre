@@ -20,30 +20,6 @@ app.use('/', mainRuoter);
 const productRouter = require("./routes/productRouter");
 app.use('/productos', productRouter);
 
-// Login Ruta
-const loginRouter = require("./routes/loginRouter");
-app.use('/login', loginRouter);
-
-// Carrito de compras Ruta
-const carritoRouter = require("./routes/carritoRouter")
-app.use('/carrito-de-compras', carritoRouter)
-
-
-// Contacto ruta
-const contactoRouter = require("./routes/contactoRouter")
-app.use('/contacto', contactoRouter)
-
-// Quienes Somos ruta
-const quienesSomosRouter = require("./routes/quienesSomosRouter")
-app.use('/quienes-somos', quienesSomosRouter)
-
-
-
-
-
-
-
-
-app.post("/login", (req,res) => {
-    res.sendFile(path.join(__dirname,"./views/register.ejs"))/* hace que el button enviar del login me lleve a la pagina ppal o index */
-});
+// Users Ruta
+const usersRouter = require("./routes/usersRouter");
+app.use('/user', usersRouter)
