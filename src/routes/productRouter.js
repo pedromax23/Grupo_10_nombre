@@ -16,10 +16,10 @@ router.get('/editarProducto/:id?',productController.editar);
 // router.put('/editarProducto', productController.editarProducto)
 
 // Ruta para ver el carrito de compras
-router.get('/carrito-de-compras', productController.carritoCompras)
+// router.get('/carrito-de-compras', productController.carritoCompras)
 
 // Ruta para ver el detalle de un producto
-router.get('/:id?', productController.detalleProducto);
+router.get('/detalle/:id?', productController.detalleProducto);
 
 
 module.exports = router;
