@@ -72,6 +72,8 @@ const controller = {
             return producto.id == idProducto
         });
         res.render('products/editarProducto', {productoAEditar});
+    },
+    carritoCompras: function(req, res) {
     }
 }
 
