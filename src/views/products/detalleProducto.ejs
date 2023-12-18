@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <%- include('../partials/head', {estilos:"detalleProducto", titulo: "La cerveza - Productos"})%>
+    <%- include('../partials/head', {estilos:"detalleProducto", titulo: "La cerveza - Productos", script: ""})%>
 <body>
 
     <%- include('../partials/header')%>
@@ -37,14 +37,12 @@
                     <i class="fa fa-cart-plus"></i>
                 </button>
 
-                <a href="/productos"> 
-                <button type="button" class="boton" name="Volver" id="volver"  title="volver">
-                    <p class=" volver"> Volver </p>
-                </a>
-                    
-                </button> 
-
-
+                <div class="contenedor_botones">
+                    <a href="/productos"> <button type="button"  class="boton" name="Volver">Volver</button></a>  
+                        
+    
+                    <a href="/productos/editarProducto/<%=producto.id%>"><button type="button" class="boton"  name="Editar">Editar</button></a>     
+                </div>
             </div>         
         </section> 
     </main>

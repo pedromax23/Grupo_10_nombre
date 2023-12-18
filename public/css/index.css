@@ -19,6 +19,7 @@ ul {
 .header-principal{
     background-color: #ffc07f;
     border-bottom: solid 1px #721121;
+
 }
 .header-top {
     width: 90%;
@@ -42,6 +43,7 @@ ul {
     width: 90%;
     margin: auto;
     padding-bottom: 10px;
+    
 }
 .menu-superior {
     margin: auto;
@@ -86,6 +88,10 @@ ul {
 }
 .menu-inferior i:hover {
     color: #721121;
+}
+
+.tituto-pantalla-grande{
+    display: none;
 }
 
 /* Footer */
@@ -184,6 +190,7 @@ ul {
     }
 }
 
+
 @media (min-width: 1200px) {
     .header-top {
         justify-content: space-around;
@@ -191,14 +198,15 @@ ul {
     .menu-superior {
         flex-direction: row;
         width: 70%;
+        margin:0%;
     }
     .menu-superior li {
         margin-right: 20px;
-        width: 100%;
+        width: 27%;
         transition: all 500ms;
     }
     .menu-superior li:hover {
-        width: 110%;
+        width: 29%;
     }
     .titulos-top {
         display: flex;
@@ -257,4 +265,22 @@ ul {
         padding-top: 10px;
         border-radius: 50%;
     }
+
+     .nav-padre {
+        /*width: 80%;*/ /*Elimino el ancho del nav-padre para que tome el 100% del contenedor*/
+        justify-content: space-evenly; /*Modifico el space-between por el space-evenly*/
+    }
+
+    .menu-inferior {
+        margin: 0%;
+    }
+
+    .tituto-pantalla-chica{
+        display: none;
+    }
+
+    .tituto-pantalla-grande{
+        display:inline;
+    }
+    
 }

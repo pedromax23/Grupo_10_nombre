@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Prodcuto</title>
-</head>
+    <!------------Head-------------->
+    <%- include('../partials/head', {estilos: "crearProducto", titulo: "La cerveza - Crear producto", script: ""})%>
 <body>
-    
+    <!-----------Header------------->
+    <%- include('../partials/header')%>
+    <!-----------Main------------->
+    <main>
+                <form action="/crearProducto" method="post" class="crearProductoForm">
+                    <div>
+                        <input type="text" name="nombre"  placeholder="Nombre del Producto" required>
+                    </div>
+                    <div>
+                        <textarea name="descripcion"  placeholder="Descripción del producto" required></textarea>
+                    </div>
+                    <div>
+                        <input type="file" name="imagenCerveza"  class="file"  accept=".jpg, .png, .svg" required>
+                    </div>
+                    <div>
+                        <select name="categoriaCerveza"  required>
+                            <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
+                            <option value="Golden">Golden</option>
+                            <option value="Honey">Honey</option>
+                            <option value="IPA">IPA</option>
+                            <option value="Amber Ale">Amber Ale</option>
+                            <option value="Stout">Stout</option>
+                          </select>
+                    </div>
+                    <div>
+                        <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01" required>
+                    </div>
+                    <div class="boton">
+                        <button type="submit">Crear Producto</button> <!--ver-->
+                        <button type="reset">Borrar</button><!--ver-->
+                    </div>
+                </form>
+
+
+                
+    </main>
+    <!------------Footer----------->
+    <%- include('../partials/footer')%>
 </body>
 </html>

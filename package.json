@@ -4,7 +4,8 @@
   "description": "-----------\r Integrantes",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon src/app.js"
+    "test": "nodemon src/app.js",
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",

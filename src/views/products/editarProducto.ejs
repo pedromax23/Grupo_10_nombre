@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<%- include('../partials/head', {estilos: "editarProducto", titulo: "La cerveza - Editar producto"})%>
-
+<%-  include('../partials/head', {estilos: "editarProducto", titulo:"La cerveza - Editar producto", script:""})%>
+<html>
 <body>
     <%- include('../partials/header')%>
 
     <main class="edicion-producto-main">
         <h1>Pagina de edicion de productos</h1>
         <section class="caja-edicion">
-            <form action="/editarProducto" method="post" class="edicion-form">
+            <div class="caja-form1">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST" class="edicion-form">
                 <div> 
-                    <label for="nombre-producto">Nombre del producto</label>
-                    <input placeholder="Actualizar nombre del producto" type="text" name="nombre-producto" id="nombre-producto"/>
+                    <label for="nombre-producto">Nombre del producto</label> <br>
+                    <input value="<%=productoAEditar.nombre%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre-producto" id="nombre-producto"/>
                 </div>
-
+    
                 <div> 
-                    <label for="precio-producto">Precio</label>
-                    <input placeholder="Nuevo precio" type="number" name="precio-producto" id="precio-producto"/>
+                    <label for="precio-producto">Precio</label> <br>
+                    <input value="<%=productoAEditar.precio%>" placeholder="Nuevo precio" type="number" name="precio-producto" id="precio-producto"/>
                 </div>
-
+    
                 <div> 
-                    <label for="categoria-producto">Categoría</label>
+                    <label for="categoria-producto">Categoría</label> <br>
                     <select name="categoria-producto" id="categoria-producto">
                         <option disabled selected value>Selecciona una categoría</option>
                         <option value="Golden">Golden</option>
@@ -31,22 +30,32 @@
                         <option value="Stout">Stout</option>
                     </select>
                 </div>
+                </form>
+            </div>
+               
+            <div class="caja-form2">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST" class="edicion-form">
+                    <div> 
+                        <label for="stock-producto">Stock disponible</label> <br>
+                        <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock-producto" id="stock-producto"/>
+                    </div>
+        
+                    <div>
+                        <label for="descripcion-producto">Descripción</label> <br>
+                        <textarea class="comentario" name="descripcion-producto" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.descripcion%></textarea>
+                    </div>
     
-                <div>
-                    <label for="descripcion-producto">Descripción</label>
-                    <textarea class="comentario" name="descripcion-producto" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"></textarea>
-                </div>
+                    <div> 
+                        <label for="foto-producto">Cargar más fotos</label> <br>
+                        <input placeholder="Buscar archivos" type="file" name="foto-producto" id="foto-producto" accept=".jpg, .png" multiple/>
+                    </div>
+                </form>
+            </div>
 
-                <div> 
-                    <label for="foto-producto">Cargar fotos</label>
-                    <input placeholder="Buscar archivos" type="file" name="foto-producto" id="foto-producto" accept=".jpg, .png" multiple/>
-                </div>
-            </form>
-
-            </section>
+        </section>
    
-            <section class="edicion-buttons">
-                <form action="">
+           <section class="edicion-buttons">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST">
                     <div>
                         <button type="submit">Actualizar datos</button> 
                     </div>
@@ -58,7 +67,9 @@
             </section>
     </main>
 
-    <%- include('../partials/footer')%>
+    <!--    FOOTER    -->
+
+    <%- include('../partials/footer') %>
 </body>
 
 </html>

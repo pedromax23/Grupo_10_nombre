@@ -1,4 +1,4 @@
-<%- include('../partials/head', {estilos: "carouselProductos", titulo:""})%>
+<%- include('../partials/head', {estilos: "carouselProductos",  titulo:"", script: "/js/script.js"})%>
 
 <div class="contenedor-detalle-productos" >   
     <button class="carousel-products-control-prev" type="button"  id="left" >
@@ -9,56 +9,17 @@
 
     <div class="wrapper">
         <div class="carousel-productos">
-            <article class="detalle-producto">
-                <a href="./productos">
-                    <img  src="./img/cerveza-colimita.jpg" alt="imagen" draggable="false">
-                    <div class="descripcion-producto">  
-                        <p class="nombre-cerveza"> Cerveza Colimita Lager</p>
-                        <p class="precio-cerveza"> 950$</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="detalle-producto">
-                <a href="./productos">
-                <img  src="./img/cerveza-piedra-liza.jpg" alt="imagen" draggable="false">
-                    <div class="descripcion-producto">  
-                        <p class="nombre-cerveza"> Cerveza Piedra Lisa IPA</p>
-                        <p class="precio-cerveza"> 1000$</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="detalle-producto">
-                <a href="./productos">
-                    <img  src="./img/ceveza-paraiso.jpg" alt="imagen" draggable="false">
-                    <div class="descripcion-producto">  
-                        <p class="nombre-cerveza"> Cerveza Loba Paraiso</p>
-                        <p class="precio-cerveza"> 1100$</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="detalle-producto">
-                <a href="./productos">
-                    <img  src="./img/cerveza-coralito.jpg" alt="imagen" draggable="false">
-                    <div class="descripcion-producto">  
-                        <p class="nombre-cerveza"> Cerveza Coralito IPA</p>
-                        <p class="precio-cerveza"> 1200$</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="detalle-producto">
-                <a href="./productos">
-                    <img  src="./img/imperial_ipa_losch.jpg" alt="imagen" draggable="false">
-                    <div class="descripcion-producto">  
-                        <p class="nombre-cerveza"> Imperial IPA Losch</p>
-                        <p class="precio-cerveza"> 1400$</p>
-                    </div>
-                </a>
-            </article>
-
+            <% productos.forEach(producto => { %>
+                <article class="detalle-producto">
+                    <a href="/productos/<%= producto.id %>">
+                        <img  src="/img/<%= producto.img %>" alt="imagen" draggable="false">
+                        <div class="descripcion-producto">  
+                            <p class="nombre-cerveza"><%= producto.nombre %></p>
+                            <p class="precio-cerveza">$<%= producto.precio %></p>
+                        </div>
+                    </a>
+                </article>
+            <% }) %>
         </div>
     </div>
     

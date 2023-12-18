@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-    <%- include('../partials/head', {estilos: "login", titulo: "La cerveza - Iniciar sesión"})%>
+    <%- include('../partials/head', {estilos: "login", titulo: "La cerveza - Iniciar sesión", script: ""})%>
 
 <body>
 
     <%- include('../partials/header')%>
 
     <main class="loguear">     
-        <form action="/login" method="post" class="formulario">                        
+        <form action="/user/login" method="POST" class="formulario">                        
             <div>
                 <input type="text" name="nombre-usuario"  placeholder="Nombre de usuari@">
             </div>
@@ -22,7 +22,7 @@
             </div>
         
             <div>
-                <a href="/login/register">Regístrate</a> <!-- que nos lleve a la pagina register -->
+                <a href="/user/register">Regístrate</a> <!-- que nos lleve a la pagina register -->
             </div>
         </form>
     </main>
