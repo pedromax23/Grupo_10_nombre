@@ -1,25 +1,25 @@
-//Importamos Express
 const express = require("express");
-
-//Ejecutamos método Router de Express
 const router = express.Router();
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
 
-//Procesamos el pedido GET con ruta /
+// Ruta pagina productos
 router.get('/', productController.index); //Estaría el listado del producto
 
-//Procesamos el pedido GET con ruta /:id?/crearProducto
+// Ruta formulario para crear un producto
 router.get('/crearProducto',productController.crear); 
+// router.post('/crearProducto', productController.crearProducto)
 
-//Procesamos el pedido GET con ruta /:id?/editarProducto
-router.get('/editarProducto',productController.editar);
+// Ruta formulario para editar un producto
+router.get('/editarProducto/:id?',productController.editar);
+// router.put('/editarProducto', productController.editarProducto)
 
-// Detalle del producto
+// Ruta para ver el carrito de compras
+router.get('/carrito-de-compras', productController.carritoCompras)
+
+// Ruta para ver el detalle de un producto
 router.get('/:id?', productController.detalleProducto);
-
-
 
 
 module.exports = router;
