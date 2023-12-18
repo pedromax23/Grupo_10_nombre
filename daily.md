@@ -1,6 +1,6 @@
-Iran breves comentarios pertinentes a las actividades asignadas
-Esta actividad ya se esta realizando a  traves de comentarios en el codigo y mnsajes de grupo de wathapp
+Iran breves comentarios pertinentes a las actividades asignadas.
+Esta actividad ya se está realizando a  través de comentarios en el código y mensajes en el grupo de Whatsapp.
 
-●Qué se hizo ayer.
+● Qué se hizo ayer.
 ● Si se encontró con algún impedimento.
 ● Qué va a hacer hoy.
