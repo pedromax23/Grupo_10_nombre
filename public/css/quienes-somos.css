@@ -12,7 +12,6 @@
     background-color: #721121;
     width: 50%;
     text-align: center;
-  
    
 }
 
@@ -22,6 +21,7 @@
     text-align: center;
     padding-top: 10px;
 }
+
 @keyframes maquinaEscribir {
     from {
       width: 0;
