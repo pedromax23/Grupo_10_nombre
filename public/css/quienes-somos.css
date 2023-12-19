@@ -31,9 +31,9 @@
     }
   }
 
-  .historia, .tit-historia {
+  .historia, h3.tit-historia {
     overflow: hidden;
     border-right: 2px solid #000;
     white-space: nowrap;
-    animation: maquinaEscribir 2s steps(40, end) 1;
+    animation: maquinaEscribir 2s steps(40, end)  0.3s 1 normal both;
   }
