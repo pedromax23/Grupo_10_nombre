@@ -61,7 +61,6 @@ const controller = {
         res.render('products/detalleProducto', {producto: productos[productoIndex]});
         
     },
-
     carritoCompras : (req,res)=>{
 
         res.render('products/carrito-de-compras');
