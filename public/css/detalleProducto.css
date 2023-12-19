@@ -75,7 +75,11 @@
 .botones {
     text-align: center;
 }
-
+.botones p {
+    font-weight: lighter;
+    font-size: 11px;
+    color: gray;
+}
 .cantidad{
     width: 10%;  
 }
