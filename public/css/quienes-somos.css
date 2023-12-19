@@ -1,0 +1,39 @@
+
+.introduccion {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 10px;
+}
+.tit-historia {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+    font-size: 2rem;
+    color: white; 
+    background-color: #721121;
+    width: 50%;
+    text-align: center;
+  
+   
+}
+
+.historia {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 10px;
+}
+@keyframes maquinaEscribir {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .historia, .tit-historia {
+    overflow: hidden;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    animation: maquinaEscribir 2s steps(40, end) 1;
+  }
