@@ -94,6 +94,7 @@ ul {
     display: none;
 }
 
+
 /* Footer */
 .main-footer {
     margin-top: 10px;
@@ -160,6 +161,7 @@ ul {
     1px 1px #721121, -1px -1px #721121, 1px -1px #721121, -1px 1px #721121
 
 }
+
 
 @media (min-width: 768px) {
     .header-top {
