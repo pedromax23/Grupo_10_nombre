@@ -47,6 +47,8 @@ const controller = {
     quienesSomos: function(req, res) {
         res.render('main/quienes-somos');
     }
+
+    
 }
 
 module.exports = controller;
