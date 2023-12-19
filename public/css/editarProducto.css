@@ -1,7 +1,13 @@
 .edicion-producto-main {
     margin: 10px 0;
   }
-  
+
+h1 {
+  color: black;
+  margin: 10px;
+  text-align: center;
+}
+
 .caja-edicion {
     margin: 10px;
     background-color: transparent;
