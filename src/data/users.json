@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1, 
+        "nombre": "",
+        "apellido": "",
+        "e-mail": "",
+        "contraseña": "", 
+        "categoria":"", 
+        "imagen": ""
+    }
+]

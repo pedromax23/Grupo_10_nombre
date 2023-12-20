@@ -8,7 +8,7 @@
         <h1>Pagina de edicion de productos</h1>
         <section class="caja-edicion">
             <div class="caja-form1">
-                <form action="/productos/editarProducto/<%=productoAEditar.id%>" method="POST" class="edicion-form">
+                <form action="/productos/editarProducto/<%=productoAEditar.id%>?_method=PUT" method="POST" class="edicion-form">
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
                     <input value="<%=productoAEditar.nombre%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre-producto" id="nombre-producto"/>

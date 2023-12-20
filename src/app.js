@@ -1,6 +1,14 @@
 const express = require ("express");
 const app =express();
 const path = require("path");
+const override= require("method-override"); //para poder usar los metodos PUT y DELETE
+
+//Configuracion
+app.use(express.urlencoded({extended:false})); //para tomar los datos del formulario
+app.use(express.json()); //para tomar los datos del formulario
+app.use(override("_method")) //para poder usar los metodos PUT y DELETE
+
+
 
 // Archvos estaticos
 app.use(express.static(path.resolve(__dirname, "../public")));
