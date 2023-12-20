@@ -19,7 +19,7 @@ Restrospectiva Sprint 1
     * Conflictos
     
 
-    Retro sprint 2 :
+    Retro sprint 3 :
 
 1. Comenzar a hacer.
     * Generar comentarios de las tareas asignadas en el codigo 
