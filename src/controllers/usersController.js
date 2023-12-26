@@ -12,9 +12,10 @@ const controller = {
     procesarRegister: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         
-        let id = users.length > 0 ? users[users.length - 1].id + 1 : 1; // Si aun no se registro ningun usuario en el JSON el id va a ser 1
+        // Calculamos el ID de cada usuario || En caso de que sea el primer usuario el ID sera 1
+        let id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
 
-        // Completamos el usuario con los datos que ingreso
+        // Creamos el Objeto literal (nuevoUsuario) con la informacion que recibimos en el (req)
         let nuevoUsuario = {
             id: id, 
             nombre: req.body.nombre,
@@ -27,9 +28,9 @@ const controller = {
             comment: req.body.comment
         }
     
-        users.push(nuevoUsuario);
+        users.push(nuevoUsuario); // Agregamos el Objeto Literal al array de usuarios
 
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8'); // Agregamos los cambios al archivo .JSON
 
         res.redirect('/')
     }
