@@ -33,7 +33,6 @@ const controller = {
 
     },
     crear: function(req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         // Renderizo la vista crearProducto
         res.render('products/crearProducto');
     },

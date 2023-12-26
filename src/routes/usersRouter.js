@@ -9,6 +9,6 @@ router.get('/login', usersController.login);
 
 // Ruta formulario register
 router.get('/register', usersController.register);
-// router.post('/register', usersController.procesarRegister);
+router.post('/register', usersController.procesarRegister);
 
 module.exports = router;

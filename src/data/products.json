@@ -38,12 +38,5 @@
   "descripcion": "Es una cerveza que se potencia en una guarda prolongada, tiene toques a ahumado, café, chocolate, cacao, frutos oscuros, alcohol y un final relativamente seco, cuerpo sedoso y espeso y un amargor muy bien integrado, el peso pesado de las cervezas negras.",
   "precio": 5000,
   "stock": 100
- },
- {
-  "id": 6,
-  "nombre": "Cerveza cafetera",
-  "img": "imagenCerveza-1703209508116.png",
-  "descripcion": "Prueba",
-  "precio": "2000"
  }
 ]

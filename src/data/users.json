@@ -1,11 +1,13 @@
 [
-    {
-        "id": 1, 
-        "nombre": "",
-        "apellido": "",
-        "e-mail": "",
-        "contraseña": "", 
-        "categoria":"", 
-        "imagen": ""
-    }
+ {
+  "id": 1,
+  "nombre": "Pedro",
+  "apellido": "Morgade",
+  "nombreUsuario": "Pedro",
+  "email": "pedro@gmail.com",
+  "password": "contraseña",
+  "fechaNacimiento": "2023-12-30",
+  "domicilio": "Av.Independencia 2000",
+  "comment": "Primer registro"
+ }
 ]
