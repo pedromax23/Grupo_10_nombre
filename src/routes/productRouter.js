@@ -34,11 +34,11 @@ router.put('/editarProducto/:id', upload.single('imagenCerveza'), productControl
  router.get('/carrito-de-compras', productController.carritoCompras)
 
 // Ruta para ver el detalle de un producto
-router.get('/detalle/:id?', productController.detalleProducto);
+router.get('/detalle/:id', productController.detalleProducto);
 
 // Ruta para eliminar un producto 
 
-// router.delete('/detalle/:id?', productController.eliminarProducto);
+router.delete('/delete/:id', productController.eliminarProducto);
 
 
 module.exports = router;

@@ -5,7 +5,7 @@ const fs = require("fs");
 //Creamos el objeto literal correspondiente al recurso Producto-Capa controlador 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const controller = {
@@ -97,6 +97,26 @@ const controller = {
         // mostrar la vista al usuario redirigiendo
         res.redirect('/productos/detalle/' + idProducto); // de esta forma redireccionamos a la ruta /productos/detalle / el idProducto que editamos
     },
+    
+    eliminarProducto: (req, res) => {
+
+		let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		
+
+		products= products.filter(product=>{
+			
+			return product.id!= req.params.id
+		})
+/* 
+recorre el array la pate de id y quiero que eso me devuelva lo que sea diferente a lo que esta en la ruta parametrizada req.params.id por lo que me dara una lista sin los eliminados  */
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "));
+		/* se sobreescribe el archivo JSON */
+
+		res.redirect("/productos");
+		/* una vez elimiando redirecciono al usuario a la pagina de inicio  */
+	
+	}
 }
 
 //Exportamos controller para requerirlo en productRouter.js
