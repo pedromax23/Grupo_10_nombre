@@ -12,8 +12,9 @@
     <!--Detalles de productos agregados al carrito - en margen izquierdo-->
     <section class="detalle-productos">
         <h2>Detalle de productos</h2>
+        <% productos.forEach(producto => { %>
         <div class="productos-agregados">
-            <img class="imagen-producto" src="/img/golden.png" alt="imagen del producto">
+            <img class="imagen-producto" src="/img/productos/<%= producto.img %>" alt="imagen del producto">
             <div class="caja-descripcion">
                 <h4>Nombre del producto</h3>
                 <p>Detalle del producto</p>
@@ -24,57 +25,8 @@
                 <button class="trash-button" type="reset"> Remover <i class="fa-solid fa-trash-can"></i></button>
             </div>
         </div>
-        <div class="productos-agregados">
-            <img class="imagen-producto" src="/img/honey.png" alt="imagen del producto">
-            <div class="caja-descripcion">
-                <h4>Nombre del producto</h3>
-                <p>Detalle del producto</p>
-                <form class="form-cantidad" action="">
-                    <label for=""> Cantidad: </label> <input class="input-cantidad" type="number" placeholder="1">
-                    <button class="button-cantidad" type="button"><i class="fa-solid fa-plus"></i></button> <button class="button-cantidad" type="button"><i class="fa-solid fa-minus"></i></p></button>
-                </form>
-                <!-- boton eliminar -->
-                 <!-- <form action ="/detalle/:id?/delete"?_method="DELETE" method="POST" style="display: inline-flex"></form>>  -->
-                    <button class="trash-button" type="reset"> Remover <i class="fa-solid fa-trash-can"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="productos-agregados">
-            <img class="imagen-producto" src="/img/ipa.png" alt="imagen del producto">
-            <div class="caja-descripcion">
-                <h4>Nombre del producto</h3>
-                <p>Detalle del producto</p>
-                <form class="form-cantidad" action="">
-                    <label for=""> Cantidad: </label> <input class="input-cantidad" type="number" placeholder="1">
-                    <button class="button-cantidad" type="button"><i class="fa-solid fa-plus"></i></button> <button class="button-cantidad" type="button"><i class="fa-solid fa-minus"></i></p></button>
-                </form>
-                <button class="trash-button" type="reset"> Remover <i class="fa-solid fa-trash-can"></i></button>
-            </div>
-        </div>
-        <div class="productos-agregados">
-            <img class="imagen-producto" src="/img/amber.png" alt="imagen del producto">
-            <div class="caja-descripcion">
-                <h4>Nombre del producto</h3>
-                <p>Detalle del producto</p>
-                <form class="form-cantidad" action="">
-                    <label for=""> Cantidad: </label> <input class="input-cantidad" type="number" placeholder="1">
-                    <button class="button-cantidad" type="button"><i class="fa-solid fa-plus"></i></button> <button class="button-cantidad" type="button"><i class="fa-solid fa-minus"></i></p></button>
-                </form>
-                <button class="trash-button" type="reset"> Remover <i class="fa-solid fa-trash-can"></i></button>
-            </div>
-        </div>
-        <div class="productos-agregados">
-            <img class="imagen-producto" src="/img/stout.png" alt="imagen del producto">
-            <div class="caja-descripcion">
-                <h4>Nombre del producto</h3>
-                <p>Detalle del producto</p>
-                <form class="form-cantidad" action="">
-                    <label for=""> Cantidad: </label> <input class="input-cantidad" type="number" placeholder="1">
-                    <button class="button-cantidad" type="button"><i class="fa-solid fa-plus"></i></button> <button class="button-cantidad" type="button"><i class="fa-solid fa-minus"></i></p></button>
-                </form>
-                <button class="trash-button" type="reset"> Remover <i class="fa-solid fa-trash-can"></i></button>
-            </div>
-        </div>
+        <% }) %>
+        
     </section>
 
     <!--Resumen total de la compra - en margen derecho cuando res > 768-->

@@ -116,7 +116,14 @@ recorre el array la pate de id y quiero que eso me devuelva lo que sea diferente
 		res.redirect("/productos");
 		/* una vez elimiando redirecciono al usuario a la pagina de inicio  */
 	
-	}
+	},
+    carritoCompras: (req, res) => {
+    // traer const de productos y transformarlo en array
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    res.render('products/carrito-de-compras', {productos: products});
+
+    }
+
 }
 
 //Exportamos controller para requerirlo en productRouter.js
