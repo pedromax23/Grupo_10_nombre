@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+}
+
+.header-principal {
+    background-color: #f6b16c;
+    border-bottom: solid 1px #692631;
+}
+
+.header-top {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-top a {
+    display: block;
+    width: 100%;
+}
+
+.header-top img {
+    width: 60%;
+}
+
+.header-top h2,
+.header-top h1 {
+    color: #721121;
+    margin-top: 0;
+}
+.nav-padre {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    
+}
+.menu-superior {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+}
+.menu-superior li {
+    padding: 5px;
+    border: 1px solid #721121;
+    background-color: #A5402D;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.menu-superior a {
+    color: #FFFFFF;
+    font-size: 25px;
+}
+.menu-inferior {
+    justify-content: space-evenly;
+    margin: auto;
+    display: flex;
+    padding: 0;
+}
+.menu-superior li a {
+    color: #FFFFFF;
+    font-size: 25px;
+    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
+}
+.menu-inferior li {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #721121;
+    background-color:  #A5402D;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.menu-inferior i{
+    color:#FFFFFF;
+    transition: all 200ms;
+}
+.menu-inferior i:hover {
+    color: #721121;
+}
+
+.tituto-pantalla-grande{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-top div {
+        margin: 0;
+    }
+    .header-top img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-top {
+        justify-content: space-around;
+    }
+    .menu-superior {
+        flex-direction: row;
+        width: 70%;
+        margin:0%;
+    }
+    .menu-superior li {
+        margin-right: 20px;
+        width: 27%;
+        transition: all 500ms;
+    }
+    .menu-superior li:hover {
+        width: 29%;
+    }
+    .titulos-top {
+        display: flex;
+        text-align: center;
+    }
+    .titulos-top h2,
+    .titulos-top h1 {
+        font-size: 40px;
+        padding-right: 60px;
+    }
+    .nav-padre {
+        justify-content: space-evenly; /*Modifico el space-between por el space-evenly*/
+    }
+
+    .menu-inferior {
+        margin: 0%;
+    }
+
+    .tituto-pantalla-chica{
+        display: none;
+    }
+
+    .tituto-pantalla-grande{
+        display:inline;
+    }
+}

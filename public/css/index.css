@@ -1,6 +1,3 @@
-* {
-    box-sizing: border-box;
-}
 body{
     font-family: 'Roboto';
     background-color: #FFCF99;
@@ -15,123 +12,6 @@ ul {
     padding: 0;
 }
 
-/* Header */
-.header-principal{
-    background-color: #ffc07f;
-    border-bottom: solid 1px #721121;
-
-}
-.header-top {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
-.header-top img {
-    width: 250px;
-}
-.header-top h2,
-.header-top h1 {
-    color: #721121;
-    margin-top: 0;
-}
-.nav-padre {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    padding-bottom: 10px;
-    
-}
-.menu-superior {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-}
-.menu-superior li {
-    padding: 5px;
-    border: 1px solid #721121;
-    background-color: #A5402D;
-    margin-bottom: 5px;
-    border-radius: 3px;
-}
-.menu-superior a {
-    color: #FFFFFF;
-    font-size: 25px;
-}
-.menu-inferior {
-    justify-content: space-evenly;
-    margin: auto;
-    display: flex;
-    padding: 0;
-}
-.menu-superior li a {
-    color: #FFFFFF;
-    font-size: 25px;
-    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
-}
-.menu-inferior li {
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #721121;
-    background-color:  #A5402D;
-    font-size: 30px;
-    margin-left: 15px;
-}
-.menu-inferior i{
-    color:#FFFFFF;
-    transition: all 200ms;
-}
-.menu-inferior i:hover {
-    color: #721121;
-}
-
-.tituto-pantalla-grande{
-    display: none;
-}
-
-
-/* Footer */
-.main-footer {
-    margin-top: 10px;
-    border-top: solid 1px #721121;
-    background-color: #ffc07f;
-    text-align: center; 
-    padding: 10px 0;
-    color: #721121;
-}
-.secciones-footer {
-    display: flex;
-    flex-direction: column;
-}
-.secciones-footer section {
-    border-bottom: 1px solid #721121;
-    width: 90%;
-    margin: auto;
-}
-.secciones-footer h3 {
-    font-size: 25px;
-    color: #721121;
-}
-.secciones-footer a {
-    color: #721121;
-}
-.redes {
-    display: flex;
-    justify-content: center;  
-}
-.seguinos i {
-    font-size: 1.5rem;
-    margin: 5px;
-}
-.copyright {
-    width: 90%;
-    margin: auto;
-}
 .carousel-inner{
     width: 100%;
     margin: auto;
@@ -164,15 +44,6 @@ ul {
 
 
 @media (min-width: 768px) {
-    .header-top {
-        flex-direction: row;
-    }
-    .header-top div {
-        margin: 0;
-    }
-    .header-top img {
-        width: 70%;
-    }
     .descripcion-producto{
         font-size: 20px;
     }
@@ -180,63 +51,18 @@ ul {
         font-size: 40px;
         color: white;
         font-weight: 500;
-        /* text-shadow: 2px 0 #ffc07f, -2px 0 #ffc07f, 0 2px #ffc07f, 0 -2px #ffc07f,
-                   1px 1px #ffc07f, -1px -1px #ffc07f, 1px -1px #ffc07f, -1px 1px #ffc07f */
-    
     }
     .carousel-caption-description-detail{
         font-size: 25px;
         color: white;
         font-weight: 500;
-
     }
 }
 
 
 @media (min-width: 1200px) {
-    .header-top {
-        justify-content: space-around;
-    }
-    .menu-superior {
-        flex-direction: row;
-        width: 70%;
-        margin:0%;
-    }
-    .menu-superior li {
-        margin-right: 20px;
-        width: 27%;
-        transition: all 500ms;
-    }
-    .menu-superior li:hover {
-        width: 29%;
-    }
-    .titulos-top {
-        display: flex;
-        text-align: center;
-    }
-    .titulos-top h2,
-    .titulos-top h1 {
-        font-size: 40px;
-        padding-right: 60px;
-    }
     .carousel-inner{
         width: 80%;
-    }
-    .secciones-footer {
-        flex-direction: row;
-    }
-    .secciones-footer section {
-        width: 90%;
-        margin: 0;
-    }
-    .ayuda {
-        border-right: 1px solid #721121;
-    }
-    .seguinos {
-        border-left: 1px solid #721121;
-    }
-    .copyright {
-        margin: auto;
     }
     .carousel-control-prev-icon, .carousel-control-next-icon{
         width: 40px;
@@ -266,23 +92,5 @@ ul {
         padding-left: 9.5px;
         padding-top: 10px;
         border-radius: 50%;
-    }
-
-     .nav-padre {
-        /*width: 80%;*/ /*Elimino el ancho del nav-padre para que tome el 100% del contenedor*/
-        justify-content: space-evenly; /*Modifico el space-between por el space-evenly*/
-    }
-
-    .menu-inferior {
-        margin: 0%;
-    }
-
-    .tituto-pantalla-chica{
-        display: none;
-    }
-
-    .tituto-pantalla-grande{
-        display:inline;
-    }
-    
+    } 
 }
