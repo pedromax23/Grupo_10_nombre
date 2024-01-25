@@ -7,9 +7,6 @@ const cookies = require('cookie-parser'); // Requerimos cookie-parser
 const userLoggedMiddleware = require('./middleware/global/userLogged.js') // Verifica si hay un usuario logeado anteriormente
 
 
-const mainRuoter = require("./routes/mainRouter");// Main Ruta
-const productRouter = require("./routes/productRouter");// Product Ruta
-const usersRouter = require("./routes/usersRouter");// Users Ruta
 
 // Configurando EJS
 app.set('views', path.resolve(__dirname, "views"));
@@ -32,6 +29,9 @@ app.use(session({
 app.use(cookies()); // Para usar las cokies
 app.use(userLoggedMiddleware)
 
+const mainRuoter = require("./routes/mainRouter");// Main Ruta
+const productRouter = require("./routes/productRouter");// Product Ruta
+const usersRouter = require("./routes/usersRouter");// Users Ruta
 app.use('/', mainRuoter);
 app.use('/productos', productRouter);
 app.use('/user', usersRouter)

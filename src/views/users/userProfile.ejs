@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('../partials/head', {estilos: "login", titulo: "La cerveza - Iniciar sesión", script: ""})%>
+
+<body>
+
+    <%- include('../partials/header')%>
+
+    <main class="loguear">     
+        <h1>Este es el perfil de: <%= user.nombre %></h1>
+
+        <a href="/user/logout">Logout</a>
+    </main>
+
+        <%- include('../partials/footer')%>
+
+</body>

@@ -15,10 +15,11 @@ const controller = {
             if(usuarioALogear.password === req.body.clave) {
                 delete usuarioALogear.password;
                 req.session.usuarioLogeado = usuarioALogear;
-
+                
                 if(req.body.recordame) {
                     res.cookie('userEmail', usuarioALogear.email, {maxAge: 1000 * 60 * 60 * 60 * 60})
                 }
+                res.locals.logeado = true;
 
                 return res.redirect('/')
             } else {
@@ -56,6 +57,23 @@ const controller = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8'); // Agregamos los cambios al archivo .JSON
 
         res.redirect('/')
+    },
+
+    profile: function(req, res) {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        let usuarioLogeado = users.find(usuario => usuario.email === req.session.usuarioLogeado.email)
+
+        res.render('users/userProfile', {'user' : usuarioLogeado})
+    },
+    logout: function(req, res) {
+        req.session.destroy();
+        res.clearCookie('userEmail')
+        return res.redirect('/')
+    },
+
+    notLogin: (req, res) => {
+        res.render('users/notLogin')
     }
 }
 
