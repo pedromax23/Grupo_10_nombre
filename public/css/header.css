@@ -1,17 +1,22 @@
 * {
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
+
 ul {
     padding: 0;
 }
 
 .header-principal {
+    display: flex;
+    flex-direction: column;
     background-color: #f6b16c;
     border-bottom: solid 1px #692631;
 }
@@ -39,8 +44,8 @@ ul {
     color: #721121;
 }
 
-.header-top h2,
-.header-top h1 {
+.titulos-top h2,
+.titulos-top h1 {
     margin: 5px 0;
 }
 
@@ -79,7 +84,7 @@ ul {
 .menu-superior li a {
     color: #FFFFFF;
     font-size: 25px;
-    display: block; /* Esto hace que el enlace ocupe todo el espacio del li */
+    display: block;
 }
 .menu-inferior li {
     padding: 5px;
