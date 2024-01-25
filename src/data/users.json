@@ -16,9 +16,20 @@
   "apellido": "fernandez",
   "nombreUsuario": "natyal ",
   "email": "nataliaalpuy1@gmail.com",
-  "password": "lukya0717",
+  "password": "lukya071",
   "fechaNacimiento": "1984-05-05",
   "domicilio": "solymar 111",
   "comment": ""
+ },
+ {
+  "id": 3,
+  "nombre": "Carlos",
+  "apellido": "Carozo",
+  "nombreUsuario": "Carlitos",
+  "email": "carlos@gmail.com",
+  "password": "carlitos123",
+  "fechaNacimiento": "1978-01-24",
+  "domicilio": "carlos al  2000",
+  "comment": "me registro"
  }
 ]

@@ -6,6 +6,29 @@ const controller = {
     login: function(req, res) {
         res.render('users/login')
     },
+    procesarlogin: function(req, res) {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        let usuarioALogear = users.find(usuario => usuario.nombreUsuario === req.body.nombre_usuario)
+
+        if(usuarioALogear) {
+            if(usuarioALogear.password === req.body.clave) {
+                delete usuarioALogear.password;
+                req.session.usuarioLogeado = usuarioALogear;
+
+                if(req.body.recordame) {
+                    res.cookie('userEmail', usuarioALogear.email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+                }
+
+                return res.redirect('/')
+            } else {
+                res.send('Contraseña erroñea')
+            }
+        } else {
+            res.send('Usuario no encontrado')
+        }
+
+    },
     register: function(req, res) {
         res.render('users/register')
     },

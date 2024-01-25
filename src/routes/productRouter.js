@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const authMiddleware = require('../middleware/routes/authRegister.js') // Autenticador de registro Middleware
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
@@ -23,22 +24,20 @@ const upload = multer({ storage: storage });
 router.get('/', productController.index); //Estaría el listado del producto
 
 // Ruta formulario para crear un producto
-router.get('/crearProducto',productController.crear); 
-router.post('/crearProducto', upload.single('imagenCerveza'), productController.crearProducto);
+router.get('/crearProducto', authMiddleware, productController.crear); 
+router.post('/crearProducto', authMiddleware, upload.single('imagenCerveza'), productController.crearProducto);
 
 // Ruta formulario para editar un producto
-router.get('/editarProducto/:id',productController.editar);
-router.put('/editarProducto/:id', upload.single('imagenCerveza'), productController.editarProducto);
+router.get('/editarProducto/:id', authMiddleware, productController.editar);
+router.put('/editarProducto/:id', authMiddleware, upload.single('imagenCerveza'), productController.editarProducto);
 
 // Ruta para ver el carrito de compras
- router.get('/carrito-de-compras', productController.carritoCompras)
+ router.get('/carrito-de-compras', authMiddleware, productController.carritoCompras)
 
 // Ruta para ver el detalle de un producto
-router.get('/detalle/:id', productController.detalleProducto);
+router.get('/detalle/:id', authMiddleware, productController.detalleProducto);
 
 // Ruta para eliminar un producto 
-
-router.delete('/delete/:id', productController.eliminarProducto);
-
+router.delete('/delete/:id', authMiddleware, productController.eliminarProducto);
 
 module.exports = router;
