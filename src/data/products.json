@@ -8,13 +8,6 @@
   "stock": 300
  },
  {
-  "id": 2,
-  "nombre": "Honey",
-  "img": "honey.png",
-  "descripcion": "De color dorado, cuerpo medio, con un intenso aroma y sabor a miel. Se caracteriza por ser muy fresca, agradable, de gusto dulce. Ideal para calmar la sed o acompañar ensaladas, platos de sabores neutros o afrutados.",
-  "precio": "2000"
- },
- {
   "id": 3,
   "nombre": "IPA",
   "img": "ipa.png",

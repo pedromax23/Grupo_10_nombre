@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const authMiddleware = require('../middleware/routes/authRegister.js') // Autenticador de registro Middleware
 const multer = require('multer');
 const path = require('path');
-const authMiddleware = require('../middleware/routes/authRegister.js') // Autenticador de registro Middleware
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
