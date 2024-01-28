@@ -1,6 +1,7 @@
 const path = require("path"); 
 const fs = require("fs"); 
 const usersFilePath = path.join(__dirname, '../data/users.json');
+const bcrypt= require('bcryptjs');
 
 const controller = {
     login: function(req, res) {
@@ -10,9 +11,14 @@ const controller = {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
         let usuarioALogear = users.find(usuario => usuario.nombreUsuario === req.body.nombre_usuario)
+        
+        //Comparamos el texto plano en la contraseña del login con la contraseña encriptada.
+        let check= bcrypt.compareSync(req.body.clave, usuarioALogear.password);
+        //console.log(check);
 
         if(usuarioALogear) {
-            if(usuarioALogear.password === req.body.clave) {
+            //if(usuarioALogear.password === req.body.clave) {
+            if(check){
                 delete usuarioALogear.password;
                 req.session.usuarioLogeado = usuarioALogear;
                 
@@ -23,7 +29,7 @@ const controller = {
 
                 return res.redirect('/')
             } else {
-                res.send('Contraseña erroñea')
+                res.send('Contraseña erronea')
             }
         } else {
             res.send('Usuario no encontrado')
@@ -35,9 +41,13 @@ const controller = {
     },
     procesarRegister: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        //const bcrypt= require('bcryptjs');
         
         // Calculamos el ID de cada usuario || En caso de que sea el primer usuario el ID sera 1
         let id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+        //Encriptamos la contraseña del register 
+        let passEncriptada= bcrypt.hashSync(req.body.password,10);
+
 
         // Creamos el Objeto literal (nuevoUsuario) con la informacion que recibimos en el (req)
         let nuevoUsuario = {
@@ -46,7 +56,7 @@ const controller = {
             apellido: req.body.apellido,
             nombreUsuario: req.body.nombreUsuario,
             email: req.body.email,
-            password: req.body.password,
+            password: passEncriptada,
             fechaNacimiento: req.body.fechaNacimiento,
             domicilio: req.body.domicilio, 
             comment: req.body.comment
