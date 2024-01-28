@@ -53,5 +53,17 @@
   "fechaNacimiento": "1982-07-06",
   "domicilio": "Darragueira 2542",
   "comment": "Hola"
+ },
+ {
+  "id": 6,
+  "nombre": "Pruba",
+  "apellido": "prueba",
+  "nombreUsuario": "prueba",
+  "email": "prueba@gmail.com",
+  "password": "$2a$10$51iDteCd9WwfqoP5TQ069Ol0POTiSlF2XAi2jxuE.hnKsTmMEfrsS",
+  "fechaNacimiento": "2024-01-04",
+  "domicilio": "123",
+  "comment": "123",
+  "img": "imagenUsuario-1706483877006.png"
  }
 ]
