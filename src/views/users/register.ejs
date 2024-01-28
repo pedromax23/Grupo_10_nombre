@@ -8,7 +8,7 @@
     <%- include('../partials/header')%>
 
     <main class="registro">
-        <form class="formulario" action="/user/register" method="POST"> 
+        <form class="formulario" action="/user/register" method="POST" enctype="multipart/form-data"> 
 
             <!-- Nombre -->
             <div> 
@@ -46,6 +46,11 @@
                 <input placeholder="Domicilio" type="text" required name="domicilio"/>
             </div>
 
+            <!-- Imagen usuario -->
+            <div class="imagen-usuario">
+                <label for="imagenUsuario">Imagen de Usuario</label>
+                <input type="file" name="imagenUsuario"  class="file">
+            </div>
             <!-- Comentario -->
             <div>
                 <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
