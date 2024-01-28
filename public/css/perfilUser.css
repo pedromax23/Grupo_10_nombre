@@ -1,0 +1,15 @@
+.perfil {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.perfil_name {
+    font-size: 25px;
+}
+
+.imagen_usuario {
+    margin: auto;
+    width: 300px;
+}

@@ -1,35 +1,14 @@
 [
  {
-  "id": 1,
-  "nombre": "Pedro",
-  "apellido": "Morgade",
-  "nombreUsuario": "Pedro",
-  "email": "pedro@gmail.com",
-  "password": "contraseña",
-  "fechaNacimiento": "2023-12-30",
-  "domicilio": "Av.Independencia 2000",
-  "comment": "Primer registro"
- },
- {
-  "id": 2,
-  "nombre": "natalia",
-  "apellido": "fernandez",
-  "nombreUsuario": "natyal ",
-  "email": "nataliaalpuy1@gmail.com",
-  "password": "lukya071",
-  "fechaNacimiento": "1984-05-05",
-  "domicilio": "solymar 111",
-  "comment": ""
- },
- {
-  "id": 3,
-  "nombre": "Carlos",
-  "apellido": "Carozo",
-  "nombreUsuario": "Carlitos",
-  "email": "carlos@gmail.com",
-  "password": "carlitos123",
-  "fechaNacimiento": "1978-01-24",
-  "domicilio": "carlos al  2000",
-  "comment": "me registro"
+  "id": 4,
+  "nombre": "prueba1",
+  "apellido": "prueba1",
+  "nombreUsuario": "prueba1",
+  "email": "prueba1@gmail.com",
+  "password": "$2a$10$hmQq4Mw9gXPbswMkij3dPOSkvwWQ1wag/Veq6GhTVdNchu9BubFmi",
+  "fechaNacimiento": "2024-01-20",
+  "domicilio": "123",
+  "comment": "123",
+  "img": "imagenUsuario-1706474572167.jpg"
  }
 ]

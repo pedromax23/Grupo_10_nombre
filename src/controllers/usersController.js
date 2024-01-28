@@ -1,6 +1,7 @@
 const path = require("path"); 
 const fs = require("fs"); 
 const usersFilePath = path.join(__dirname, '../data/users.json');
+const bcrypt = require('bcryptjs');
 
 const controller = {
     login: function(req, res) {
@@ -12,7 +13,8 @@ const controller = {
         let usuarioALogear = users.find(usuario => usuario.nombreUsuario === req.body.nombre_usuario)
 
         if(usuarioALogear) {
-            if(usuarioALogear.password === req.body.clave) {
+            let comprobarPasword = bcrypt.compareSync(req.body.clave, usuarioALogear.password)
+            if(comprobarPasword) {
                 delete usuarioALogear.password;
                 req.session.usuarioLogeado = usuarioALogear;
                 
@@ -39,6 +41,9 @@ const controller = {
         
         // Calculamos el ID de cada usuario || En caso de que sea el primer usuario el ID sera 1
         let id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+
+        // Encriptacion password
+        req.body.password = bcrypt.hashSync(req.body.password, 10)
 
         // Creamos el Objeto literal (nuevoUsuario) con la informacion que recibimos en el (req)
         let nuevoUsuario = {
