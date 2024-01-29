@@ -51,7 +51,7 @@ const controller = {
             fechaNacimiento: req.body.fechaNacimiento,
             domicilio: req.body.domicilio, 
             comment: req.body.comment,
-            img: req.file.filename,
+            img:  req.file ? req.file.filename : 'no-image-user.jpg',
         }
     
         users.push(nuevoUsuario); // Agregamos el Objeto Literal al array de usuarios

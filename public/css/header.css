@@ -76,14 +76,14 @@ ul {
     font-size: 25px;
 }
 .menu-inferior {
-    justify-content: space-evenly;
+    justify-content: flex-end;
     margin: auto;
     display: flex;
     padding: 0;
 }
 .menu-superior li a {
     color: #FFFFFF;
-    font-size: 25px;
+    font-size: 20px;
     display: block;
 }
 .menu-inferior li {
@@ -106,6 +106,18 @@ ul {
     display: none;
 }
 
+.linkImgUsuario{
+    width: 60px;
+}
+.imagenUsuario{
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+
+
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
@@ -115,6 +127,21 @@ ul {
     .header-top div {
         margin: 0;
     }
+
+    .linkImgUsuario{
+        width: 70px;
+    }
+    .imagenUsuario{
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .menu-inferior li{
+        padding: 10px;
+
+    }
+    
 }
 
 @media (min-width: 1200px) {
@@ -123,13 +150,19 @@ ul {
     }
     .menu-superior {
         flex-direction: row;
-        width: 70%;
+        text-align: center;
+        width: 90%;
         margin:0%;
+        align-items: center;
     }
+
+
     .menu-superior li {
+        padding: 5px;
         margin-right: 20px;
-        width: 27%;
+        width: 25%;
         transition: all 500ms;
+        margin-bottom: 0px;
     }
     .menu-superior li:hover {
         width: 29%;
@@ -145,10 +178,18 @@ ul {
     }
     .nav-padre {
         justify-content: space-evenly; /*Modifico el space-between por el space-evenly*/
+        width: 80%;
     }
 
-    .menu-inferior {
+    .menu-inferior{
         margin: 0%;
+        width: 30%;
+        align-items: center;
+    }
+
+    .menu-inferior li{
+        padding: 5px;
+
     }
 
     .tituto-pantalla-chica{
@@ -157,5 +198,14 @@ ul {
 
     .tituto-pantalla-grande{
         display:inline;
+    }
+
+    .linkImgUsuario{
+        width: 20%;
+    }
+    .imagenUsuario{
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
     }
 }

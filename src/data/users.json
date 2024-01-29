@@ -8,7 +8,8 @@
   "password": "contraseña",
   "fechaNacimiento": "2023-12-30",
   "domicilio": "Av.Independencia 2000",
-  "comment": "Primer registro"
+  "comment": "Primer registro",
+  "img": "no-image-user.jpg"
  },
  {
   "id": 2,
@@ -19,7 +20,8 @@
   "password": "lukya071",
   "fechaNacimiento": "1984-05-05",
   "domicilio": "solymar 111",
-  "comment": ""
+  "comment": "",
+  "img": "no-image-user.jpg"
  },
  {
   "id": 3,
@@ -30,6 +32,19 @@
   "password": "carlitos123",
   "fechaNacimiento": "1978-01-24",
   "domicilio": "carlos al  2000",
-  "comment": "me registro"
+  "comment": "me registro",
+  "img": "no-image-user.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Nicolas",
+  "apellido": "Gerlero",
+  "nombreUsuario": "nico",
+  "email": "nicogerlero@hotmail.com",
+  "password": "123",
+  "fechaNacimiento": "2024-01-17",
+  "domicilio": "dsadsa",
+  "comment": "",
+  "img": "imagenUsuario-1706486382554.jpg"
  }
 ]

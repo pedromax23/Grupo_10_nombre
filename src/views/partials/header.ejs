@@ -25,8 +25,8 @@
         </ul>
         <ul class="menu-inferior">
             <% if(locals.estaLogeado) { %>
-                <li><a href="/user/login"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="/productos/carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li><!-- carrito -->
+                <a href="/user/login" class="linkImgUsuario"><img src="/img/usuarios/<%= locals.usuarioLogeado.img %>" class="imagenUsuario"></a>
+                <li><a href="/productos/carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li>
             <% } else { %>
                 <li><a href="/user/login"><i class="fa-solid fa-user"></i></a></li>
             <% } %>
