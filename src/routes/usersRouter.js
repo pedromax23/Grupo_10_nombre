@@ -32,6 +32,8 @@ router.post('/register', authLoginMiddleware, upload.single('imagenUsuario'), us
 // Perfil del usuario
 router.get('/profile', authMiddleware, usersController.profile)
 router.get('/logout', authMiddleware, usersController.logout);
+router.get('/cambiarPassword/:id', authMiddleware, usersController.cambiarContraseña);
+router.post('/cambiarPassword/:id', authMiddleware, usersController.actualizarPassword);
 
 // Usuario no logeado
 router.get('/notLogin', authLoginMiddleware, usersController.notLogin)

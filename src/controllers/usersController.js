@@ -81,9 +81,39 @@ const controller = {
         return res.redirect('/')
     },
 
+    cambiarContraseña: function(req, res) {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        let usuarioId = users.find(usuario => usuario.id === (parseInt(req.params.id)))
+
+        res.render('users/cambiarPassword', {usuario: usuarioId})
+    },
+
+    actualizarPassword: function(req, res) {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        let usuarioId = users.find(usuario => usuario.id === (parseInt(req.params.id)))
+
+        if(bcrypt.compareSync(req.body.contraseña, usuarioId.password)) {
+            let nuevaContraseña = bcrypt.hashSync(req.body.nuevaContraseña, 12)
+
+            usuarioId.password = nuevaContraseña
+
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
+            req.session.destroy();
+            res.clearCookie('userEmail')
+    
+            res.redirect('/user/login')
+        } else {
+            res.send('Contraseña erroñea')
+        }
+
+
+    },
+
     notLogin: (req, res) => {
         res.render('users/notLogin')
-    }
+    },
 }
 
 module.exports = controller;

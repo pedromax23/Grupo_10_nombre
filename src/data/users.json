@@ -1,54 +1,5 @@
 [
  {
-  "id": 1,
-  "nombre": "Pedro",
-  "apellido": "Morgade",
-  "nombreUsuario": "Pedro",
-  "email": "pedro@gmail.com",
-  "password": "contraseña",
-  "fechaNacimiento": "2023-12-30",
-  "domicilio": "Av.Independencia 2000",
-  "comment": "Primer registro",
-  "img": "no-image-user.jpg"
- },
- {
-  "id": 2,
-  "nombre": "natalia",
-  "apellido": "fernandez",
-  "nombreUsuario": "natyal ",
-  "email": "nataliaalpuy1@gmail.com",
-  "password": "lukya071",
-  "fechaNacimiento": "1984-05-05",
-  "domicilio": "solymar 111",
-  "comment": "",
-  "img": "no-image-user.jpg"
- },
- {
-  "id": 3,
-  "nombre": "Carlos",
-  "apellido": "Carozo",
-  "nombreUsuario": "Carlitos",
-  "email": "carlos@gmail.com",
-  "password": "carlitos123",
-  "fechaNacimiento": "1978-01-24",
-  "domicilio": "carlos al  2000",
-  "comment": "me registro",
-  "img": "no-image-user.jpg"
- },
- {
-  "id": 4,
-  "nombre": "ANGELINA",
-  "apellido": "BRUZONI",
-  "nombreUsuario": "Angie",
-  "email": "angelinabruzoni2050@gmail.com",
-  "password": "Felipe645!",
-  "fechaNacimiento": "1991-01-21",
-  "domicilio": "zabaleta 455",
-  "comment": "Hola",
-  "img": "no-image-user.jpg"
-
- },
- {
   "id": 5,
   "nombre": "Vanesa",
   "apellido": "Paschetta",
@@ -59,18 +10,17 @@
   "domicilio": "Darragueira 2542",
   "comment": "Hola",
   "img": "no-image-user.jpg"
-
  },
  {
   "id": 6,
-  "nombre": "Pruba",
-  "apellido": "prueba",
-  "nombreUsuario": "prueba",
-  "email": "prueba@gmail.com",
-  "password": "$2a$10$51iDteCd9WwfqoP5TQ069Ol0POTiSlF2XAi2jxuE.hnKsTmMEfrsS",
-  "fechaNacimiento": "2024-01-04",
+  "nombre": "Pedro",
+  "apellido": "Morgade",
+  "nombreUsuario": "pedro",
+  "email": "pedro@gmail.com",
+  "password": "$2a$12$83uziwPRt/u2IaNGt50J9uRIFVJRCXA9PwCJmCtlfThdx7T.q6fpK",
+  "fechaNacimiento": "2024-01-05",
   "domicilio": "123",
   "comment": "123",
-  "img": "no-image-user.jpg"
+  "img": "imagenUsuario-1706540811315.jpg"
  }
 ]

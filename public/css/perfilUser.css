@@ -13,3 +13,18 @@
     margin: auto;
     width: 300px;
 }
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+.botones a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(151, 133, 133);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
