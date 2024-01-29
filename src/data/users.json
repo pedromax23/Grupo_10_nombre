@@ -22,5 +22,17 @@
   "domicilio": "123",
   "comment": "123",
   "img": "imagenUsuario-1706540811315.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "prueba",
+  "apellido": "prueba",
+  "nombreUsuario": "prueba",
+  "email": "prueba@gmail.com",
+  "password": "$2a$10$FTMqWemkMQTfzTwhpmbCVuLXC6IIbR3icFkW4EBqqmrUwMtHL3J3W",
+  "fechaNacimiento": "2024-01-03",
+  "domicilio": "prueba",
+  "comment": "prueba",
+  "img": "imagenUsuario-1706542049416.png"
  }
 ]

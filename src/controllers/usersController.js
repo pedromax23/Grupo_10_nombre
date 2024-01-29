@@ -67,7 +67,6 @@ const controller = {
 
         res.redirect('/user/login')
     },
-
     profile: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -80,7 +79,6 @@ const controller = {
         res.clearCookie('userEmail')
         return res.redirect('/')
     },
-
     cambiarContraseña: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -88,7 +86,6 @@ const controller = {
 
         res.render('users/cambiarPassword', {usuario: usuarioId})
     },
-
     actualizarPassword: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -110,7 +107,6 @@ const controller = {
 
 
     },
-
     notLogin: (req, res) => {
         res.render('users/notLogin')
     },
