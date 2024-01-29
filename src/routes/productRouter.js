@@ -1,43 +1,30 @@
 const express = require("express");
 const router = express.Router();
-const authMiddleware = require('../middleware/routes/authRegister.js') // Autenticador de registro Middleware
-const multer = require('multer');
-const path = require('path');
+const authMiddleware = require('../middleware/routes/authRegister.js'); // Autenticador de registro Middleware
+const multer = require('../middleware/routes/multerProducto.js');
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
-
-// Configuración de multer
-
-const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, 'public/img')
-    },
-    filename: function(req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    },
-});
-
-const upload = multer({ storage: storage });
+const multer = require("multer");
 
 // Ruta pagina productos
-router.get('/', productController.index); //Estaría el listado del producto
-
-// Ruta formulario para crear un producto
-router.get('/crearProducto', authMiddleware, productController.crear); 
-router.post('/crearProducto', authMiddleware, upload.single('imagenCerveza'), productController.crearProducto);
-
-// Ruta formulario para editar un producto
-router.get('/editarProducto/:id', authMiddleware, productController.editar);
-router.put('/editarProducto/:id', authMiddleware, upload.single('imagenCerveza'), productController.editarProducto);
-
-// Ruta para ver el carrito de compras
- router.get('/carrito-de-compras', authMiddleware, productController.carritoCompras)
+router.get('/', productController.listado);
 
 // Ruta para ver el detalle de un producto
 router.get('/detalle/:id', authMiddleware, productController.detalleProducto);
 
+// Ruta para ver el carrito de compras
+router.get('/carrito-de-compras', authMiddleware, productController.carritoCompras)
+
+ // Ruta formulario para crear un producto
+router.get('/crearProducto', authMiddleware, productController.crearProducto); 
+router.post('/crearProducto', authMiddleware, multer.single('imagenCerveza'), productController.crearProductoPOST);
+
+// Ruta formulario para editar un producto
+router.get('/editarProducto/:id', authMiddleware, productController.editarProducto);
+router.put('/editarProducto/:id', authMiddleware, multer.single('imagenCerveza'), productController.editarProductoPOST);
+
 // Ruta para eliminar un producto 
-router.delete('/delete/:id', authMiddleware, productController.eliminarProducto);
+router.delete('/delete/:id', authMiddleware, productController.eliminarProductoDELETE);
 
 module.exports = router;

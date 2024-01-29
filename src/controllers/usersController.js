@@ -7,9 +7,8 @@ const controller = {
     login: function(req, res) {
         res.render('users/login')
     },
-    procesarlogin: function(req, res) {
+    loginPOST: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
         let usuarioALogear = users.find(usuario => usuario.nombreUsuario === req.body.nombre_usuario)
 
         //Comparamos el texto plano en la contraseña del login con la contraseña encriptada.
@@ -32,19 +31,17 @@ const controller = {
         } else {
             res.send('Usuario no encontrado')
         }
-
     },
     register: function(req, res) {
         res.render('users/register')
     },
-    procesarRegister: function(req, res) {
-
+    registerPOST: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        //const bcrypt= require('bcryptjs');
         
         // Calculamos el ID de cada usuario || En caso de que sea el primer usuario el ID sera 1
         let id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
 
+        // Encriptamos la contraseña
         let passEncriptada = bcrypt.hashSync(req.body.password,10);
 
         // Creamos el Objeto literal (nuevoUsuario) con la informacion que recibimos en el (req)
@@ -62,19 +59,18 @@ const controller = {
         }
     
         users.push(nuevoUsuario); // Agregamos el Objeto Literal al array de usuarios
-
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8'); // Agregamos los cambios al archivo .JSON
 
         res.redirect('/user/login')
     },
-    profile: function(req, res) {
+    perfil: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
         let usuarioLogeado = users.find(usuario => usuario.email === req.session.usuarioLogeado.email)
 
         res.render('users/userProfile', {'user' : usuarioLogeado})
     },
-    logout: function(req, res) {
+    deslogeo: function(req, res) {
         req.session.destroy();
         res.clearCookie('userEmail')
         return res.redirect('/')
@@ -86,17 +82,16 @@ const controller = {
 
         res.render('users/cambiarPassword', {usuario: usuarioId})
     },
-    actualizarPassword: function(req, res) {
+    cambiarContraseñaPOST: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
         let usuarioId = users.find(usuario => usuario.id === (parseInt(req.params.id)))
 
         if(bcrypt.compareSync(req.body.contraseña, usuarioId.password)) {
             let nuevaContraseña = bcrypt.hashSync(req.body.nuevaContraseña, 12)
-
             usuarioId.password = nuevaContraseña
-
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
+
             req.session.destroy();
             res.clearCookie('userEmail')
     
@@ -104,8 +99,6 @@ const controller = {
         } else {
             res.send('Contraseña erroñea')
         }
-
-
     },
     notLogin: (req, res) => {
         res.render('users/notLogin')
