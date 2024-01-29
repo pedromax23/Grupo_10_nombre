@@ -37,14 +37,40 @@
  },
  {
   "id": 4,
-  "nombre": "Nicolas",
-  "apellido": "Gerlero",
-  "nombreUsuario": "nico",
-  "email": "nicogerlero@hotmail.com",
-  "password": "123",
-  "fechaNacimiento": "2024-01-17",
-  "domicilio": "dsadsa",
-  "comment": "",
-  "img": "imagenUsuario-1706486382554.jpg"
+  "nombre": "ANGELINA",
+  "apellido": "BRUZONI",
+  "nombreUsuario": "Angie",
+  "email": "angelinabruzoni2050@gmail.com",
+  "password": "Felipe645!",
+  "fechaNacimiento": "1991-01-21",
+  "domicilio": "zabaleta 455",
+  "comment": "Hola",
+  "img": "no-image-user.jpg"
+
+ },
+ {
+  "id": 5,
+  "nombre": "Vanesa",
+  "apellido": "Paschetta",
+  "nombreUsuario": "Vane",
+  "email": "vpaschetta@gmail.com",
+  "password": "$2a$10$breuUoW2d2EwDM2LgNDU6.EK8PX1lyWZ5srmqaIURch36RaH/BpNG",
+  "fechaNacimiento": "1982-07-06",
+  "domicilio": "Darragueira 2542",
+  "comment": "Hola",
+  "img": "no-image-user.jpg"
+
+ },
+ {
+  "id": 6,
+  "nombre": "Pruba",
+  "apellido": "prueba",
+  "nombreUsuario": "prueba",
+  "email": "prueba@gmail.com",
+  "password": "$2a$10$51iDteCd9WwfqoP5TQ069Ol0POTiSlF2XAi2jxuE.hnKsTmMEfrsS",
+  "fechaNacimiento": "2024-01-04",
+  "domicilio": "123",
+  "comment": "123",
+  "img": "no-image-user.jpg"
  }
 ]
