@@ -10,14 +10,14 @@
     border: 1px #F15156 solid;
     border-radius: 10px;
     background-color: #A5402D;
-    width: 200px;
+    height: 500px;
     margin: 20px 10px;
     text-align: center;
 }
 
 .imagen{
     border-radius: 10px;
-    width: 90%;
+    height: 85%;
     margin: auto;
 }
 
@@ -40,17 +40,13 @@
         flex-direction: row;
     }
 
-    .productos article {
-        width: 150px;
+    .link-articulo {
+        width: 300px;
     }
 }
 
 @media (min-width: 1200px) {
     .productos {
         align-items: flex-start;
-    }
-
-    .productos article {
-        height: 300px;
     }
 }
