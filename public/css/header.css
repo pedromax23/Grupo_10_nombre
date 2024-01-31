@@ -101,27 +101,18 @@ ul {
 
 
 @media (min-width: 768px) {
-    .linkImgUsuario{
-        width: 70px;
-    }
-    .imagenUsuario{
-        width: 100%;
-        border-radius: 100%;
-        object-fit: cover;
+    .titulo-top {
+        font-size: 25px;
+        margin-left: 250px;
     }
 
-    .menu-inferior li{
-        padding: 10px;
-    }   
-}
-
-@media (min-width: 1200px) {
     .header-top {
         flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
+        width: 80%;
+        justify-content: flex-start;
         align-items: center;
     }
+
     .menu-superior {
         flex-direction: row;
         width: 90%;
@@ -141,7 +132,31 @@ ul {
         width: 200px;
         transition: all .3s;
     }
+    .menu-superior {
+        flex-direction: row;
+        width: 90%;
+    }
     
+    .linkImgUsuario{
+        width: 70px;
+    }
+    .imagenUsuario{
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .menu-inferior li{
+        padding: 10px;
+    }   
+}
+
+@media (min-width: 1200px) {
+    
+    .titulo-top {
+        font-size: 35px;
+    }
+
     .menu_li:hover {
         width: 220px;
     }
