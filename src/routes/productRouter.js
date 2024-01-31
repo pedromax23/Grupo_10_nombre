@@ -5,7 +5,6 @@ const multer = require('../middleware/routes/multerProducto.js');
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
-const multer = require("multer");
 
 // Ruta pagina productos
 router.get('/', productController.listado);
