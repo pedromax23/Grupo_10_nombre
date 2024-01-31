@@ -20,7 +20,7 @@ ul {
 .carousel-inner img{
     margin: 10px 0;
     object-fit: cover;
-    max-height: 600px;
+    max-height: 400px;
     width: 100%;
 }
 .descripcion-producto{

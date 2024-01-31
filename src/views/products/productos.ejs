@@ -9,16 +9,11 @@
         <section class="productos">
             <!-- Cree un bucle para mostrar cada producto -->
             <% products.forEach(producto => { %>
-                <article>
-                    <a href="/productos/detalle/<%= producto.id %>">
-                        <div class="titulo-imagen">
-                            <h3><%= producto.nombre %></h3>
-                            <img src="/img/productos/<%= producto.img %>" alt="imagen-producto">
-                        </div>
-                    </a>
-
+                <a class="link-articulo" href="/productos/detalle/<%= producto.id %>">
+                    <h3 class="nombre-producto"><%= producto.nombre %></h3>
+                    <img class= "imagen" src="/img/productos/<%= producto.img %>" alt="imagen-producto">
                     <p class="precio"><%= "$" + producto.precio %></p>
-                </article>
+                </a>
             <% }) %>
             <!-- Fin del bucle -->
         </section>

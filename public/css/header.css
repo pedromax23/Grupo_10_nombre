@@ -61,6 +61,7 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: flex-end;
 }
 
 .menu-superior li {
@@ -76,7 +77,7 @@ ul {
     font-size: 25px;
 }
 .menu-inferior {
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: auto;
     display: flex;
     padding: 0;

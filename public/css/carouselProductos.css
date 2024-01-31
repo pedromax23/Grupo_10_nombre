@@ -5,8 +5,7 @@
     padding-bottom: 3%;
 }
 .contenedor-detalle-productos img{
-    width: 200px;
-    height: 400px;
+    height: 300px;
 }
 .carousel-products-control-prev {
     position: absolute;
@@ -87,6 +86,11 @@
     filter: invert(1) grayscale(100)
 }
 
+@media (min-width: 768px) {
+.contenedor-detalle-productos img{
+    height: 400px;
+}
+}
 @media (min-width: 1200px) {
     .carousel-products-control-next{
         filter: invert(0)
@@ -113,7 +117,6 @@
         padding-bottom: 2%;
     }
     .contenedor-detalle-productos img{
-        width: 425px;
-        height: 670px;
+        height: 500px;
     }
 }

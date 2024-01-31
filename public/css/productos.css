@@ -1,31 +1,34 @@
 .productos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-.productos article {
+.link-articulo {
+    display: flex;
+    flex-direction: column;
     border: 1px #F15156 solid;
     border-radius: 10px;
     background-color: #A5402D;
-    width: 300px;
-    margin: 20px 0;
+    width: 200px;
+    margin: 20px 10px;
     text-align: center;
 }
 
-.titulo-imagen img {
+.imagen{
     border-radius: 10px;
     width: 90%;
+    margin: auto;
 }
 
-.titulo-imagen h3 {
+.nombre-producto {
     text-align: center;
     font-size: 30px;
     color: #FFF;
 }
 
 .precio {
+    margin: 0;
     text-align: center;
     font-size: 25px;
     color: #FFCF99;
@@ -38,7 +41,7 @@
     }
 
     .productos article {
-        width: 45%;
+        width: 150px;
     }
 }
 
@@ -48,6 +51,6 @@
     }
 
     .productos article {
-        width: 23%;
+        height: 300px;
     }
 }

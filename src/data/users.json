@@ -34,5 +34,17 @@
   "domicilio": "prueba",
   "comment": "prueba",
   "img": "imagenUsuario-1706542049416.png"
+ },
+ {
+  "id": 8,
+  "nombre": "Luciano",
+  "apellido": "Otonelli",
+  "nombreUsuario": "lotonelli",
+  "email": "luciano.otonelli@gmail.com",
+  "password": "$2a$10$qJm5L0l.DUeHuyzamk4rPOKMbNsLEwKGdPBpPfG8nRgyKNNavaToe",
+  "fechaNacimiento": "1994-01-25",
+  "domicilio": "Calle prueba",
+  "comment": "",
+  "img": "no-image-user.jpg"
  }
 ]

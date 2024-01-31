@@ -41,3 +41,23 @@ Restrospectiva Sprint 1
 5. Dejar de hacer
     * Conflictos
     
+Retro Sprint 5
+
+1. Comenzar a hacer.
+    * Empezar a realizar distintas tareas complementarias para desarrollar otras funcionalidades en el proyecto, que no están planteadas en el sprint.
+    * Estar al dia con los avances del proyecto, dudas y dificultades e intercambiar ideas al respecto
+    
+
+2. Hacer más.
+    * Aumentar el número de reuniones o breves reuniones realizadas semanalmente, para estar más al día entre nosotros.
+    * Avisar por el grupo cuando cualquiera de los integrantes está trabajando sobre cierta funcionalidad, para no pisarnos entre nosotros.
+      
+3. Continuar haciendo.
+    * Trabajo en equipo
+    * Buen clima de trabajo
+
+4. Hacer menos.
+    * 
+
+5. Dejar de hacer
+    * 
