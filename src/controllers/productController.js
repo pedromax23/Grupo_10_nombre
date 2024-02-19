@@ -1,13 +1,28 @@
 const path = require("path"); 
 const fs = require("fs"); 
-
 const productsFilePath = path.join(__dirname, '../data/products.json');
 
-const controller = {
-    listado: function(req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-        res.render('products/productos', {products})
+const Product = db.Product;
+const Variety = db.Variety;
+
+const controller = {
+    listado: async function(req, res) {
+        try {
+            const products = await Product.findAll({
+                include: ['Variety']
+            });
+            console.log(products)
+
+            res.render('products/productos', {products})
+        } catch(error) {
+            res.send(error)
+        }
+        // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        // res.render('products/productos', {products})
     },
     detalleProducto: function(req, res) {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

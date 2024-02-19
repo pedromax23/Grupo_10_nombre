@@ -3,6 +3,11 @@ const fs = require("fs");
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
 
+const db = require('../database/models')
+const sequelize = db.sequelize;
+
+
+
 const controller = {
     login: function(req, res) {
         res.render('users/login')
