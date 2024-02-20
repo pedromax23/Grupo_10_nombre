@@ -39,6 +39,14 @@
   text-align: center;
 }
 
+.recordame_div label {
+  font-size: 20px;
+}
+
+#recordame {
+  width: 20px;
+}
+
 @media (min-width: 1200px) {
   .formulario input,
   .formulario button,
