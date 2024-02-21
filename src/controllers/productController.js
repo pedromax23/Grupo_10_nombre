@@ -24,12 +24,16 @@ const controller = {
 
         // res.render('products/productos', {products})
     },
-    detalleProducto: function(req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    detalleProducto: async function(req, res) {
+        try {
+            const product = await Product.findByPk(req.params.id, {
+                include: ['Variety']
+            })
 
-        let productoIndex = products.findIndex(producto => producto.id === (parseInt(req.params.id)));//retorna el indice del objeto que cumple con la condicion
-
-        res.render('products/detalleProducto', {producto: products[productoIndex]});
+            res.render('products/detalleProducto', {producto: product});
+        } catch(error) {
+            res.send(error)
+        }
     },
     carritoCompras : (req,res)=>{
         res.render('products/carrito-de-compras');

@@ -9,22 +9,21 @@
         <section class="detalleProducto">
 
             <div class="imagen-titulo">
-                <h2><%= producto.nombre %></h2>
+                <h2><%= producto.name %></h2>
+                <p><%= producto.Variety.name %></p>
                 <img src="/img/productos/<%= producto.img %>" alt="Aquí va imágen Imperial Ipa Losch">
                 <div class="cont-PorcentajecAlcohol">
-                    <input type="text" name="porcentajeAlcohol" value="Alcohol 8.5 %" readonly>
+                    <input type="text" name="porcentajeAlcohol" value="Alcohol <%= producto.alcohol_content %> %" readonly>
                 </div>
             </div>   
             
             <div class="descripcion-cerveza">
                 <div class="descripcion">
-                    <p> <%= producto.descripcion %> </p>
+                    <p> <%= producto.description %> </p>
                 </div>
                 
                 <div class="informacion">
-                    <p>1 Bulto: 12 latas x 473 ml</p>
-                    <strong><p><%= "$ " +  producto.precio %></p></strong>
-                    <p>Vencimiento: 07/08/2024</p>
+                    <strong><p><%= "$ " +  producto.price %></p></strong>
                 </div>
 
                 <div class="botones">
