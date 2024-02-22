@@ -7,42 +7,39 @@
     <%- include('../partials/header')%>
     <!-----------Main------------->
     <main>
-                <form action="/productos/crearProducto" method="post" class="crearProductoForm" enctype="multipart/form-data">
-                    <div>
-                        <input type="text" name="nombre"  placeholder="Nombre del Producto" required>
-                    </div>
-                    <div>
-                        <textarea name="descripcion"  placeholder="Descripción del producto" required></textarea>
-                    </div>
-                    <div>
-                        <input type="file" name="imagenCerveza"  class="file"  required>
-                    </div>
-                    <div>
-                        <select name="categoriaCerveza"  required>
-                            <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
-                            <option value="Golden">Golden</option>
-                            <option value="Honey">Honey</option>
-                            <option value="IPA">IPA</option>
-                            <option value="Amber Ale">Amber Ale</option>
-                            <option value="Stout">Stout</option>
-                          </select>
-                    </div>
-                    <div>
-                        <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01" required>
-                    </div>
-                    <!-- Acá iría input para stock-->
-                   
+        <form action="/productos/crearProducto" method="post" class="crearProductoForm" enctype="multipart/form-data">
+            <div>
+                <input type="text" name="nombre"  placeholder="Nombre del Producto" required>
+            </div>
+            <div>
+                <textarea name="descripcion"  placeholder="Descripción del producto" required></textarea>
+            </div>
+            <div>
+                <input type="file" name="imagenCerveza"  class="file"  required>
+            </div>
+            <div>
+                <select name="categoriaCerveza">
+                    <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
+                    <% for( let i = 0; i < variedades.length; i++ ) { %>
+                        <option value="<%= variedades[i].id %>"><%= variedades[i].name %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div>
+                <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01">
+            </div>
+            <div>
+                <input type="number" name="stock"  min="0" placeholder="Stock 200" step="0.01">
+            </div>
+            <div>
+                <input type="number" name="alcohol_content"  min="0" placeholder="Alcohol content 9" step="0.01">
+            </div>
 
-
-                    <div class="boton">
-                        <button type="submit">Crear Producto</button> <!--ver-->
-                            
-                        <button type="reset">Borrar</button><!--ver-->
-                    </div>
-
-
-
-                
+            <div class="botones">
+                <button type="submit">Crear Producto</button>
+                    
+                <button type="reset">Borrar</button>
+            </div>
     </main>
     <!------------Footer----------->
     <%- include('../partials/footer')%>

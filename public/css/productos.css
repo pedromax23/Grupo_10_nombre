@@ -9,15 +9,14 @@
     flex-direction: column;
     border: 1px #F15156 solid;
     border-radius: 10px;
-    background-color: #A5402D;
-    height: 500px;
-    margin: 20px 10px;
+    background-color: #b64f3d;
+    margin: 10px 10px;
     text-align: center;
 }
 
 .imagen{
     border-radius: 10px;
-    height: 85%;
+    width: 300px;
     margin: auto;
 }
 

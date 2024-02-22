@@ -1,7 +1,3 @@
-const path = require("path"); 
-const fs = require("fs"); 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
@@ -14,15 +10,11 @@ const controller = {
             const products = await Product.findAll({
                 include: ['Variety']
             });
-            console.log(products)
 
             res.render('products/productos', {products})
         } catch(error) {
             res.send(error)
         }
-        // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // res.render('products/productos', {products})
     },
     detalleProducto: async function(req, res) {
         try {
@@ -38,81 +30,84 @@ const controller = {
     carritoCompras : (req,res)=>{
         res.render('products/carrito-de-compras');
     },
-    crearProducto: function(req, res) {
-        res.render('products/crearProducto');
-    },
-    crearProductoPOST: function(req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    crearProducto: async function(req, res) {
+        try {
+            const variedades = await Variety.findAll()
 
-        // crear nuevo producto y guardarlo en un objeto literal
-        const nuevoProducto = {
-            id: products[products.length - 1].id + 1,
-            nombre: req.body.nombre,
-            img: req.file.filename,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            categoria: req.body.categoria
+            res.render('products/crearProducto', {variedades: variedades});
+        } catch(error) {
+            res.send(error)
         }
-
-        // hacer el push para agregar productos
-        products.push(nuevoProducto);
-
-        // transformar al JSON
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "), 'utf-8');
-
-        // mostrar la vista al usuario redirigiendo
-        res.redirect('/productos');
     },
-    editarProducto: function(req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // Renderizo la vista editarProducto
-        let productoAEditar = products.find(producto => {
-            return producto.id == (parseInt(req.params.id))
-        });
-        res.render('products/editarProducto', {productoAEditar});
-    },
-    editarProductoPOST: function(req, res) {
-        // traer const de productos y transformarlo en array
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    crearProductoPOST: async function(req, res) {
+        try {
+            const nuevoProducto = {
+                name: req.body.nombre,
+                img: req.file.filename,
+                description: req.body.descripcion,
+                price: req.body.precio,
+                stock: req.body.stock,
+                alcohol_content: req.body.alcohol_content,
+                variety_id: req.body.categoriaCerveza
+            }
 
-        // filtar por req.params.id con find
-        let idProducto = parseInt(req.params.id); // recuperamos id de la url y lo guardamos en idProducto
-        let productoAEditar = products.find(producto => {
-            return producto.id == idProducto
-        });
-        // sobreescribir el producto en un nuevo objeto literal
-        productoAEditar = {
-            id: productoAEditar.id,
-            nombre: req.body.nombre,
-            img: req.file ? req.file.filename : productoAEditar.img, // if ternario para ver si se subio foto, sino uso la que estaba
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            categoria: req.body.categoria
+            const crearProducto = await Product.create(nuevoProducto)
+
+            res.redirect('/productos');
+
+        } catch(error) {
+            res.send(error);
         }
-        
-        let indice = products.findIndex(product => {
-            return product.id == idProducto
-        }); // buscamos la posicion del objeto en el array
-
-        products[indice] = productoAEditar;
-
-        // transformar al JSON
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "), 'utf-8');
-
-        // mostrar la vista al usuario redirigiendo
-        res.redirect('/productos/detalle/' + idProducto); // de esta forma redireccionamos a la ruta /productos/detalle / el idProducto que editamos
     },
-    eliminarProductoDELETE: (req, res) => {
-		let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    editarProducto: async function(req, res) {
+        try {
+            const variedades = await Variety.findAll();
 
-		products= products.filter(product=>{
-			return product.id!= req.params.id
-		})
+            const product = await Product.findByPk(req.params.id, {
+                include: ['Variety']
+            })
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "));
+            res.render('products/editarProducto', {productoAEditar: product, variedades: variedades});
+        } catch(error) {
+            res.send(error)
+        }
+    },
+    editarProductoPOST: async function(req, res) {
+        try {
+            const productoEditado = {
+                name: req.body.nombre,
+                img: req.file.filename,
+                description: req.body.descripcion,
+                price: req.body.precio,
+                stock: req.body.stock,
+                alcohol_content: req.body.alcohol_content,
+                variety_id: req.body.categoria
+            }
 
-		res.redirect("/productos");
+            const editarProducto = await Product.update(productoEditado, {
+                where: {
+                    id: req.params.id
+                }
+            })
 
+            res.redirect('/productos/detalle/' + req.params.id);
+
+        } catch(error) {
+            res.send(error)
+        }
+    },
+    eliminarProductoDELETE: async (req, res) => {
+        try {
+            const eliminarProducto = await Product.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+
+            res.redirect("/productos");
+        } catch(error) {
+            res.send(error)
+        }
 	}
 }
 

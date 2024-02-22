@@ -1,43 +1,47 @@
 /**************MAIN***************/
 /**************Mobile*************/
 
-
 .crearProductoForm{
-    padding: 20px;/*Ver*/
+    width: 90%;
     display: flex;
     flex-direction: column;
+    margin: auto;
+    align-items: center;
 }
 
 .crearProductoForm div{
-    width: 100%;
-    margin-top: 10px;
+    width: 300px;
+    margin: 5px 0;
+    display: flex;
 }
 
 
- input, textarea, select, button{
+input, textarea, select{
     width: 100%;
-    line-height: 1.8;
-    font-size: 100%;
+    padding: 5px;
     border: 1px transparent;
     border-radius: 3px;  
     text-align: center;
 }
 
+.botones {
+    justify-content: space-between;
+}
 
-button{
+button {
+    width: 45%;
+    padding: 10px;
     background-color: #A5402D;
     border: 1px solid #721121;
     color:white;
-    margin-top: 5px;
 }
 
 /**************TABLET*************/
 @media (min-width: 768px) {
 
-    .crearProductoForm input, textarea, select, button{
-        margin-left: 20%;
-        width: 60%;
-        
+    .crearProductoForm div{
+        width: 500px;
+
     }
 
 }
@@ -45,10 +49,7 @@ button{
 /*****************PC******************/
 @media (min-width: 1200px) {
 
-    .crearProductoForm input, textarea, select, button{
-        margin-left: 35%;
-        width: 30%;
-    }
+ 
 
 }
 

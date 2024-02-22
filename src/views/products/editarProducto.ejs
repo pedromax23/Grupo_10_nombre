@@ -11,35 +11,38 @@
                 <form action="/productos/editarProducto/<%=productoAEditar.id%>?_method=PUT" method="POST" class="edicion-form" enctype="multipart/form-data">
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
-                    <input value="<%=productoAEditar.nombre%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre" id="nombre-producto"/>
+                    <input value="<%=productoAEditar.name%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre" id="nombre-producto"/>
                 </div>
     
                 <div> 
                     <label for="precio-producto">Precio</label> <br>
-                    <input value="<%=productoAEditar.precio%>" placeholder="Nuevo precio" type="number" name="precio" id="precio-producto"/>
+                    <input value="<%=productoAEditar.price%>" placeholder="Nuevo precio" type="number" name="precio" id="precio-producto"/>
                 </div>
     
                 <div> 
                     <label for="categoria-producto">Categoría</label> <br>
                     <select name="categoria" id="categoria-producto">
                         <option disabled selected value>Selecciona una categoría</option>
-                        <option value="Golden">Golden</option>
-                        <option value="Honey">Honey</option>
-                        <option value="IPA">IPA</option>
-                        <option value="Amber Ale">Amber Ale</option>
-                        <option value="Stout">Stout</option>
+                        <% variedades.forEach(variedad => { %>
+                            <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
+                        <% }) %>
                     </select>
                 </div>
                 <div class="caja-form2">
                 
                     <div> 
                         <label for="stock-producto">Stock disponible</label> <br>
-                        <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock-producto" id="stock-producto"/>
+                        <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock" id="stock-producto"/>
                     </div>
         
                     <div>
                         <label for="descripcion-producto">Descripción</label> <br>
-                        <textarea class="comentario" name="descripcion" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.descripcion%></textarea>
+                        <textarea class="comentario" name="descripcion" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.description%></textarea>
+                    </div>
+
+                    <div> 
+                        <label for="alcohol_content">Contenido alcoholico</label> <br>
+                        <input value="<%=productoAEditar.alcohol_content%>" placeholder="9" type="number" name="alcohol_content" id="alcohol_content"/>
                     </div>
     
                     <div> 
