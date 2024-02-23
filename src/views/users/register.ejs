@@ -12,17 +12,17 @@
 
             <!-- Nombre -->
             <div> 
-                <input placeholder="Nombre" type="text" required name="nombre" minlength="3"/>
+                <input placeholder="Nombre" type="text" required name="name" minlength="3"/>
             </div>
 
             <!-- Apellido -->
             <div> 
-                <input placeholder="Apellido" type="text" required name="apellido" minlength="3"/>
+                <input placeholder="Apellido" type="text" required name="last_name" minlength="3"/>
             </div>
     
             <!-- Nombre de usuario -->
             <div>
-                <input placeholder="Nombre de usuari@" type="text" required name="nombreUsuario"/>
+                <input placeholder="Nombre de usuari@" type="text" required name="user_name"/>
             </div>
     
             <!-- Email -->
@@ -38,22 +38,23 @@
             <!-- Fecha de nacimiento -->
             <div class="fecha-nacimiento">
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                <input type="date" required name="fechaNacimiento"/>
+                <input type="date" required name="birth_date" id="fecha-nacimiento"/>
             </div>
 
             <!-- Domicilio -->
             <div>
-                <input placeholder="Domicilio" type="text" required name="domicilio"/>
+                <input placeholder="Domicilio" type="text" required name="address"/>
+            </div>
+
+            <!-- Comentario -->
+            <div>
+                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
             </div>
 
             <!-- Imagen usuario -->
             <div class="imagen-usuario">
                 <label for="imagenUsuario">Imagen de Usuario</label>
-                <input type="file" name="imagenUsuario"  class="file">
-            </div>
-            <!-- Comentario -->
-            <div>
-                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
+                <input type="file" name="img"  class="file" id="imagenUsuario">
             </div>
 
             <!-- Boton de enviar -->

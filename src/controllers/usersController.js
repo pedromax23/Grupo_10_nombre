@@ -6,67 +6,75 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/models')
 const sequelize = db.sequelize;
 
-
+const User = db.User;
+const User_category = db.User_category;
 
 const controller = {
     login: function(req, res) {
         res.render('users/login')
     },
-    loginPOST: function(req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let usuarioALogear = users.find(usuario => usuario.nombreUsuario === req.body.nombre_usuario)
-
-        //Comparamos el texto plano en la contraseña del login con la contraseña encriptada.
-        let check= bcrypt.compareSync(req.body.clave, usuarioALogear.password);
-        
-        if(usuarioALogear) {
-            if(check) {
-                delete usuarioALogear.password;
-                req.session.usuarioLogeado = usuarioALogear;
-                
-                if(req.body.recordame) {
-                    res.cookie('userEmail', usuarioALogear.email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+    loginPOST: async function(req, res) {
+        try {
+            const usuarioALogear = await User.findAll({
+                where: {
+                    user_name: req.body.user_name
                 }
-                res.locals.logeado = true;
+            })
+            console.log(usuarioALogear)
 
-                return res.redirect('/')
+            //Comparamos el texto plano en la contraseña del login con la contraseña encriptada.
+            let check= bcrypt.compareSync(req.body.clave, usuarioALogear[0].password);
+
+            if(usuarioALogear) {
+                if(check) {
+                    delete usuarioALogear.password;
+                    req.session.usuarioLogeado = usuarioALogear;
+                    
+                    if(req.body.recordame) {
+                        res.cookie('userEmail', usuarioALogear.email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+                    }
+                    res.locals.logeado = true;
+                    
+                } else {
+                    res.send('Contraseña erronea')
+                }
             } else {
-                res.send('Contraseña erronea')
+                res.send('Usuario no encontrado')
             }
-        } else {
-            res.send('Usuario no encontrado')
+
+            return res.redirect('/')
+        } catch(error) {
+            res.send(error)
         }
     },
     register: function(req, res) {
+
         res.render('users/register')
+
     },
-    registerPOST: function(req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        
-        // Calculamos el ID de cada usuario || En caso de que sea el primer usuario el ID sera 1
-        let id = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+    registerPOST: async function(req, res) {
+        try {
 
-        // Encriptamos la contraseña
-        let passEncriptada = bcrypt.hashSync(req.body.password,10);
+            let passEncriptada = bcrypt.hashSync(req.body.password,10);
 
-        // Creamos el Objeto literal (nuevoUsuario) con la informacion que recibimos en el (req)
-        let nuevoUsuario = {
-            id: id, 
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            nombreUsuario: req.body.nombreUsuario,
-            email: req.body.email,
-            password: passEncriptada,
-            fechaNacimiento: req.body.fechaNacimiento,
-            domicilio: req.body.domicilio, 
-            comment: req.body.comment,
-            img:  req.file ? req.file.filename : 'no-image-user.jpg',
+            let nuevoUsuario = {
+                name: req.body.name,
+                last_name: req.body.last_name,
+                user_name: req.body.user_name,
+                email: req.body.email,
+                password: passEncriptada,
+                birth_date: req.body.birth_date,
+                address: req.body.address, 
+                comment: req.body.comment,
+                img:  req.file ? req.file.filename : 'no-image-user.jpg',
+            }
+
+            const userCreate = await User.create(nuevoUsuario);
+
+            res.redirect('/user/login')
+        } catch(error) {
+            res.send(error)
         }
-    
-        users.push(nuevoUsuario); // Agregamos el Objeto Literal al array de usuarios
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8'); // Agregamos los cambios al archivo .JSON
-
-        res.redirect('/user/login')
     },
     perfil: function(req, res) {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));

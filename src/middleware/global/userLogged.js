@@ -1,6 +1,6 @@
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../../data/users.json');
-const fs = require('fs')
+
+const db = require('../../database/models')
+const User = db.User;
 
 // Funcion asyncronica
 async function userLoggedMiddleware(req, res, next) {    
@@ -16,9 +16,14 @@ async function userLoggedMiddleware(req, res, next) {
     try {
         // Si existe una cokie almacenada...
         if (emailCokie) {
-            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            // Buscamos el usuario logeado
-            let usuarioALogear = users.find(usuario => usuario.email === emailCokie) 
+
+            const user = await User.findAll({
+                where: {
+                    email: emailCokie
+                }
+            })
+
+            let usuarioALogear = user[0]
             
             // Si existe el usuario logeado guradamos sus datos en el session y en locals
             if (usuarioALogear) {

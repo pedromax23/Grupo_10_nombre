@@ -12,7 +12,7 @@ router.post('/login', authLoginMiddleware, usersController.loginPOST);
 
 // Ruta formulario register
 router.get('/register', authLoginMiddleware, usersController.register);
-router.post('/register', authLoginMiddleware, multer.single('imagenUsuario'), usersController.registerPOST);
+router.post('/register', authLoginMiddleware, multer.single('img'), usersController.registerPOST);
 
 // Perfil del usuario
 router.get('/profile', authMiddleware, usersController.perfil)
