@@ -88,29 +88,36 @@ const controller = {
         res.clearCookie('userEmail')
         return res.redirect('/')
     },
-    cambiarContraseña: function(req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let usuarioId = users.find(usuario => usuario.id === (parseInt(req.params.id)))
-
-        res.render('users/cambiarPassword', {usuario: usuarioId})
+    cambiarContraseña: async function(req, res) {
+        try {
+            const usuario = await User.findByPk(req.params.id);
+            if (!usuario) {
+                return res.status(404).send("Usuario no encontrado"); 
+            }
+            res.render('users/cambiarPassword', {usuario: usuario})
+        }
+        catch(error) {
+            res.send(error)
+        }
     },
-    cambiarContraseñaPOST: function(req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-        let usuarioId = users.find(usuario => usuario.id === (parseInt(req.params.id)))
-
-        if(bcrypt.compareSync(req.body.contraseña, usuarioId.password)) {
-            let nuevaContraseña = bcrypt.hashSync(req.body.nuevaContraseña, 12)
-            usuarioId.password = nuevaContraseña
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
-
-            req.session.destroy();
-            res.clearCookie('userEmail')
-    
-            res.redirect('/user/login')
-        } else {
-            res.send('Contraseña erroñea')
+    cambiarContraseñaPOST: async function(req, res) {
+        try {
+            const usuario = await User.findByPk(req.params.id);
+            if (!usuario) {
+                return res.status(404).send("Usuario no encontrado"); 
+            };
+            if(bcrypt.compareSync(req.body.contraseña, usuario.password)) {
+                let nuevaContraseña = bcrypt.hashSync(req.body.nuevaContraseña, 12)
+                await usuario.update({password: nuevaContraseña});
+                req.session.destroy();
+                res.clearCookie('userEmail')
+                res.redirect('/user/login')
+            } else {
+                res.send('Contraseña erroñea')
+            };
+        }
+        catch(error) {
+            res.send(error)
         }
     },
     notLogin: (req, res) => {
