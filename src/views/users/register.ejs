@@ -48,7 +48,8 @@
 
             <!-- Comentario -->
             <div>
-                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="20" placeholder="Deja tu comentario"></textarea>
+                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="250" placeholder="Deja tu comentario"></textarea>
+                <p>Caracteres restantes: <span id="contador">250</span></p>
             </div>
 
             <!-- Imagen usuario -->
@@ -72,7 +73,7 @@
 
     <%- include('../partials/footer')%>
 
-
+<script src="/js/register.js"></script>
 </body>
 
 </html>
