@@ -7,8 +7,10 @@
 
     <%- include('../partials/header')%>
 
+    <%= console.log(user) %>
+
     <main class="perfil">     
-        <h1 class="perfil_name">Este es el perfil de: <%= user.nombre %></h1>
+        <h1 class="perfil_name">Este es el perfil de: <%= user.name %></h1>
 
         <img class="imagen_usuario" src="/img/usuarios/<%= user.img %>" alt="Imagen de usuario">
 

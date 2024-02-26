@@ -76,12 +76,30 @@ const controller = {
             res.send(error)
         }
     },
-    perfil: function(req, res) {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    perfil: async function(req, res) {
+      
+        console.log(req.session.usuarioLogeado);
 
-        let usuarioLogeado = users.find(usuario => usuario.email === req.session.usuarioLogeado.email)
+        try {
+            const user = await User.findOne({
+                where: {
+                    email: req.session.usuarioLogeado[0].email
+                }
+            })
 
-        res.render('users/userProfile', {'user' : usuarioLogeado})
+            //console.log(user);
+            res.render('users/userProfile', {user});
+
+        } catch(error) {
+            res.send(error)
+            console.log(error)
+        }
+        
+        // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+        // let usuarioLogeado = users.find(usuario => usuario.email === req.session.usuarioLogeado.email)
+
+        // res.render('users/userProfile', {'user' : usuarioLogeado})
     },
     deslogeo: function(req, res) {
         req.session.destroy();

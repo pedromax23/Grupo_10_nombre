@@ -21,7 +21,6 @@ const controller = {
             const product = await Product.findByPk(req.params.id, {
                 include: ['Variety']
             })
-
             res.render('products/detalleProducto', {producto: product});
         } catch(error) {
             res.send(error)

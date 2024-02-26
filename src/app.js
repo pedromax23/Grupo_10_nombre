@@ -8,7 +8,7 @@ const userLoggedMiddleware = require('./middleware/global/userLogged.js') // Ver
 
 
 
-// Configurando EJS
+// Configurando EJS ()
 app.set('views', path.resolve(__dirname, "views"));
 app.set('view engine', 'ejs');
 
