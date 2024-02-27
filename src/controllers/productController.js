@@ -1,6 +1,5 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
-
 const Product = db.Product;
 const Variety = db.Variety;
 
@@ -10,12 +9,12 @@ const controller = {
             const products = await Product.findAll({
                 include: ['Variety']
             });
-
             res.render('products/productos', {products})
         } catch(error) {
             res.send(error)
         }
     },
+
     detalleProducto: async function(req, res) {
         try {
             const product = await Product.findByPk(req.params.id, {
@@ -26,18 +25,20 @@ const controller = {
             res.send(error)
         }
     },
+
     carritoCompras : (req,res)=>{
         res.render('products/carrito-de-compras');
     },
+
     crearProducto: async function(req, res) {
         try {
             const variedades = await Variety.findAll()
-
             res.render('products/crearProducto', {variedades: variedades});
         } catch(error) {
             res.send(error)
         }
     },
+
     crearProductoPOST: async function(req, res) {
         try {
             const nuevoProducto = {
@@ -49,15 +50,13 @@ const controller = {
                 alcohol_content: req.body.alcohol_content,
                 variety_id: req.body.categoriaCerveza
             }
-
             const crearProducto = await Product.create(nuevoProducto)
-
             res.redirect('/productos');
-
         } catch(error) {
             res.send(error);
         }
     },
+
     editarProducto: async function(req, res) {
         try {
             const variedades = await Variety.findAll();
@@ -65,12 +64,12 @@ const controller = {
             const product = await Product.findByPk(req.params.id, {
                 include: ['Variety']
             })
-
             res.render('products/editarProducto', {productoAEditar: product, variedades: variedades});
         } catch(error) {
             res.send(error)
         }
     },
+
     editarProductoPOST: async function(req, res) {
         try {
             const productoEditado = {
@@ -82,19 +81,17 @@ const controller = {
                 alcohol_content: req.body.alcohol_content,
                 variety_id: req.body.categoria
             }
-
             const editarProducto = await Product.update(productoEditado, {
                 where: {
                     id: req.params.id
                 }
             })
-
             res.redirect('/productos/detalle/' + req.params.id);
-
         } catch(error) {
             res.send(error)
         }
     },
+
     eliminarProductoDELETE: async (req, res) => {
         try {
             const eliminarProducto = await Product.destroy({
@@ -102,7 +99,6 @@ const controller = {
                     id: req.params.id
                 }
             })
-
             res.redirect("/productos");
         } catch(error) {
             res.send(error)
