@@ -27,7 +27,7 @@ const controller = {
                     res.locals.logeado = true;
                     
                     if(req.body.recordame) {
-                        res.cookie('userEmail', usuarioALogear.email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+                        res.cookie('userEmail', usuarioALogear[0].email, {maxAge: 1000 * 60 * 60 * 60 * 60})
                     }
                 } else {
                     res.send('Contraseña erronea')
@@ -75,7 +75,7 @@ const controller = {
         try {
             const user = await User.findOne({
                 where: {
-                    email: req.session.usuarioLogeado[0].email
+                    email: req.session.usuarioLogeado.email
                 }
             })
 

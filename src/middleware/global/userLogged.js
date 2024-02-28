@@ -23,7 +23,6 @@ async function userLoggedMiddleware(req, res, next) {
             })
 
             let usuarioALogear = user[0]
-            
             // Si existe el usuario logeado guradamos sus datos en el session y en locals
             if (usuarioALogear) {
                 req.session.usuarioLogeado = usuarioALogear;

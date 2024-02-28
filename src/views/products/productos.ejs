@@ -10,8 +10,8 @@
             <!-- Cree un bucle para mostrar cada producto -->
             <% products.forEach(producto => { %>
                 <a class="link-articulo" href="/productos/detalle/<%= producto.id %>">
-                    <h3 class="nombre-producto"><%= producto.name %></h3>
                     <img class= "imagen" src="/img/productos/<%= producto.img %>" alt="imagen-producto">
+                    <h3 class="nombre-producto"><%= producto.name %></h3>
                     <p class="precio"><%= "$" + producto.price %></p>
                 </a>
             <% }) %>
