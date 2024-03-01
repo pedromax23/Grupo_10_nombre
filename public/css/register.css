@@ -1,6 +1,5 @@
+
 .registro {
-  background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(154, 154, 154, 0.5)), url("/img/Presentación sin título (1).png");
-  background-repeat: round;
   padding: 25px 0;
 }
 
@@ -57,6 +56,13 @@
 }
 
 @media (min-width: 1200px) {
+  .registro {
+    background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(154, 154, 154, 0.5)), url("/img/fondo_register.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
   .formulario input {
     width: 400px;
   }

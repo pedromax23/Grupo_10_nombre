@@ -1,5 +1,4 @@
 .loguear {
-  margin: 10px 0;
   padding: 150px 0;
 }
 
@@ -56,6 +55,12 @@
 }
 
 @media (min-width: 1200px) {
+  .loguear {
+    background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(154, 154, 154, 0.5)), url("/img/fondo_login.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
   
   .button {
     width: 150px;

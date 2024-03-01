@@ -5,70 +5,59 @@
     <%- include('../partials/header')%>
 
     <main class="edicion-producto-main">
-        <h1>Pagina de edicion de productos</h1>
         <section class="caja-edicion">
-            <div class="caja-form1">
-                <form action="/productos/editarProducto/<%=productoAEditar.id%>?_method=PUT" method="POST" class="edicion-form" enctype="multipart/form-data">
+            <form action="/productos/editarProducto/<%=productoAEditar.id%>?_method=PUT" method="POST" class="edicion-form" enctype="multipart/form-data">
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
                     <input value="<%=productoAEditar.name%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre" id="nombre-producto"/>
                 </div>
-    
+
                 <div> 
                     <label for="precio-producto">Precio</label> <br>
                     <input value="<%=productoAEditar.price%>" placeholder="Nuevo precio" type="number" name="precio" id="precio-producto"/>
                 </div>
-    
+
                 <div> 
                     <label for="categoria-producto">Categoría</label> <br>
                     <select name="categoria" id="categoria-producto">
                         <option disabled selected value>Selecciona una categoría</option>
                         <% variedades.forEach(variedad => { %>
-                            <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
+                        <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
                         <% }) %>
                     </select>
                 </div>
-                <div class="caja-form2">
-                
-                    <div> 
-                        <label for="stock-producto">Stock disponible</label> <br>
-                        <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock" id="stock-producto"/>
-                    </div>
-        
-                    <div>
-                        <label for="descripcion-producto">Descripción</label> <br>
-                        <textarea class="comentario" name="descripcion" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.description%></textarea>
-                    </div>
 
-                    <div> 
-                        <label for="alcohol_content">Contenido alcoholico</label> <br>
-                        <input value="<%=productoAEditar.alcohol_content%>" placeholder="9" type="number" name="alcohol_content" id="alcohol_content"/>
-                    </div>
+                <div> 
+                    <label for="stock-producto">Stock disponible</label> <br>
+                    <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock" id="stock-producto"/>
+                </div>
     
-                    <div> 
-                        <label for="foto-producto">Cargar más fotos</label> <br>
-                        <input placeholder="Buscar archivos" type="file" name="imagenCerveza" id="foto-producto" accept=".jpg, .png" multiple/>
-                    </div>
-                
-            </div>
+                <div>
+                    <label for="descripcion-producto">Descripción</label> <br>
+                    <textarea class="comentario" name="descripcion" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.description%></textarea>
+                </div>
 
+                <div> 
+                    <label for="alcohol_content">Contenido alcoholico</label> <br>
+                    <input value="<%=productoAEditar.alcohol_content%>" placeholder="9" type="number" name="alcohol_content" id="alcohol_content"/>
+                </div>
+
+                <div> 
+                    <label for="foto-producto">Cargar más fotos</label> <br>
+                    <input placeholder="Buscar archivos" type="file" name="imagenCerveza" id="foto-producto" accept=".jpg, .png" multiple/>
+                </div> 
+            </form>
+            <img class="img-botella" src="/img/img-form-edicion.jpeg" alt="">
         </section>
    
-           <section class="edicion-buttons">
-                    <div>
-                        <button type="submit">Actualizar datos</button> 
-                    </div>
-    
-                    <div>
-                        <button type="reset">Borrar</button> <!-- elimina datos del formulario no del JSON -->
-                    </div>
-            </section>
-            </form>
-            </div>
-               
-    </main>
+        <section class="edicion-buttons">
 
-    <!--    FOOTER    -->
+                <button type="submit">Actualizar datos</button> 
+
+                <button type="reset">Borrar</button> <!-- elimina datos del formulario no del JSON -->
+
+        </section>
+    </main>
 
     <%- include('../partials/footer') %>
 </body>
