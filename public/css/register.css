@@ -1,5 +1,8 @@
 .registro {
-  margin: 10px 0;
+  margin: 0px 0;
+  background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(154, 154, 154, 0.5)), url("/img/Presentación sin título (1).png");
+  background-repeat: round;
+  
 }
 
 .formulario {
