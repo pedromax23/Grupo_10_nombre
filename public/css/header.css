@@ -17,7 +17,6 @@ ul {
 .header-principal {
     display: flex;
     background-color: #f6b16c;
-    border-bottom: solid 1px #692631;
 }
 
 .header-top a {

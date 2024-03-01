@@ -2,24 +2,24 @@
 <html>
 <link rel="stylesheet" href="/css/contacto.css">
 
-<%- include('../partials/head', {estilos: "" ,titulo:"La cerveza - contacto", script: "" })%>
+    <%- include('../partials/head', {estilos: "contacto" ,titulo:"La cerveza - contacto", script: "" })%>
 
     <body>
 
         <%- include('../partials/header')%>
 
-            <main>
+            <main class="main-contact">
                 <h3>Seguinos en nuestras redes sociales para conocer más</h3>
                 <nav>
                     <ul class="redes">
                         <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-whatsapp"></i> 22333333</a></li>
                     </ul>
                 </nav>
                 <nav>
                     <ul>
-                        <li><i class="fa-brands fa-whatsapp"></i> 22333333</li>
                         <li><i class="fa-solid fa-location-dot"></i> 12 de Octubre 7749. Mar del Plata, Buenos Aires,
                             Argentina.</li>
                         <li><a href=""><i class="fa-solid fa-envelope"></i> info@lavolada.com.ar</a></li>
@@ -40,8 +40,6 @@
                     </div>
 
                 </form>
-
-
             </main>
 
             <%- include('../partials/footer')%>

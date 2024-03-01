@@ -5,6 +5,7 @@ const User = db.User;
 async function userLoggedMiddleware(req, res, next) {    
     res.locals.estaLogeado = false; // Establece el valor false dentro de (res.locals.estaLogeado)
     
+    // Si existe un usuario
     if(req.session.usuarioLogeado) {
         res.locals.estaLogeado = true;
         res.locals.usuarioLogeado = req.session.usuarioLogeado;

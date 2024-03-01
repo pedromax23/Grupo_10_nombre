@@ -1,5 +1,6 @@
 .loguear {
   margin: 10px 0;
+  padding: 150px 0;
 }
 
 .formulario {
@@ -14,21 +15,14 @@
 }
 
 .formulario input {
-  border: none;
+  border: 1px solid #000;
+  background-color: rgb(207, 250, 250);
   border-radius: 3px;
   padding: 8px;
 }
 
-.formulario button {
-  background-color: #A5402D;
-  border: 1px solid #721121;
-  border-radius: 3px;
-  width: 200px;
-  color: white;
-  padding: 5px;
-}
-
-.formulario a {
+.button {
+  margin: 10px 0;
   background-color: #A5402D;
   border: 1px solid #721121;
   border-radius: 3px;
@@ -47,10 +41,24 @@
   width: 20px;
 }
 
-@media (min-width: 1200px) {
-  .formulario input,
-  .formulario button,
-  .formulario a {
+@media (min-width: 768px) {
+  .div-botones {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+  }
+  .button {
+    margin: 0 5px;
+  }
+  .formulario input {
     width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  .button {
+    width: 150px;
+    font-size: 20px;
   }
 }

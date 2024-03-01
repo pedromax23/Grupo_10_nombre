@@ -1,38 +1,60 @@
 .main-footer {
-    margin-top: 10px;
-    border-top: solid 1px #721121;
-    background-color: #ffc07f;
-    text-align: center; 
-    padding: 10px 0;
-    color: #721121;
+    background-color: #c39362;
+    text-align: center;
 }
+
 .secciones-footer {
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 .secciones-footer section {
-    border-bottom: 1px solid #721121;
     width: 90%;
     margin: auto;
 }
 .secciones-footer h3 {
     font-size: 25px;
-    color: #721121;
+    color: #000;
 }
 .secciones-footer a {
-    color: #721121;
+    color: #000;
 }
+
 .redes {
     display: flex;
-    justify-content: center;  
-}
-.seguinos i {
-    font-size: 1.5rem;
-    margin: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .copyright {
     width: 90%;
     margin: auto;
+}
+
+#icono {
+    font-size: 50px;
+    transition: all 0.3s ease;
+}
+#icono:hover {
+    transform: scale(1.1);
+}
+.fa-square-instagram, .fa-square-facebook, .fa-square-twitter, .fa-whatsapp {
+    padding: 20px; 
+    font-size: 3.5rem;
+}
+.fa-square-instagram {
+    color: rgb(173, 6, 140)
+}
+
+.fa-square-facebook {
+    color: rgb(4, 4, 150); 
+}
+
+.fa-square-twitter{
+    color: rgb(72, 124, 255); 
+}
+.fa-whatsapp {
+    color: rgb(13, 176, 13); 
+    font-size: 3.5rem;
 }
 
 @media (min-width: 768px) {
@@ -48,10 +70,10 @@
         margin: 0;
     }
     .ayuda {
-        border-right: 1px solid #721121;
+        border-right: 1px solid #000;
     }
     .seguinos {
-        border-left: 1px solid #721121;
+        border-left: 1px solid #000;
     }
     .copyright {
         margin: auto;
