@@ -1,8 +1,8 @@
 .registro {
-  margin: 0px 0;
   background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(154, 154, 154, 0.5)), url("/img/Presentación sin título (1).png");
   background-repeat: round;
-  
+  margin: 10px 0;
+  padding: 25px 0;
 }
 
 .formulario {
@@ -36,14 +36,16 @@
 }
 
 .formulario input {
-  border: none;
   border-radius: 3px;
   padding: 8px;
   width: 300px;
+  border: 1px solid #000;
+  background-color: rgb(207, 250, 250);
 }
 
 .comentario {
   width: 300px;
+  background-color: rgb(207, 250, 250);
 }
 
 .formulario button {

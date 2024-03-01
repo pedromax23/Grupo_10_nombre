@@ -23,12 +23,13 @@ const controller = {
             if(usuarioALogear) {
                 if(check) {
                     delete usuarioALogear.password;
-                    req.session.usuarioLogeado = usuarioALogear;
+                    req.session.usuarioLogeado = usuarioALogear[0];
                     res.locals.logeado = true;
                     
                     if(req.body.recordame) {
                         res.cookie('userEmail', usuarioALogear[0].email, {maxAge: 1000 * 60 * 60 * 60 * 60})
                     }
+
                 } else {
                     res.send('Contraseña erronea')
                 }

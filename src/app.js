@@ -4,7 +4,7 @@ const path = require("path");
 const override= require("method-override"); //para poder usar los metodos PUT y DELETE
 const session = require('express-session'); // Requerimos express-session
 const cookies = require('cookie-parser'); // Requerimos cookie-parser
-const userLoggedMiddleware = require('./middleware/global/userLogged.js') // Verifica si hay un usuario logeado anteriormente
+const userExist = require('./middleware/global/userExist.js') // Verifica si hay un usuario logeado anteriormente
 
 
 
@@ -27,7 +27,7 @@ app.use(session({
 }));
 
 app.use(cookies()); // Para usar las cokies
-app.use(userLoggedMiddleware)
+app.use(userExist)
 
 const mainRuoter = require("./routes/mainRouter");// Main Ruta
 const productRouter = require("./routes/productRouter");// Product Ruta
