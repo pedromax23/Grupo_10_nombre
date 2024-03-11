@@ -3,7 +3,8 @@ const router = express.Router();
 const authLoginMiddleware = require('../middleware/routes/authLogin.js');
 const authMiddleware = require('../middleware/routes/authRegister.js');
 const multer = require('../middleware/routes/multerPerfil.js');
-
+const {cheq} = require ("express-validator")
+const validacionRegister = require("../middleware/routes/validacionRegister.js")
 const usersController = require("../controllers/usersController");
 
 // Ruta formulario login
@@ -12,7 +13,7 @@ router.post('/login', authLoginMiddleware, usersController.loginPOST);
 
 // Ruta formulario register
 router.get('/register', authLoginMiddleware, usersController.register);
-router.post('/register', authLoginMiddleware, multer.single('img'), usersController.registerPOST);
+router.post('/register', authLoginMiddleware, multer.single('img'), validacionRegister, usersController.registerPOST);
 
 // Perfil del usuario
 router.get('/profile', authMiddleware, usersController.perfil)

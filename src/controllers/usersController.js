@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const db = require('../database/models')
 const sequelize = db.sequelize;
 
@@ -47,30 +48,37 @@ const controller = {
     },
 
     registerPOST: async function(req, res) {
-        try {
-            // Encriptamos la contraseña
-            let passEncriptada = bcrypt.hashSync(req.body.password,10);
-
-            let nuevoUsuario = {
-                name: req.body.name,
-                last_name: req.body.last_name,
-                user_name: req.body.user_name,
-                email: req.body.email,
-                password: passEncriptada,
-                birth_date: req.body.birth_date,
-                address: req.body.address, 
-                comment: req.body.comment,
-                img:  req.file ? req.file.filename : 'no-image-user.jpg',
+        let errors = validationResult(req) // Validamos los errores del formulario
+        if (errors.isEmpty) {
+            try {
+                // Encriptamos la contraseña
+                let passEncriptada = bcrypt.hashSync(req.body.password,10);
+    
+                let nuevoUsuario = {
+                    name: req.body.name,
+                    last_name: req.body.last_name,
+                    user_name: req.body.user_name,
+                    email: req.body.email,
+                    password: passEncriptada,
+                    birth_date: req.body.birth_date,
+                    address: req.body.address, 
+                    comment: req.body.comment,
+                    img:  req.file ? req.file.filename : 'no-image-user.jpg',
+                }
+    
+                // Creamos el usuario en MySQL
+                const userCreate = await User.create(nuevoUsuario);
+    
+                res.redirect('/user/login')
+            } catch(error) {
+                res.send(error)
             }
-
-            // Creamos el usuario en MySQL
-            const userCreate = await User.create(nuevoUsuario);
-
-            res.redirect('/user/login')
-        } catch(error) {
-            res.send(error)
         }
-    },
+        else {
+            res.render ("register", {errors: errors, old:req.body}) //redireccionamos si hay errores en el formulario
+        }
+            
+       },
 
     perfil: async function(req, res) {
         try {

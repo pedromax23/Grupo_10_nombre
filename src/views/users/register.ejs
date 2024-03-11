@@ -12,38 +12,46 @@
 
             <!-- Nombre -->
             <div> 
-                <input placeholder="Nombre" type="text" required name="name" minlength="3"/>
+                <input placeholder="Nombre" type="text" name="name" />
+                <% if (locals.errors && errors.name) { %>
+                    <p class = "errores"> <%= errors.name %></p>
+                    <% for (let i = 0; i < errors.length; i++)  { %>
+                        <% if(errores[i].param == "name"){ %>
+                            <p> <%= errores[i].msg %> </p>
+                   <% } %>
+              <% } %>
+              <% } %>
             </div>
 
             <!-- Apellido -->
             <div> 
-                <input placeholder="Apellido" type="text" required name="last_name" minlength="3"/>
+                <input placeholder="Apellido" type="text"  name="last_name" />
             </div>
     
             <!-- Nombre de usuario -->
             <div>
-                <input placeholder="Nombre de usuari@" type="text" required name="user_name"/>
+                <input placeholder="Nombre de usuari@" type="text"  name="user_name"/>
             </div>
     
             <!-- Email -->
             <div>
-                <input placeholder="Email" type="email" required name="email"/>
+                <input placeholder="Email" type="email"  name="email"/>
             </div>
 
             <!-- Password -->
             <div>
-                <input placeholder="Contraseña..." type="password" required name="password"/>
+                <input placeholder="Contraseña..." type="password"  name="password"/>
             </div>
     
             <!-- Fecha de nacimiento -->
             <div class="fecha-nacimiento">
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                <input type="date" required name="birth_date" id="fecha-nacimiento"/>
+                <input type="date"  name="birth_date" id="fecha-nacimiento"/>
             </div>
 
             <!-- Domicilio -->
             <div>
-                <input placeholder="Domicilio" type="text" required name="address"/>
+                <input placeholder="Domicilio" type="text"  name="address"/>
             </div>
 
             <!-- Comentario -->
