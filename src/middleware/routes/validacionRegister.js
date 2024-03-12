@@ -4,32 +4,46 @@ const sequelize = db.sequelize;
 
 const validacionRegister = [
     check ("name")
-    .isEmpty()
+    .notEmpty()
     .withMessage("El campo nombre no puede estra vacío")
     .bail()
     .isLength({min:2})
     .withMessage("Debe tener como mínimo 2 caracteres"), 
 
     check ("last_name")
-    .isEmpty()
-    .withMessage("El campo nombre no puede estra vacío")
+    .notEmpty()
+    .withMessage("El campo Apellido no puede estra vacío")
+    .bail()
+    .isLength({min:2})
+    .withMessage("Debe tener como mínimo 2 caracteres"),
+
+    check ("user_name")
+    .notEmpty()
+    .withMessage("El campo usuario no puede estra vacío")
     .bail()
     .isLength({min:2})
     .withMessage("Debe tener como mínimo 2 caracteres"), 
 
     check ("email")
-    .isEmpty()
+    .notEmpty()
     .withMessage("EL campo email no puede estar vacío")
     .bail()
     .isEmail()
     .withMessage("El email debe tener un formato válido")
     .custom (async (email) => {
-        const existingUser = await db.User.findOne({ email });
+        const existingUser = await db.User.findOne({
+                    where: {
+                        email: email
+                    }
+                }
+            );
         if (existingUser) {
-          throw new Error("El email ya está registrado")}}),
+          throw new Error("El email ya está registrado")
+        }
+    }),
 
     check ("password")
-    .isEmpty()
+    .notEmpty()
     .withMessage("EL campo contraseña no puede estar vacío")
     .bail()
     .isLength({min:8})
@@ -48,7 +62,7 @@ const validacionRegister = [
     .bail(),
 
     check ("img")
-    .isIn(".jpg", ".jpeg", ".png", ".gif")
+    .isIn(".jpg", ".jpeg", ".png")
 ]
 
 module.exports = validacionRegister; 

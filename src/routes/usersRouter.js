@@ -3,7 +3,6 @@ const router = express.Router();
 const authLoginMiddleware = require('../middleware/routes/authLogin.js');
 const authMiddleware = require('../middleware/routes/authRegister.js');
 const multer = require('../middleware/routes/multerPerfil.js');
-const {cheq} = require ("express-validator")
 const validacionRegister = require("../middleware/routes/validacionRegister.js")
 const usersController = require("../controllers/usersController");
 

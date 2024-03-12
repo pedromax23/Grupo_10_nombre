@@ -49,7 +49,7 @@ const controller = {
 
     registerPOST: async function(req, res) {
         let errors = validationResult(req) // Validamos los errores del formulario
-        if (errors.isEmpty) {
+        if (!errors.errors.length > 0) {
             try {
                 // Encriptamos la contraseña
                 let passEncriptada = bcrypt.hashSync(req.body.password,10);
@@ -75,7 +75,7 @@ const controller = {
             }
         }
         else {
-            res.render ("register", {errors: errors, old:req.body}) //redireccionamos si hay errores en el formulario
+            res.render ("users/register", {errors: errors.mapped(), old:req.body}) //redireccionamos si hay errores en el formulario
         }
             
        },
