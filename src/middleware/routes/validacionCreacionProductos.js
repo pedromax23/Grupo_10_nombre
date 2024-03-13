@@ -1,9 +1,13 @@
 const {check} = require ("express-validator");
 const db = require("../../database/models");
-const sequelize = db.sequelize; 
 
 
 const validacionCreacion = [
+    check('nombre')
+    .notEmpty().withMessage('El campo nombre no puede estar vacio'),
+
+    check('categoriaCerveza')
+    .notEmpty().withMessage('El campo Categoria no puede estar vacio')
 ]
 
 module.exports = validacionCreacion; 

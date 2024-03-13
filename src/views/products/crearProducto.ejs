@@ -8,15 +8,25 @@
     <!-----------Main------------->
     <main>
         <form action="/productos/crearProducto" method="post" class="crearProductoForm" enctype="multipart/form-data">
+            <!-- Campo Nombre -->
             <div>
-                <input type="text" name="nombre"  placeholder="Nombre del Producto" required>
+                <input type="text" name="nombre"  placeholder="Nombre del Producto" value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="errores_register"><%= errors.nombre.msg %></p>
+                <% } %>
             </div>
+
+            <!-- Campo Descripción -->
             <div>
-                <textarea name="descripcion"  placeholder="Descripción del producto" required></textarea>
+                <textarea name="descripcion"  placeholder="Descripción del producto"></textarea>
             </div>
+
+            <!-- Campo Imagen -->
             <div>
-                <input type="file" name="imagenCerveza"  class="file"  required>
+                <input type="file" name="imagenCerveza"  class="file">
             </div>
+
+            <!-- Campo Categoría -->
             <div>
                 <select name="categoriaCerveza">
                     <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
@@ -24,13 +34,22 @@
                         <option value="<%= variedades[i].id %>"><%= variedades[i].name %></option>
                     <% } %>
                 </select>
+                <% if (locals.errors && errors.categoriaCerveza) { %>
+                    <p class="errores_register"><%= errors.categoriaCerveza.msg %></p>
+                <% } %>
             </div>
+
+            <!-- Campo Precio -->
             <div>
                 <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01">
             </div>
+
+            <!-- Campo Stock -->
             <div>
                 <input type="number" name="stock"  min="0" placeholder="Stock 200" step="0.01">
             </div>
+
+            <!-- Campo Alchol Content -->
             <div>
                 <input type="number" name="alcohol_content"  min="0" placeholder="Alcohol content 9" step="0.01">
             </div>

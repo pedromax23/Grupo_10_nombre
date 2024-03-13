@@ -12,7 +12,7 @@
 .crearProductoForm div{
     width: 300px;
     margin: 5px 0;
-    display: flex;
+
 }
 
 
@@ -35,6 +35,12 @@ button {
     background-color: #A5402D;
     border: 1px solid #721121;
     color:white;
+}
+
+.errores_register {
+    color: red;
+    background-color: #000;
+    text-align: center;
 }
 
 /**************TABLET*************/

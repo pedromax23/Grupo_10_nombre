@@ -1,5 +1,5 @@
 const db = require('../database/models');
-const sequelize = db.sequelize;
+const { validationResult } = require('express-validator');
 const Product = db.Product;
 const Variety = db.Variety;
 
@@ -41,17 +41,27 @@ const controller = {
 
     crearProductoPOST: async function(req, res) {
         try {
-            const nuevoProducto = {
-                name: req.body.nombre,
-                img: req.file.filename,
-                description: req.body.descripcion,
-                price: req.body.precio,
-                stock: req.body.stock,
-                alcohol_content: req.body.alcohol_content,
-                variety_id: req.body.categoriaCerveza
+            let validacionErrores = validationResult(req);
+            if(validacionErrores.length > 0) {
+                
+                const nuevoProducto = {
+                    name: req.body.nombre,
+                    img: req.file.filename,
+                    description: req.body.descripcion,
+                    price: req.body.precio,
+                    stock: req.body.stock,
+                    alcohol_content: req.body.alcohol_content,
+                    variety_id: req.body.categoriaCerveza
+                }
+                const crearProducto = await Product.create(nuevoProducto)
+                res.redirect('/productos');
+
+            } else {
+                
+                const variedades = await Variety.findAll()
+                res.render('products/crearProducto', {errors: validacionErrores.mapped(), oldData: req.body, variedades: variedades})
+
             }
-            const crearProducto = await Product.create(nuevoProducto)
-            res.redirect('/productos');
         } catch(error) {
             res.send(error);
         }
