@@ -40,6 +40,14 @@
   width: 20px;
 }
 
+.errores_register {
+  text-align: center;
+  color: #A5402D;
+  background-color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight:bold;
+}
+
 @media (min-width: 768px) {
   .div-botones {
     display: flex;

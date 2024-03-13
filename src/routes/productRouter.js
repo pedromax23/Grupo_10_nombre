@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const authMiddleware = require('../middleware/routes/authRegister.js'); // Autenticador de registro Middleware
 const multer = require('../middleware/routes/multerProducto.js');
+const validacionCreacion = require('../middleware/routes/validacionCreacionProductos.js');
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
@@ -16,8 +17,8 @@ router.get('/detalle/:id', authMiddleware, productController.detalleProducto);
 router.get('/carrito-de-compras', authMiddleware, productController.carritoCompras)
 
  // Ruta formulario para crear un producto
-router.get('/crearProducto', authMiddleware, productController.crearProducto); 
-router.post('/crearProducto', authMiddleware, multer.single('imagenCerveza'), productController.crearProductoPOST);
+router.get('/crearProducto', authMiddleware, validacionCreacion, productController.crearProducto); 
+router.post('/crearProducto', authMiddleware, multer.single('imagenCerveza'), validacionCreacion, productController.crearProductoPOST);
 
 // Ruta formulario para editar un producto
 router.get('/editarProducto/:id', authMiddleware, productController.editarProducto);

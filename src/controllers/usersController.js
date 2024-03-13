@@ -13,31 +13,34 @@ const controller = {
     },
 
     loginPOST: async function(req, res) {
+        let errors = validationResult(req) // Validamos los errores del formulario
         try {
-            const usuarioALogear = await User.findAll({
-                where: {
-                    user_name: req.body.user_name
-                }
-            })
-
-            let check= bcrypt.compareSync(req.body.clave, usuarioALogear[0].password);
-            if(usuarioALogear) {
-                if(check) {
-                    delete usuarioALogear.password;
-                    req.session.usuarioLogeado = usuarioALogear[0];
-                    res.locals.logeado = true;
-                    
-                    if(req.body.recordame) {
-                        res.cookie('userEmail', usuarioALogear[0].email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+            if(!errors.errors.length > 0) {
+                const usuarioALogear = await User.findAll({
+                    where: {
+                        user_name: req.body.user_name
                     }
+                })
 
-                } else {
-                    res.send('Contraseña erronea')
+                let check= bcrypt.compareSync(req.body.clave, usuarioALogear[0].password);
+                if(usuarioALogear) {
+                    if(check) {
+                        delete usuarioALogear.password;
+                        req.session.usuarioLogeado = usuarioALogear[0];
+                        res.locals.logeado = true;
+                        
+                        if(req.body.recordame) {
+                            res.cookie('userEmail', usuarioALogear[0].email, {maxAge: 1000 * 60 * 60 * 60 * 60})
+                        }
+                    } else {
+                        return res.render("users/login", {errors: {clave: {msg: 'Contraseña incorrecta'}}, old:req.body})
+                    }
                 }
+
+                return res.redirect('/')
             } else {
-                res.send('Usuario no encontrado')
+                return res.render("users/login", {errors: errors.mapped(), old:req.body})
             }
-            return res.redirect('/')
         } catch(error) {
             res.send(error)
         }
@@ -49,11 +52,11 @@ const controller = {
 
     registerPOST: async function(req, res) {
         let errors = validationResult(req) // Validamos los errores del formulario
-        if (!errors.errors.length > 0) {
-            try {
+        try {
+            if (!errors.errors.length > 0) {
                 // Encriptamos la contraseña
                 let passEncriptada = bcrypt.hashSync(req.body.password,10);
-    
+
                 let nuevoUsuario = {
                     name: req.body.name,
                     last_name: req.body.last_name,
@@ -65,20 +68,17 @@ const controller = {
                     comment: req.body.comment,
                     img:  req.file ? req.file.filename : 'no-image-user.jpg',
                 }
-    
+
                 // Creamos el usuario en MySQL
                 const userCreate = await User.create(nuevoUsuario);
-    
                 res.redirect('/user/login')
-            } catch(error) {
-                res.send(error)
+            } else {
+                res.render ("users/register", {errors: errors.mapped(), old:req.body}) //redireccionamos si hay errores en el formulario
             }
+        } catch(error) {
+            res.send(error)
         }
-        else {
-            res.render ("users/register", {errors: errors.mapped(), old:req.body}) //redireccionamos si hay errores en el formulario
-        }
-            
-       },
+    },
 
     perfil: async function(req, res) {
         try {

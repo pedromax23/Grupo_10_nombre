@@ -10,11 +10,17 @@
     <main class="loguear">     
         <form action="/user/login" method="POST" class="formulario">                        
             <div>
-                <input type="text" name="user_name"  placeholder="Nombre de usuari@">
+                <input type="text" name="user_name"  placeholder="Nombre de usuari@" value="<%= locals.old ? old.user_name : null %>">
+                <% if (locals.errors && errors.user_name) { %>
+                    <p class="errores_register"><%= errors.user_name.msg %></p>
+                <% } %>
             </div>
 
             <div>
-                <input type="password" name="clave"  placeholder="Introduce tu contraseña">       
+                <input type="password" name="clave"  placeholder="Introduce tu contraseña" value="<%= locals.old ? old.clave : null %>">
+                <% if (locals.errors && errors.clave) { %>
+                    <p class="errores_register"><%= errors.clave.msg %></p>
+                <% } %>       
             </div>
             
             <div class="recordame_div">

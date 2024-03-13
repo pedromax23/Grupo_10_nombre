@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('../partials/head', {estilos: "register", titulo: "La cerveza - Registrate", script: ""})%>
+
+<body>
+
+    <%- include('../partials/header')%>
+
+    <main class="registro">
+        <form class="formulario" action="/user/register" method="POST" enctype="multipart/form-data"> 
+
+            <!-- Nombre -->
+            <div> 
+                <input placeholder="Nombre" type="text" name="name" value="<%= locals.old ? old.name : null %>"/>
+                <% if (locals.errors && errors.name) { %>
+                    <p class="errores_register"><%= errors.name.msg %></p>
+                <% } %>
+            </div>
+
+            <!-- Apellido -->
+            <div> 
+                <input placeholder="Apellido" type="text"  name="last_name" value="<%= locals.old ? old.last_name : null %>"/>
+                <% if (locals.errors && errors.last_name) { %>
+                    <p class="errores_register"><%= errors.last_name.msg %></p>
+                <% } %>
+            </div>
+
+            <!-- Nombre de usuario -->
+            <div>
+                <input placeholder="Nombre de usuari@" type="text"  name="user_name" value="<%= locals.old ? old.user_name : null %>"/>
+                <% if (locals.errors && errors.user_name) { %>
+                    <p class="errores_register"><%= errors.user_name.msg %></p>
+                <% } %>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <input placeholder="Email" type="text"  name="email" value="<%= locals.old ? old.email : null %>"/>
+                <% if (locals.errors && errors.email) { %>
+                    <p class="errores_register"><%= errors.email.msg %></p>
+                <% } %>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <input placeholder="Contraseña..." type="password"  name="password" value="<%= locals.old ? old.password : null %>"/>
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errores_register"><%= errors.password.msg %></p>
+                <% } %>
+            </div>
+
+            <!-- Fecha de nacimiento -->
+            <div class="fecha-nacimiento">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date"  name="birth_date" id="fecha-nacimiento"/>
+            </div>
+
+            <!-- Domicilio -->
+            <div>
+                <input placeholder="Domicilio" type="text"  name="address"/>
+            </div>
+
+            <!-- Comentario -->
+            <div>
+                <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="250" placeholder="Deja tu comentario"></textarea>
+                <p>Caracteres restantes: <span id="contador">250</span></p>
+            </div>
+
+            <!-- Imagen usuario -->
+            <div class="imagen-usuario">
+                <label for="imagenUsuario">Imagen de Usuario</label>
+                <input type="file" name="img"  class="file" id="imagenUsuario">
+            </div>
+
+            <!-- Boton de enviar -->
+            <div>
+                <button type="submit">Enviar</button> 
+            </div>
+
+            <!-- Boton de borrar -->
+            <div>
+                <button type="reset">Borrar</button> 
+            </div>
+
+        </form>
+    </main>
+
+    <%- include('../partials/footer')%>
+
+<script src="/js/register.js"></script>
+</body>
+
+</html>

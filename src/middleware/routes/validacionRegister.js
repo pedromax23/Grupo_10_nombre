@@ -2,6 +2,7 @@ const {check} = require ("express-validator");
 const db = require("../../database/models");
 const sequelize = db.sequelize; 
 
+
 const validacionRegister = [
     check ("name")
     .notEmpty()
@@ -63,6 +64,7 @@ const validacionRegister = [
 
     check ("img")
     .isIn(".jpg", ".jpeg", ".png")
+    .withMessage("Ese formato de imagen no es valido")
 ]
 
 module.exports = validacionRegister; 
