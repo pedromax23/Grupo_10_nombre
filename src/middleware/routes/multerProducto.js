@@ -10,6 +10,22 @@ const storage = multer.diskStorage({
     },
 });
 
-const upload = multer({ storage: storage });
+// Función de filtro para aceptar solo ciertos tipos de archivos
+const fileFilter = function(req, file, cb) {
+    const allowedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+    const extname = path.extname(file.originalname).toLowerCase();
+    if (allowedExtensions.includes(extname)) {
+        // Acepta el archivo
+        cb(null, true);
+    } else {
+        // Rechaza el archivo
+        cb(new Error('El archivo debe ser una imagen con extensión .jpg, .png, .jpeg o .gif'));
+    }
+};
+
+const upload = multer({ 
+    storage: storage,
+    fileFilter: fileFilter 
+});
 
 module.exports = upload;

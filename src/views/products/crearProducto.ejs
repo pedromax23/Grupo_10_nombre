@@ -24,6 +24,9 @@
             <!-- Campo Imagen -->
             <div>
                 <input type="file" name="imagenCerveza"  class="file">
+                <% if (locals.errors && errors.imagenCerveza) { %>
+                    <p class="errores_register"><%= errors.imagenCerveza.msg %></p>
+                <% } %>
             </div>
 
             <!-- Campo Categoría -->
@@ -31,7 +34,11 @@
                 <select name="categoriaCerveza">
                     <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
                     <% for( let i = 0; i < variedades.length; i++ ) { %>
-                        <option value="<%= variedades[i].id %>"><%= variedades[i].name %></option>
+                        <% if(locals.errors) { %>
+                            <option value="<%= variedades[i].id %>" <% if (variedades[i].id == locals.oldData.categoriaCerveza) { %>selected<% } %>><%= variedades[i].name %></option>
+                        <% } else { %>    
+                            <option value="<%= variedades[i].id %>"><%= variedades[i].name %></option> 
+                        <% } %>    
                     <% } %>
                 </select>
                 <% if (locals.errors && errors.categoriaCerveza) { %>
@@ -41,17 +48,26 @@
 
             <!-- Campo Precio -->
             <div>
-                <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01">
+                <input type="number" name="precio"  min="0" placeholder="Precio 100.00" step="0.01" value="<%= locals.oldData ? oldData.precio : null %>">
+                <% if (locals.errors && errors.precio) { %>
+                    <p class="errores_register"><%= errors.precio.msg %></p>
+                <% } %>
             </div>
 
             <!-- Campo Stock -->
             <div>
-                <input type="number" name="stock"  min="0" placeholder="Stock 200" step="0.01">
+                <input type="number" name="stock"  min="0" placeholder="Stock 200" value="<%= locals.oldData ? oldData.stock : null %>">
+                <% if (locals.errors && errors.stock) { %>
+                    <p class="errores_register"><%= errors.stock.msg %></p>
+                <% } %>
             </div>
 
             <!-- Campo Alchol Content -->
             <div>
-                <input type="number" name="alcohol_content"  min="0" placeholder="Alcohol content 9" step="0.01">
+                <input type="number" name="alcohol_content"  min="0" placeholder="Alcohol content 9" value="<%= locals.oldData ? oldData.alcohol_content : null %>">
+                <% if (locals.errors && errors.alcohol_content) { %>
+                    <p class="errores_register"><%= errors.alcohol_content.msg %></p>
+                <% } %>
             </div>
 
             <div class="botones">

@@ -42,7 +42,7 @@ const controller = {
     crearProductoPOST: async function(req, res) {
         try {
             let validacionErrores = validationResult(req);
-            if(validacionErrores.length > 0) {
+            if(!validacionErrores.errors.length > 0) {
                 
                 const nuevoProducto = {
                     name: req.body.nombre,
