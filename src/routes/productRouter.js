@@ -3,6 +3,7 @@ const router = express.Router();
 const authMiddleware = require('../middleware/routes/authRegister.js'); // Autenticador de registro Middleware
 const multer = require('../middleware/routes/multerProducto.js');
 const validacionCreacion = require('../middleware/routes/validacionCreacionProductos.js');
+const validacionEdicion = require('../middleware/routes/validacionEditarProducto.js')
 
 //Importamos el controlador de Producto
 const productController = require("../controllers/productController");
@@ -21,8 +22,8 @@ router.get('/crearProducto', authMiddleware, validacionCreacion, productControll
 router.post('/crearProducto', authMiddleware, multer.single('imagenCerveza'), validacionCreacion, productController.crearProductoPOST);
 
 // Ruta formulario para editar un producto
-router.get('/editarProducto/:id', authMiddleware, productController.editarProducto);
-router.put('/editarProducto/:id', authMiddleware, multer.single('imagenCerveza'), productController.editarProductoPOST);
+router.get('/editarProducto/:id', authMiddleware, validacionEdicion, productController.editarProducto);
+router.put('/editarProducto/:id', authMiddleware, multer.single('imagenCerveza'), validacionEdicion, productController.editarProductoPOST);
 
 // Ruta para eliminar un producto 
 router.delete('/delete/:id', authMiddleware, productController.eliminarProductoDELETE);

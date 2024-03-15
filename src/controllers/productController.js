@@ -82,21 +82,31 @@ const controller = {
 
     editarProductoPOST: async function(req, res) {
         try {
-            const productoEditado = {
-                name: req.body.nombre,
-                img: req.file.filename,
-                description: req.body.descripcion,
-                price: req.body.precio,
-                stock: req.body.stock,
-                alcohol_content: req.body.alcohol_content,
-                variety_id: req.body.categoria
-            }
-            const editarProducto = await Product.update(productoEditado, {
-                where: {
-                    id: req.params.id
+            let validacionErrores = validationResult(req);
+            if(!validacionErrores.errors.length > 0) {
+                const productoEditado = {
+                    name: req.body.nombre,
+                    img: req.file.filename,
+                    description: req.body.descripcion,
+                    price: req.body.precio,
+                    stock: req.body.stock,
+                    alcohol_content: req.body.alcohol_content,
+                    variety_id: req.body.categoria
                 }
-            })
-            res.redirect('/productos/detalle/' + req.params.id);
+                const editarProducto = await Product.update(productoEditado, {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                res.redirect('/productos/detalle/' + req.params.id);
+            } else {
+                const variedades = await Variety.findAll();
+
+                const product = await Product.findByPk(req.params.id, {
+                    include: ['Variety']
+                })
+                res.render('products/editarProducto', {errors: validacionErrores.mapped(), productoAEditar: product, variedades: variedades});
+            }
         } catch(error) {
             res.send(error)
         }

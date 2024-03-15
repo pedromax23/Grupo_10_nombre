@@ -10,11 +10,17 @@
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
                     <input value="<%=productoAEditar.name%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre" id="nombre-producto"/>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="errores_register"><%= errors.nombre.msg %></p>
+                    <% } %>
                 </div>
 
                 <div> 
                     <label for="precio-producto">Precio</label> <br>
                     <input value="<%=productoAEditar.price%>" placeholder="Nuevo precio" type="number" name="precio" id="precio-producto"/>
+                    <% if (locals.errors && errors.precio) { %>
+                        <p class="errores_register"><%= errors.precio.msg %></p>
+                    <% } %>
                 </div>
 
                 <div> 
@@ -22,14 +28,20 @@
                     <select name="categoria" id="categoria-producto">
                         <option disabled selected value>Selecciona una categoría</option>
                         <% variedades.forEach(variedad => { %>
-                        <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
+                            <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.categoria) { %>
+                        <p class="errores_register"><%= errors.categoria.msg %></p>
+                    <% } %>
                 </div>
 
                 <div> 
                     <label for="stock-producto">Stock disponible</label> <br>
                     <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock" id="stock-producto"/>
+                    <% if (locals.errors && errors.stock) { %>
+                        <p class="errores_register"><%= errors.stock.msg %></p>
+                    <% } %>
                 </div>
     
                 <div>
@@ -40,22 +52,26 @@
                 <div> 
                     <label for="alcohol_content">Contenido alcoholico</label> <br>
                     <input value="<%=productoAEditar.alcohol_content%>" placeholder="9" type="number" name="alcohol_content" id="alcohol_content"/>
+                    <% if (locals.errors && errors.alcohol_content) { %>
+                        <p class="errores_register"><%= errors.alcohol_content.msg %></p>
+                    <% } %>
                 </div>
 
                 <div> 
                     <label for="foto-producto">Cargar más fotos</label> <br>
-                    <input placeholder="Buscar archivos" type="file" name="imagenCerveza" id="foto-producto" accept=".jpg, .png" multiple/>
-                </div> 
+                    <input placeholder="Buscar archivos" type="file" name="imagenCerveza" id="foto-producto"/>
+                    <% if (locals.errors && errors.imagenCerveza) { %>
+                        <p class="errores_register"><%= errors.imagenCerveza.msg %></p>
+                    <% } %>
+                </div>
+
+                <div class="edicion-buttons">                    
+                    <button type="submit">Actualizar datos</button>
+            
+                    <button type="reset">Borrar</button> <!-- elimina datos del formulario no del JSON -->
+                </div>
             </form>
             <img class="img-botella" src="/img/img-form-edicion.jpeg" alt="">
-        </section>
-   
-        <section class="edicion-buttons">
-
-                <button type="submit">Actualizar datos</button> 
-
-                <button type="reset">Borrar</button> <!-- elimina datos del formulario no del JSON -->
-
         </section>
     </main>
 

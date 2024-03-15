@@ -11,6 +11,7 @@
 }
 
 .edicion-form {
+
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -28,13 +29,7 @@
   width: 300px;
 }
 
-.edicion-buttons {
-  display: flex;  
-  width: 400px;
-  margin: auto;
-}
-
-.edicion-buttons button {
+.edicion-form button {
   background-color: #A5402D;
   border: 1px solid #000;
   border-radius: 3px;
@@ -44,8 +39,22 @@
   margin: 0 5px;
 }
 
+.edicion-buttons {
+  display: flex;  
+  width: 400px;
+  margin: auto;
+}
+
 .img-botella {
   display: none;
+}
+
+.errores_register {
+  text-align: center;
+  color: #A5402D;
+  background-color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight:bold;
 }
 
 @media (min-width: 768px) {
