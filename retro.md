@@ -61,3 +61,21 @@ Retro Sprint 5
 
 5. Dejar de hacer
     * 
+
+Retro sprint 7
+
+1. Comenzar a hacer
+    * En este sprint tuvimos poca comunicación y poca reunión. 
+
+2. Hacer mas
+    * Reuniones para definir criterios, porque a veces avanzamos solos y no lo comunicamos al resto
+
+3. Continuar haciendo
+    * Trabajo en equipo y colaboración
+
+4. Hacer menos 
+    * 
+
+5. Dejar de hacer 
+    * 
+
