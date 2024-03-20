@@ -14,16 +14,16 @@ window.addEventListener("load", () => {
 
         if(form.name.value == "") {
             errorsList.push("El nombre está vacío");
-        } else if (form.name.value.length < 3) {
-            errorsList.push("El nombre debe tener al menos 3 caracteres");
+        } else if (form.name.value.length < 2) {
+            errorsList.push("El nombre debe tener al menos 2 caracteres");
         };
 
         // CONTRASEÑA
 
         if(form.password.value == "") {
             errorsList.push("La contraseña está vacía");
-        } else if (form.password.value.length < 6) {
-            errorsList.push("La constraseña debe contener al menos 6 caracteres");
+        } else if (form.password.value.length < 8) {
+            errorsList.push("La constraseña debe contener al menos 8 caracteres");
         };
 
 
@@ -38,6 +38,10 @@ window.addEventListener("load", () => {
         } else if (!emailReg.test(form.email.value)) {
             errorsList.push("Debe contener un email valido");
         };
+
+        // IMAGEN
+
+        
 
         // agregar al listado (inicialmente vacio) los errores como elementos <li>
         // si hay errores, prevengo que se envien

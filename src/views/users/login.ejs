@@ -7,7 +7,12 @@
 
     <%- include('../partials/header')%>
 
-    <main class="loguear">     
+    <main class="loguear">
+        <ul class="errores">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <br>
+            
+        </ul>     
         <form action="/user/login" method="POST" class="formulario">                        
             <div>
                 <input type="text" name="user_name"  placeholder="Nombre de usuari@" value="<%= locals.old ? old.user_name : null %>">
@@ -38,4 +43,5 @@
 
         <%- include('../partials/footer')%>
 
+<script src="/js/login.js"></script>
 </body>
