@@ -47,6 +47,15 @@
   font-size: 15px;
   font-weight:bold;
 }
+.errores {
+  display: none;
+  text-align: center;
+  color: #A5402D;
+  background-color: white;
+  font-size: 15px;
+  font-weight:bold;
+}
+
 
 .validaciones {
   height: 100%;
