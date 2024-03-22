@@ -48,6 +48,25 @@
   font-weight:bold;
 }
 
+.validaciones {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.viewErrores {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.validaciones li {
+  color: black;
+  background-color: rgb(213, 139, 139);
+  padding: 5px;
+}
+
 @media (min-width: 768px) {
   .div-botones {
     display: flex;
