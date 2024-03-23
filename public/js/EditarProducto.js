@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
 
-    let form = document.querySelector('.crearProductoForm');
+    let form = document.querySelector('.edicion-form');
     let validacion = document.querySelector(".validaciones");
 
     form.addEventListener("submit", (event) => {
@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
         }
         
         // IMAGEN
-        let imagenInput = document.querySelector('.file');
+        let imagenInput = document.getElementById('foto-producto');
         let archivo = imagenInput.files[0]; // Recuperamos la informacion del archivo
         // Validaciones
         if (!archivo) {
@@ -35,6 +35,7 @@ window.addEventListener("load", () => {
                 errorsList.push("La imagen es demasiado grande. Por favor, selecciona una imagen más pequeña.");
             }
         }
+        console.log(errorsList)
 
         if (errorsList.length > 0) {
             event.preventDefault();

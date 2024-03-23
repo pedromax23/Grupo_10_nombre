@@ -40,15 +40,16 @@ window.addEventListener("load", () => {
         };
 
         // IMAGEN
-        let fileInput = document.getElementById('imagenUsuario');
-        let file = fileInput.files[0];
-        if (!file) {
+        let imagenInput = document.getElementById('imagenUsuario');
+        let archivo = imagenInput.files[0]; // Recuperamos la informacion del archivo
+        // Validaciones
+        if (!archivo) {
             errorsList.push("Por favor, selecciona una imagen.");
         } else {
             let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-            if (!allowedExtensions.test(file.name)) {
+            if (!allowedExtensions.test(archivo.name)) {
                 errorsList.push("La imagen debe tener una extensión válida (jpg, jpeg, png o gif).");
-            } else if (file.size > 10 * 1024 * 1024) { // 10 MB
+            } else if (archivo.size > 10 * 1024 * 1024) { // 10 MB
                 errorsList.push("La imagen es demasiado grande. Por favor, selecciona una imagen más pequeña.");
             }
         }

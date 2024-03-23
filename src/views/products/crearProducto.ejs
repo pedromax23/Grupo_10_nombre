@@ -64,7 +64,7 @@
 
             <!-- Campo Alchol Content -->
             <div>
-                <input type="number" name="alcohol_content"  min="0" placeholder="Alcohol content 9" value="<%= locals.oldData ? oldData.alcohol_content : null %>">
+                <input type="number" name="alcohol_content" placeholder="Alcohol content 9" value="<%= locals.oldData ? oldData.alcohol_content : null %>">
                 <% if (locals.errors && errors.alcohol_content) { %>
                     <p class="errores_register"><%= errors.alcohol_content.msg %></p>
                 <% } %>
