@@ -32,7 +32,7 @@
             <!-- Campo Categoría -->
             <div>
                 <select name="categoriaCerveza">
-                    <option disabled selected hidden class="option1-select">Selecciona una categoría</option>
+                    <option disabled selected hidden value="ninguna" class="option1-select">Selecciona una categoría</option>
                     <% for( let i = 0; i < variedades.length; i++ ) { %>
                         <% if(locals.errors) { %>
                             <option value="<%= variedades[i].id %>" <% if (variedades[i].id == locals.oldData.categoriaCerveza) { %>selected<% } %>><%= variedades[i].name %></option>
@@ -70,6 +70,10 @@
                 <% } %>
             </div>
 
+            <ul class="validaciones">
+
+            </ul>
+
             <div class="botones">
                 <button type="submit">Crear Producto</button>
                     
@@ -79,4 +83,7 @@
     <!------------Footer----------->
     <%- include('../partials/footer')%>
 </body>
+
+<script src="/js/CrearProducto.js"></script>
+
 </html>

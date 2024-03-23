@@ -62,15 +62,26 @@
   font-size: 15px;
   font-weight:bold;
 }
-.errores {
-  display: none;
+
+.validaciones {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
   text-align: center;
-  color: #A5402D;
-  background-color: white;
-  font-size: 15px;
-  font-weight:bold;
 }
 
+.validaciones li {
+  margin: 2px 0;
+  color: black;
+  background-color: rgb(213, 139, 139);
+  padding: 5px;
+}
+
+.viewErrores {
+  border: 1px solid;
+  border-radius: 5px;
+}
 
 @media (min-width: 1200px) {
   .registro {
