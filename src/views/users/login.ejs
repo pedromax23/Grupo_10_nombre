@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html>
-
     <%- include('../partials/head', {estilos: "login", titulo: "La cerveza - Iniciar sesión", script: ""})%>
-
 <body>
 
     <%- include('../partials/header')%>
 
     <main class="loguear"> 
-        <form action="/user/login" method="POST" class="formulario">                        
+
+        <!-- FORMULARIO LOGIN -->
+        <form action="/user/login" method="POST" class="formulario">     
+            
+            <!-- CAMPO NOMBRE -->
             <div>
                 <input type="text" name="user_name"  placeholder="Nombre de usuari@" value="<%= locals.old ? old.user_name : null %>">
+
                 <% if (locals.errors && errors.user_name) { %>
                     <p class="errores_register"><%= errors.user_name.msg %></p>
                 <% } %>
             </div>
 
+            <!-- CAMPO CONTRASEÑA -->
             <div>
                 <input type="password" name="clave"  placeholder="Introduce tu contraseña" value="<%= locals.old ? old.clave : null %>">
+
                 <% if (locals.errors && errors.clave) { %>
                     <p class="errores_register"><%= errors.clave.msg %></p>
                 <% } %>       
             </div>
-            
+
+            <!-- CAMPO CHECKBOX RECORDAME -->
             <div class="recordame_div">
                 <label for="recordame">Recordame</label>
                 <input type="checkbox" name="recordame" id="recordame">       
             </div>
 
-            <ul class="validaciones">
+            <!-- VALIDACIONES DEL FRONT -->
+            <ul class="validaciones"></ul>
 
-            </ul>
-
+            <!-- BOTONES -->
             <div class="div-botones">
                 <button class="button" type="submit">Ingresar</button> 
         
-                <a class="button" href="/user/register">Regístrate</a> <!-- que nos lleve a la pagina register -->
+                <a class="button" href="/user/register">Regístrate</a>
             </div>
         </form>
     </main>

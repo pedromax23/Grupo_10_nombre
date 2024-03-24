@@ -6,8 +6,6 @@ const session = require('express-session'); // Requerimos express-session
 const cookies = require('cookie-parser'); // Requerimos cookie-parser
 const userExist = require('./middleware/global/userExist.js') // Verifica si hay un usuario logeado anteriormente
 
-
-
 // Configurando EJS ()
 app.set('views', path.resolve(__dirname, "views"));
 app.set('view engine', 'ejs');

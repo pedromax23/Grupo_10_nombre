@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.caja_notLogin {
+    max-width: 500px;
+    padding: 20px;
+}
+
+.caja_notLogin p {
+    font-size: 20px;
+}
+
+.loguearse {
+    display: flex;
+}
+
+.caja_notLogin a {
+    border: 5px;
+    border: solid 1px black;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    transition: all .3s;
+}
+.caja_notLogin a:hover {
+    background-color: rgb(165, 165, 216);
+}

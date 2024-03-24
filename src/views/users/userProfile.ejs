@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-
     <%- include('../partials/head', {estilos: "perfilUser", titulo: "La cerveza - Perfil", script: ""})%>
-
 <body>
 
     <%- include('../partials/header')%>
 
-    <%= console.log(user) %>
+    <main class="perfil">   
 
-    <main class="perfil">     
+        <!-- TITULO DEL PERFIL -->
         <h1 class="perfil_name">Este es el perfil de: <%= user.name %></h1>
 
+        <!-- IMAGEN DEL USUARIO -->
         <img class="imagen_usuario" src="/img/usuarios/<%= user.img %>" alt="Imagen de usuario">
 
+        <!-- BOTONES -->
         <div class="botones">
             <a class="logout" href="/user/logout">Logout</a>
             <a href="/user/cambiarPassword/<%= user.id %>">Cambiar contraseña</a>
@@ -21,6 +21,6 @@
 
     </main>
 
-        <%- include('../partials/footer')%>
+    <%- include('../partials/footer')%>
 
 </body>

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-
-    <%- include('../partials/head', {estilos: "login", titulo: "La cerveza - Iniciar sesión", script: ""})%>
-
+    <%- include('../partials/head', {estilos: "notLogin", titulo: "La cerveza - Iniciar sesión", script: ""})%>
 <body>
 
     <%- include('../partials/header')%>
 
-    <main class="loguear">     
-        <p>Usted no tiene permisos para entrar a esta pagina</p>
-        <p>Si desea logearse ingrese aqui</p>
-        <a href="/user/login">login</a>
+    <main class="main">
+        <div class="caja_notLogin">
+            <p>Usted no tiene permisos para entrar a esta pagina</p>
+            <div class="loguearse">
+                <label>Si desea logearse ingrese aqui</label>
+                <a href="/user/login">login</a>
+            </div>
+        </div>
     </main>
 
         <%- include('../partials/footer')%>

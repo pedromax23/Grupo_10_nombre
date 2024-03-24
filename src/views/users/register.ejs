@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
-
     <%- include('../partials/head', {estilos: "register", titulo: "La cerveza - Registrate", script: ""})%>
-
 <body>
 
     <%- include('../partials/header')%>
 
     <main class="registro">
+
+        <!-- FORMULARIO REGISTRO -->
         <form class="formulario" action="/user/register" method="POST" enctype="multipart/form-data"> 
 
-            <!-- Nombre -->
+            <!-- CAMPO NOMBRE -->
             <div> 
                 <input placeholder="Nombre" type="text" name="name" value="<%= locals.old ? old.name : null %>"/>
+                
                 <% if (locals.errors && errors.name) { %>
                     <p class="errores_register"><%= errors.name.msg %></p>
                 <% } %>
             </div>
 
-            <!-- Apellido -->
+            <!-- CAMPO APELLIDO -->
             <div> 
                 <input placeholder="Apellido" type="text"  name="last_name" value="<%= locals.old ? old.last_name : null %>"/>
+                
                 <% if (locals.errors && errors.last_name) { %>
                     <p class="errores_register"><%= errors.last_name.msg %></p>
                 <% } %>
             </div>
 
-            <!-- Nombre de usuario -->
+            <!-- CAMPO NOMBRE USUARIO -->
             <div>
                 <input placeholder="Nombre de usuari@" type="text"  name="user_name" value="<%= locals.old ? old.user_name : null %>"/>
+                
                 <% if (locals.errors && errors.user_name) { %>
                     <p class="errores_register"><%= errors.user_name.msg %></p>
                 <% } %>
             </div>
 
-            <!-- Email -->
+            <!-- CAMPO EMAIL -->
             <div>
                 <input placeholder="Email" type="text"  name="email" value="<%= locals.old ? old.email : null %>"/>
                 <% if (locals.errors && errors.email) { %>
@@ -42,7 +45,7 @@
                 <% } %>
             </div>
 
-            <!-- Password -->
+            <!-- CAMPO CONTRASEÑA -->
             <div>
                 <input placeholder="Contraseña..." type="password"  name="password" value="<%= locals.old ? old.password : null %>"/>
                 <% if (locals.errors && errors.password) { %>
@@ -50,24 +53,24 @@
                 <% } %>
             </div>
 
-            <!-- Fecha de nacimiento -->
+            <!-- CAMPO FECHA DE NACIMIENTO -->
             <div class="fecha-nacimiento">
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
                 <input type="date"  name="birth_date" id="fecha-nacimiento"/>
             </div>
 
-            <!-- Domicilio -->
+            <!-- CAMPO DOMICILIO -->
             <div>
                 <input placeholder="Domicilio" type="text"  name="address"/>
             </div>
 
-            <!-- Comentario -->
+            <!-- CAMPO COMENTARIO -->
             <div>
                 <textarea class="comentario" name="comment" id="comment" rows="5" cols="24" maxlength="250" placeholder="Deja tu comentario"></textarea>
                 <p>Caracteres restantes: <span id="contador">250</span></p>
             </div>
 
-            <!-- Imagen usuario -->
+            <!-- CAMPO IMAGEN -->
             <div class="imagen-usuario">
                 <label for="imagenUsuario">Imagen de Usuario</label>
                 <input type="file" name="img" class="file" id="imagenUsuario">
@@ -77,12 +80,10 @@
             
             </ul>
 
-            <!-- Boton de enviar -->
+            <!-- BOTONES -->
             <div>
                 <button type="submit">Enviar</button> 
             </div>
-
-            <!-- Boton de borrar -->
             <div>
                 <button type="reset">Borrar</button> 
             </div>
@@ -92,7 +93,7 @@
 
     <%- include('../partials/footer')%>
 
-<script src="/js/register.js"></script>
 </body>
+<script src="/js/register.js"></script>
 
 </html>
