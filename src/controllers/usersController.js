@@ -13,16 +13,17 @@ const controller = {
     },
 
     loginPOST: async function(req, res) {
+        
         let errors = validationResult(req) // Validamos los errores del formulario
         try {
             if(!errors.errors.length > 0) {
                 const usuarioALogear = await User.findAll({
                     where: {
-                        user_name: req.body.user_name
+                        user_name: req.body.name
                     }
                 })
 
-                let check= bcrypt.compareSync(req.body.clave, usuarioALogear[0].password);
+                let check= bcrypt.compareSync(req.body.password, usuarioALogear[0].password);
                 if(usuarioALogear) {
                     if(check) {
                         delete usuarioALogear.password;
@@ -33,7 +34,7 @@ const controller = {
                             res.cookie('userEmail', usuarioALogear[0].email, {maxAge: 1000 * 60 * 60 * 60 * 60})
                         }
                     } else {
-                        return res.render("users/login", {errors: {clave: {msg: 'Contraseña incorrecta'}}, old:req.body})
+                        return res.render("users/login", {errors: {password: {msg: 'Contraseña incorrecta'}}, old:req.body})
                     }
                 }
 

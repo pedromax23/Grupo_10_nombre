@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 
         // USER NAME (o EMAIL)
     
-        if(form.user_name.value == "") {
+        if(form.name.value == "") {
             errorsList.push("Escribe un usuario válido");
         };
 

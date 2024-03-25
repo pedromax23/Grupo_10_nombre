@@ -7,15 +7,19 @@
 
     <main>
         <section class="productos">
-            <!-- Cree un bucle para mostrar cada producto -->
+
+            <!-- BUCLE FOREACH SOBRE LOS PRODUCTOS -->
             <% products.forEach(producto => { %>
+
                 <a class="link-articulo" href="/productos/detalle/<%= producto.id %>">
-                    <img class= "imagen" src="/img/productos/<%= producto.img %>" alt="imagen-producto">
+                    <img class= "imagen" src="/img/productos/<%= producto.img %>" alt="imagen de un producto">
                     <h3 class="nombre-producto"><%= producto.name %></h3>
                     <p class="precio"><%= "$" + producto.price %></p>
                 </a>
+
             <% }) %>
-            <!-- Fin del bucle -->
+            <!-- FIN DEL BUCLE -->
+
         </section>
     </main>
 

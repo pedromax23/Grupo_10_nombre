@@ -3,7 +3,7 @@ const db = require("../../database/models");
 const bcrypt = require('bcryptjs');
 
 const validacionLogin = [
-    check ("user_name")
+    check ("name")
     .notEmpty()
     .withMessage("El campo nombre no puede estra vacío")
     .bail()
@@ -19,7 +19,7 @@ const validacionLogin = [
         }
     }),
     
-    check("clave")
+    check("password")
     .notEmpty()
     .withMessage("El campo contraseña no puede estra vacío")
 ]

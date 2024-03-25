@@ -12,7 +12,7 @@
             
             <!-- CAMPO NOMBRE -->
             <div>
-                <input type="text" name="user_name"  placeholder="Nombre de usuari@" value="<%= locals.old ? old.user_name : null %>">
+                <input type="text" name="name"  placeholder="Nombre de usuari@" value="<%= locals.old ? old.user_name : null %>">
 
                 <% if (locals.errors && errors.user_name) { %>
                     <p class="errores_register"><%= errors.user_name.msg %></p>
@@ -21,10 +21,10 @@
 
             <!-- CAMPO CONTRASEÑA -->
             <div>
-                <input type="password" name="clave"  placeholder="Introduce tu contraseña" value="<%= locals.old ? old.clave : null %>">
+                <input type="password" name="password"  placeholder="Introduce tu contraseña" value="<%= locals.old ? old.clave : null %>">
 
-                <% if (locals.errors && errors.clave) { %>
-                    <p class="errores_register"><%= errors.clave.msg %></p>
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errores_register"><%= errors.password.msg %></p>
                 <% } %>       
             </div>
 

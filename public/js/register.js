@@ -8,38 +8,37 @@ window.addEventListener("load", () => {
 
         let errorsList = [];
 
-        // NOMBRE
+        // CAMPO NOMBRE
         if(form.name.value == "") {
             errorsList.push("El nombre está vacío");
         } else if (form.name.value.length < 2) {
             errorsList.push("El nombre debe tener al menos 2 caracteres");
         };
 
-        // APELLIDO
+        // CAMPO APELLIDO
         if(form.last_name.value == "") {
             errorsList.push("El Apellido está vacío");
         } else if (form.name.value.length < 2) {
             errorsList.push("El Apellido debe tener al menos 2 caracteres");
         };
 
-        // EMAIL
+        // CAMPO EMAIL
         // declaro un regex
         let emailReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
         if(form.email.value == "") {
             errorsList.push("Escribe un email");
         } else if (!emailReg.test(form.email.value)) {
             errorsList.push("Debe contener un email valido");
         }
         
-        // CONTRASEÑA
+        // CAMPO CONTRASEÑA
         if(form.password.value == "") {
             errorsList.push("La contraseña está vacía");
         } else if (form.password.value.length < 8) {
             errorsList.push("La constraseña debe contener al menos 8 caracteres");
         };
 
-        // IMAGEN
+        // CAMPO IMAGEN
         let imagenInput = document.getElementById('imagenUsuario');
         let archivo = imagenInput.files[0]; // Recuperamos la informacion del archivo
         // Validaciones
