@@ -89,7 +89,6 @@ const controller = {
                 }
             })
 
-            console.log(user)
             res.render('users/userProfile', {user});
         } catch(error) {
             res.send(error)

@@ -34,5 +34,11 @@ app.use('/', mainRuoter);
 app.use('/productos', productRouter);
 app.use('/user', usersRouter)
 
+// API
+const usersRouterAPI = require("./routes/api/usersApi");
+const productsApi = require("./routes/api/productsApi.js");
+app.use('/api/users', usersRouterAPI)
+app.use('/api/products', productsApi)
+
 // Iniciando el servidor
 app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://localhost:3030/"));

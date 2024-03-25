@@ -8,7 +8,7 @@
     
     <nav class="nav-padre">
         <ul class="menu-superior">
-            <% if(locals.estaLogeado) { %>
+            <% if(locals.estaLogeado && locals.usuarioLogeado.category_id == 2) { %>
                 <li class="menu_li"><a href="/">Inicio</a></li>
                 <li class="menu_li"><a href="/quienes-somos">Quienes somos</a></li>
                 <li class="menu_li"><a href="/productos">Productos</a></li>

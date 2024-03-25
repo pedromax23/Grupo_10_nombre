@@ -32,6 +32,9 @@ const controller = {
 
     crearProducto: async function(req, res) {
         try {
+
+            
+
             const variedades = await Variety.findAll()
             res.render('products/crearProducto', {variedades: variedades});
         } catch(error) {
