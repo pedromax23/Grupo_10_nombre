@@ -2,12 +2,14 @@
 <html>
     <%- include('../partials/head', {estilos:"detalleProducto", titulo: "La cerveza - Productos", script: ""})%>
 <body>
-
     <%- include('../partials/header')%>
 
     <main>
+
+        <!-- SECCIÓN DETALLE DE PRODUCTO -->
         <section class="detalleProducto">
 
+            <!-- TITULO, VARIEDAD, ALCOHOL CONTENT E IMAGEN -->
             <div class="imagen-titulo">
                 <h2><%= producto.name %></h2>
                 <p><%= producto.Variety.name %></p>
@@ -17,6 +19,7 @@
                 </div>
             </div>   
             
+            <!-- DESCRIPCIÓN -->
             <div class="descripcion-cerveza">
                 <div class="descripcion">
                     <p> <%= producto.description %> </p>
@@ -33,27 +36,29 @@
                     <p>Disponible: <%=producto.stock%> unidades.</p>
                 </div>
 
+                <!-- BOTONES -->
                 <button type="button" class="boton" name="botonAgregar" id="btn_agregar"  title="buscar">
                     <i class="fa fa-cart-plus"></i>
                 </button>
-
                 <div class="contenedor_botones">
                     <a href="/productos"> <button type="button"  class="boton" name="Volver">Volver</button></a>  
-                        
-    
                     <a href="/productos/editarProducto/<%=producto.id%>"><button type="button" class="boton"  name="Editar">Editar</button></a>     
                 </div>
-
                 <div>
                     <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                     </form>
                 </div>
-            </div>         
+            </div>   
+
+            <button class="boton_localstorage"></button>
         </section> 
+
     </main>
 
     <%- include('../partials/footer')%>
 
 </body>
+
+<script src="/js/DetalleProducto.js"></script>
 </html>

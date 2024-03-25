@@ -6,23 +6,31 @@
 
     <main class="edicion-producto-main">
         <section class="caja-edicion">
+
+            <!-- FORMULARIO DE EDICION -->
             <form action="/productos/editarProducto/<%=productoAEditar.id%>?_method=PUT" method="POST" class="edicion-form" enctype="multipart/form-data">
+                
+                <!-- CAMPO NOMBRE -->
                 <div> 
                     <label for="nombre-producto">Nombre del producto</label> <br>
                     <input value="<%=productoAEditar.name%>" placeholder="Ej: Actualizar nombre del producto" type="text" name="nombre" id="nombre-producto"/>
+                    
                     <% if (locals.errors && errors.nombre) { %>
                         <p class="errores_register"><%= errors.nombre.msg %></p>
                     <% } %>
                 </div>
 
+                <!-- CAMPO PRECIO -->
                 <div> 
                     <label for="precio-producto">Precio</label> <br>
                     <input value="<%=productoAEditar.price%>" placeholder="Nuevo precio" type="number" name="precio" id="precio-producto"/>
+                    
                     <% if (locals.errors && errors.precio) { %>
                         <p class="errores_register"><%= errors.precio.msg %></p>
                     <% } %>
                 </div>
 
+                <!-- CAMPO CATEGORÍA -->
                 <div> 
                     <label for="categoria-producto">Categoría</label> <br>
                     <select name="categoria" id="categoria-producto">
@@ -31,50 +39,58 @@
                             <option value="<%= variedad.id %>" <% if (variedad.id === productoAEditar.Variety.id) { %> selected <% } %>><%= variedad.name %></option>
                         <% }) %>
                     </select>
+                    
                     <% if (locals.errors && errors.categoria) { %>
                         <p class="errores_register"><%= errors.categoria.msg %></p>
                     <% } %>
                 </div>
 
+                <!-- CAMPO STOCK -->
                 <div> 
                     <label for="stock-producto">Stock disponible</label> <br>
                     <input value="<%=productoAEditar.stock%>" placeholder="1" type="number" name="stock" id="stock-producto"/>
+                    
                     <% if (locals.errors && errors.stock) { %>
                         <p class="errores_register"><%= errors.stock.msg %></p>
                     <% } %>
                 </div>
     
+                <!-- CAMPO DESCRIPCIÓN -->
                 <div>
                     <label for="descripcion-producto">Descripción</label> <br>
                     <textarea class="comentario" name="descripcion" id="descripcion-producto" rows="5" cols="24" maxlength="300" placeholder="Escriba una descripción (máximo 300 palabras)"><%=productoAEditar.description%></textarea>
                 </div>
 
+                <!-- CAMPO CONTENIDO DE ALCOHOL -->
                 <div> 
                     <label for="alcohol_content">Contenido alcoholico</label> <br>
                     <input value="<%=productoAEditar.alcohol_content%>" placeholder="9" type="number" name="alcohol_content" id="alcohol_content"/>
+                    
                     <% if (locals.errors && errors.alcohol_content) { %>
                         <p class="errores_register"><%= errors.alcohol_content.msg %></p>
                     <% } %>
                 </div>
 
+                <!-- CAMPO IMAGEN -->
                 <div> 
-                    <label for="foto-producto">Cargar más fotos</label> <br>
+                    <label for="foto-producto">Cargar foto</label> <br>
                     <input placeholder="Buscar archivos" type="file" name="imagenCerveza" id="foto-producto"/>
                     <% if (locals.errors && errors.imagenCerveza) { %>
                         <p class="errores_register"><%= errors.imagenCerveza.msg %></p>
                     <% } %>
                 </div>
 
-                <ul class="validaciones">
+                <!-- VALIDACIONES DEL FROT -->
+                <ul class="validaciones"></ul>
 
-                </ul>
-
+                <!-- BOTONES -->
                 <div class="edicion-buttons">                    
                     <button type="submit">Actualizar datos</button>
             
                     <button type="reset">Borrar</button> <!-- elimina datos del formulario no del JSON -->
                 </div>
             </form>
+            
             <img class="img-botella" src="/img/img-form-edicion.jpeg" alt="">
         </section>
     </main>
