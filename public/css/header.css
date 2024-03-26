@@ -16,11 +16,14 @@ ul {
 
 .header-principal {
     display: flex;
-    background-color: #f6b16c;
+    background-image: url("/img/header_mobile.jpg");
+    background-size: 100%;
+    height: 180px;
 }
 
 .header-top a {
     display: none;
+
 }
 
 .nav-padre {
@@ -121,6 +124,11 @@ ul {
     .menu-superior {
         justify-content: center;
     }
+
+    .header-principal {
+        display: flex;
+        background-image: url("/img/header_mobile.jpg");
+}
 }
 
 @media (min-width: 1200px) {
@@ -157,4 +165,8 @@ ul {
     .menu-inferior i:hover {
         color: #721121;
     }
+    .header-principal {
+        display: flex;
+        background-image: url("/img/header.jpg");
+}
 }
