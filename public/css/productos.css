@@ -3,7 +3,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 0px ;
+   
+   
 }
+
 .link-articulo {
     display: flex;
     flex-direction: column;
@@ -41,11 +45,17 @@
 
     .link-articulo {
         width: 300px;
+        transition-property: box-shadow width;
+        transition-duration: 1ms 1ms;
+    }
+    .link-articulo:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 }
 
 @media (min-width: 1200px) {
     .productos {
         align-items: flex-start;
+        
     }
 }
