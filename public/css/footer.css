@@ -31,6 +31,8 @@
     margin: auto;
 }
 
+
+
 #icono {
     font-size: 50px;
     transition: all 0.3s ease;
@@ -58,6 +60,15 @@
     font-size: 3.5rem;
 }
 
+.fa-circle-up{
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    color: #721121;
+  
+}
+
+
 @media (min-width: 768px) {
 }
 
@@ -77,6 +88,10 @@
         border-left: 1px solid #000;
     }
     .copyright {
+        margin: auto;
+    }
+
+    .icono-up{
         margin: auto;
     }
 }

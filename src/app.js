@@ -5,6 +5,8 @@ const override= require("method-override"); //para poder usar los metodos PUT y 
 const session = require('express-session'); // Requerimos express-session
 const cookies = require('cookie-parser'); // Requerimos cookie-parser
 const userExist = require('./middleware/global/userExist.js') // Verifica si hay un usuario logeado anteriormente
+const error404Middleware= require('../src/middleware/global/error404Middleware.js');
+
 
 // Configurando EJS ()
 app.set('views', path.resolve(__dirname, "views"));
@@ -40,5 +42,7 @@ const productsApi = require("./routes/api/productsApi.js");
 app.use('/api/users', usersRouterAPI)
 app.use('/api/products', productsApi)
 
+//Es el Middleware que se ejecuta al final de todos.
+app.use(error404Middleware);
 // Iniciando el servidor
 app.listen(3030, () => console.log("Servidor corriendo en el puerto: http://localhost:3030/"));
