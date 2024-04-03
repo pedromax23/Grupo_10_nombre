@@ -7,6 +7,8 @@ const cookies = require('cookie-parser'); // Requerimos cookie-parser
 const userExist = require('./middleware/global/userExist.js') // Verifica si hay un usuario logeado anteriormente
 const error404Middleware= require('../src/middleware/global/error404Middleware.js');
 
+const cors = require('cors')
+app.use(cors())
 
 // Configurando EJS ()
 app.set('views', path.resolve(__dirname, "views"));

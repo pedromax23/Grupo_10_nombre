@@ -1,3 +1,4 @@
+const { where } = require('sequelize');
 const db = require('../database/models');
 const { validationResult } = require('express-validator');
 const Product = db.Product;
@@ -6,14 +7,29 @@ const Variety = db.Variety;
 const controller = {
     listado: async function(req, res) {
         try {
-            const products = await Product.findAll({
-                include: ['Variety']
-            });
-            res.render('products/productos', {products})
+            let products;
+            let varietys = await Variety.findAll();
+            
+            if (req.query.tipo) {
+                // Si el parámetro 'tipo' está presente en los parámetros de consulta
+                products = await Product.findAll({
+                    where: { variety_id: req.query.tipo }, // Filtrar por el ID de la variedad
+                    include: ['Variety']
+                });
+            } else {
+                // Si no se proporciona el parámetro 'tipo', obtener todos los productos
+                products = await Product.findAll({
+                    include: ['Variety']
+                });
+            }
+            
+            res.render('products/productos', { products: products, varietys: varietys });
         } catch(error) {
-            res.send(error)
+            res.send(error);
         }
     },
+    
+    
 
     detalleProducto: async function(req, res) {
         try {
