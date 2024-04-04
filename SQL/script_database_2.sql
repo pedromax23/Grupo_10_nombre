@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
--- Host: localhost    Database: cerveceria
+-- Host: 127.0.0.1    Database: cerveceria
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 
@@ -32,7 +32,7 @@ CREATE TABLE `products` (
   `alcohol_content` float NOT NULL,
   `variety_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (3,'STOUT',1050,'imagenCerveza-1711480282371.jpg',' Es una cerveza que se potencia en una guarda prolongada, tiene toques a ahumado, café, chocolate, cacao, frutos oscuros, alcohol y un final relativamente seco, cuerpo sedoso y espeso y un amargor muy bien integrado, el peso pesado de las cervezas negras.',15,5,6),(4,'HONEY',1010,'imagenCerveza-1711480356125.jpg','De color dorado, cuerpo medio, con un intenso aroma y sabor a miel. Se caracteriza por ser muy fresca, agradable, de gusto dulce. Ideal para calmar la sed o acompañar ensaladas, platos de sabores neutros o afrutados.',15,6,4),(5,'IPA INTENSA',1130,'imagenCerveza-1711480428337.jpg','Es una cerveza elaborada a base de maltas pálidas y un toque de maltas caramelo, con fuerte sabor y aroma a lúpulos americanos, espuma blanca persistente, de cuerpo medio y con gran carácter. Ideal para maridar con quesos fuertes y picante.',12,7,5),(6,'AMBER',950,'imagenCerveza-1711480480513.jpg','Conocidas simplemente como Red Ales en algunas regiones. Con cuerpo, rica en caramelos y un balance equilibrado entre la malta y los lúpulos. Ideal para acompañar carnes, quesos y hamburguesas.',14,5,7),(7,'GOLDEN',1095,'imagenCerveza-1711480554005.jpg','Tiene un agradable color dorado, amargor liviano, carbonatación media-alta, un suave sabor a cereal hace el soporte dulce para la combinación de lúpulos alemanes y americanos que entregan frescas notas cítricas y florales, cuerpo medio y agradable espuma. Fácil de hacer y de beber..',16,4,3);
+INSERT INTO `products` VALUES (16,'PURA VOLADA',1050,'imagenCerveza-1712193559421.jpg','Clásica cerveza con miel, elaborada con miel pura de abejas. De bajo amargor y cuerpo medio. ',4,6,4),(17,'HONEY CLASICA',995,'imagenCerveza-1712193480007.jpg','De color dorado, cuerpo medio, con un intenso aroma y sabor a miel. Se caracteriza por ser muy fresca, agradable, de gusto dulce. Ideal para calmar la sed o acompañar ensaladas, platos de sabores neutros o afrutados.',8,6,4),(18,'LIBRE',850,'imagenCerveza-1712193605350.jpg','Cerveza suave, con alta concentración de miel. SIN ALCOHOL. Para disfrutar en todo momento.\r\n',6,0,4),(19,'ALTA IPA',1500,'imagenCerveza-1712193725721.jpg','Intensa y espumosa, con una alta concentración de de alcohol y de lúpulos',6,7,5),(20,'IPA CLASICA',1350,'imagenCerveza-1712193909214.jpg','Es una cerveza elaborada a base de maltas pálidas y un toque de maltas caramelo, con fuerte sabor y aroma a lúpulos americanos, espuma blanca persistente, de cuerpo medio y con gran carácter. Ideal para maridar con quesos fuertes y picante.',8,7,5),(21,'BLACK IPA',1390,'imagenCerveza-1712193996772.jpg','Cerveza elaborada con maltas mas oscuras y una alta concentración de amargor y alcohol',6,8,5),(22,'AMBER CLASICA',1250,'imagenCerveza-1712194041205.jpg','Conocidas simplemente como Red Ales en algunas regiones. Con cuerpo, rica en caramelos y un balance equilibrado entre la malta y los lúpulos. Ideal para acompañar carnes, quesos y hamburguesas.',9,5,7),(23,'CANDY',1250,'imagenCerveza-1712194103206.jpg','Color ambar, lupulada, de intensidad moderada, con un sabor maltoso a caramelo.',4,5,7),(24,'STOUT CLASICA',1240,'imagenCerveza-1712194144252.jpg',' Es una cerveza que se potencia en una guarda prolongada, tiene toques a ahumado, café, chocolate, cacao, frutos oscuros, alcohol y un final relativamente seco, cuerpo sedoso y espeso y un amargor muy bien integrado, el peso pesado de las cervezas negras.',3,5,6),(25,'MILK STOUT',1350,'imagenCerveza-1712194229496.jpg','De cuerpo pleno y cremoso, levemente dulce y sedosa, pero con el lúpulo justo para balancear el gusto.',6,5,6),(26,'GOLDEN CLASICA',1230,'imagenCerveza-1712194267329.jpg','Tiene un agradable color dorado, amargor liviano, carbonatación media-alta, un suave sabor a cereal hace el soporte dulce para la combinación de lúpulos alemanes y americanos que entregan frescas notas cítricas y florales, cuerpo medio y agradable espuma. Fácil de hacer y de beber.',6,4,3),(27,'BISQUICK',990,'imagenCerveza-1712194367300.jpg','Carácter de malta medio bajo, con sabor a bizcocho. Pálida, orientada al lúpulo',6,4,3),(28,'DORADA',1010,'imagenCerveza-1712194419559.jpg','La más dorada de nuestras cervezas, orientada al sabor y muy refrescante.',6,4,3);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-26 23:13:24
+-- Dump completed on 2024-04-03 22:36:48
