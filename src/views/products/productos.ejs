@@ -6,16 +6,20 @@
     <%- include('../partials/header')%>
 
     <main>
-        <section class="productos">
-
-            <ul>
+        <section class="variedades">
+            <input type="checkbox" id="abrirMenu">
+            <label for="abrirMenu" class="checkbox-label">Variedades</label>
+            <ul class="menu__variedades">
+                <li><a href="/productos">Todas</a></li>
                 <% varietys.forEach(variety => { %>
 
                     <li><a href="/productos?tipo=<%=variety.id%>"><%= variety.name %></a></li>
     
                 <% }) %>
             </ul>
+        </section>
 
+        <section class="productos">
             <!-- BUCLE FOREACH SOBRE LOS PRODUCTOS -->
             <% products.forEach(producto => { %>
 
