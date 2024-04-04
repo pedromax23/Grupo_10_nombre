@@ -8,9 +8,23 @@
     <%- include('../partials/header')%>
 
     <script>
-        let edad = 0;
-      
         
+        let edad =0;
+        edad = prompt("Por favor, introduce tu edad:");
+
+        if(edad == ""){
+            console.log(edad);
+            prompt("Por favor, introduce tu edad:"); 
+               
+
+        }else if (edad<18){
+            alert("Debes ser mayor de 18 años.");
+        }else{
+
+            res.render ("/")
+        }
+      
+        /*let edad= 0;
         while(edad <= 18) {
           
           edad = prompt("Por favor, introduce tu edad:");
@@ -32,7 +46,7 @@
            
             alert("Debes ser mayor de 18 años.");
           }
-        }
+        }*/
       </script>
 
     
