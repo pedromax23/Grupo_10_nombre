@@ -7,48 +7,7 @@
 
     <%- include('../partials/header')%>
 
-    <script>
-        
-        let edad =0;
-        edad = prompt("Por favor, introduce tu edad:");
-
-        if(edad == ""){
-            console.log(edad);
-            prompt("Por favor, introduce tu edad:"); 
-               
-
-        }else if (edad<18){
-            alert("Debes ser mayor de 18 años.");
-        }else{
-
-            res.render ("/")
-        }
-      
-        /*let edad= 0;
-        while(edad <= 18) {
-          
-          edad = prompt("Por favor, introduce tu edad:");
-      
-         
-          if(edad === null) {
-            alert("Es necesario introducir la edad para continuar.");
-            break; 
-          }
-          else if(isNaN(edad) || edad.trim() === "") {
-            
-            alert("Por favor, introduce un número válido.");
-            edad = 0; 
-          }
-          else if(edad >= 18) {
-           
-            res.render ("/")
-          } else {
-           
-            alert("Debes ser mayor de 18 años.");
-          }
-        }*/
-      </script>
-
+   
     
     <main>
         

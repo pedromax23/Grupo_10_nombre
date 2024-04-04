@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head', {estilos:"detalleProducto", titulo: "La cerveza - Productos", script: ""})%>
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+
+        <!-- SECCIÓN DETALLE DE PRODUCTO -->
+        <section class="detalleProducto">
+
+            <div>
+
+                <h1>Seguro que quieres eliminar el producto: <%= producto.name %></h1>
+
+                <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </div>   
+        </section> 
+
+    </main>
+
+    <%- include('../partials/footer')%>
+
+</body>
+
+<script src="/js/DetalleProducto.js"></script>
+</html>

@@ -23,7 +23,9 @@ const controller = {
             res.send('Error:', error);
           });
 
-        let products = await Product.findAll()
+        let products = await Product.findAll({
+          include: 'Variety'
+        })
 
         res.json({
             count: products.length,

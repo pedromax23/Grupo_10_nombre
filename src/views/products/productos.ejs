@@ -8,6 +8,14 @@
     <main>
         <section class="productos">
 
+            <ul>
+                <% varietys.forEach(variety => { %>
+
+                    <li><a href="/productos?tipo=<%=variety.id%>"><%= variety.name %></a></li>
+    
+                <% }) %>
+            </ul>
+
             <!-- BUCLE FOREACH SOBRE LOS PRODUCTOS -->
             <% products.forEach(producto => { %>
 

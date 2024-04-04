@@ -30,6 +30,7 @@ router.get('/editarProducto/:id',authMiddleware, validacionEdicion, validacionUs
 router.put('/editarProducto/:id', authMiddleware, multer.single('imagenCerveza'), validacionEdicion, validacionUsuarioCategoria, productController.editarProductoPOST);
 
 // Ruta para eliminar un producto 
+router.get('/eliminar/:id', authMiddleware, validacionUsuarioCategoria, productController.eliminarProducto)
 router.delete('/delete/:id', authMiddleware, validacionUsuarioCategoria, productController.eliminarProductoDELETE);
 
 
