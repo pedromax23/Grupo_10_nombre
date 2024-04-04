@@ -1,29 +1,30 @@
-<%- include('../partials/head', {estilos: "header", titulo: "", script: ""})%>
+<header>
 
-<header class="header-principal">
-
-    <div class="header-top">
+    <!-- IMAGEN LOGO -->
+    <div class="logo">
         <a href="/"><img src="/img/la_volada_logo.png" alt=""></a>
     </div>
     
-    <nav class="nav-padre">
-        <ul class="menu-superior">
+    <nav class="menu_principal">
+
+        <ul class="menu_superior">
             <% if(locals.estaLogeado && locals.usuarioLogeado.category_id == 1) { %>
-                <li class="menu_li"><a href="/">Inicio</a></li>
-                <li class="menu_li"><a href="/quienes-somos">Quienes somos</a></li>
-                <li class="menu_li"><a href="/productos">Productos</a></li>
-                <li class="menu_li"><a href="/contacto">Contacto</a></li>
-                <li class="menu_li"><a href="/productos/crearProducto">Crear producto</a></li>
+                <li class="Inicio"><a href="/">Inicio</a></li>
+                <li><a href="/quienes-somos">Quienes somos</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/productos/crearProducto">Crear producto</a></li>
             <% } else { %>
-                <li class="menu_li"><a href="/">Inicio</a></li>
-                <li class="menu_li"><a href="/quienes-somos">Quienes somos</a></li>
-                <li class="menu_li"><a href="/productos">Productos</a></li>
-                <li class="menu_li"><a href="/contacto">Contacto</a></li>
+                <li class="Inicio"><a href="/">Inicio</a></li>
+                <li><a href="/quienes-somos">Quienes somos</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/contacto">Contacto</a></li>
             <%}%>
         </ul>
-        <ul class="menu-inferior">
+
+        <ul class="menu_inferior">
             <% if(locals.estaLogeado) { %>
-                <a href="/user/profile" class="linkImgUsuario"><img src="/img/usuarios/<%= locals.usuarioLogeado.img %>" class="imagenUsuario"></a>
+                <a href="/user/profile" class="imagenUsuario"><img src="/img/usuarios/<%= locals.usuarioLogeado.img %>"></a>
                 <li><a href="/productos/carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li>
             <% } else { %>
                 <li><a href="/user/login"><i class="fa-solid fa-user"></i></a></li>
