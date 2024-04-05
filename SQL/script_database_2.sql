@@ -18,6 +18,7 @@
 --
 -- Table structure for table `products`
 --
+DROP DATABASE IF EXISTS `cerveceria`;
 CREATE DATABASE cerveceria;
 Use cerveceria;
 
