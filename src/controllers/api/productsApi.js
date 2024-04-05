@@ -1,5 +1,7 @@
 const db = require('../../database/models')
+const{ Op } = require('sequelize');
 const Product = db.Product;
+const Variety = db.Variety;
 
 const controller = {
     products: async (req, res) => {
@@ -27,6 +29,10 @@ const controller = {
           include: 'Variety'
         })
 
+        products.map((elemento) => {
+          elemento.img = 'http://localhost:3030/img/productos/' + elemento.img
+        })
+
         res.json({
             count: products.length,
             countByCategory: countByCategory,
@@ -34,15 +40,53 @@ const controller = {
         })
     },
 
-    findProduct: async (req, res) => {
+    findOneProduct: async (req, res) => {
         let product = await Product.findByPk(req.params.id, {
             include: 'Variety'
         })
 
-        console.log(product)
         res.json({
             product: product
         })
+    },
+
+    findProducts: async (req, res) => {
+      try {
+
+        const productos = await Product.findAll({
+          where: {
+            name: {[Op.like]: `%${req.query.s}%`}
+          }
+        })
+
+        productos.map((producto) => {
+          producto.img = 'http://localhost:3030/img/productos/' + producto.img
+        })
+
+        res.json({
+          count: productos.length,
+          productos: productos
+        })
+
+      } catch(error) {
+        res.send(error)
+      }
+    },
+
+    variedades: async (req, res) => {
+      try {
+
+        const variedades = await Variety.findAll();
+
+        res.json({
+          count: variedades.length,
+          variedades: variedades
+        })
+
+      } catch(error) {
+        res.send(error)
+      }
+
     }
 }
 
