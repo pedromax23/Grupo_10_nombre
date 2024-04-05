@@ -18,6 +18,8 @@
 --
 -- Table structure for table `products`
 --
+CREATE DATABASE cerveceria;
+Use cerveceria;
 
 DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
