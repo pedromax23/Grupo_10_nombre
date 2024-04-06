@@ -4,7 +4,7 @@ const User = db.User;
 const controller = {
     allUsers: async (req, res) => {
         let usuarios = await User.findAll()
-        
+
         res.json({
             count: usuarios.length,
             users: usuarios
