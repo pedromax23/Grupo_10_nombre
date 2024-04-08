@@ -1,17 +1,21 @@
-// Función para mostrar u ocultar el botón según la posición del scroll
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  var icScrollToTop = document.getElementById("iconoScrollToTop");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    icScrollToTop.style.display = "block";
-  } else {
-    icScrollToTop.style.display = "none";
-  }
-}
-
-// Función para desplazar la página hacia arriba cuando se hace clic en el botón
+// Función para desplazarse hacia arriba en la página
 function scrollToTop() {
-  document.body.scrollTop = 0; // Para navegadores Safari
-  document.documentElement.scrollTop = 0; // Para otros navegadores
-}
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  }
+  
+  // Evento de clic en el botón en el footer para desplazarse hacia arriba
+  document.getElementById('scrollToTopBtnFooter').addEventListener('click', scrollToTop);
+  
+  // Mostrar u ocultar el botón según la posición del scroll
+  window.addEventListener('scroll', function() {
+    var scrollToTopBtnFooter = document.getElementById('scrollToTopBtnFooter');
+    if (window.scrollY > 300) { // Cambia este valor según cuánto quieras que el usuario haga scroll antes de mostrar el botón
+      scrollToTopBtnFooter.style.display = 'block';
+    } else {
+      scrollToTopBtnFooter.style.display = 'none';
+    }
+  });
+  

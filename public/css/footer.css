@@ -60,30 +60,6 @@
     font-size: 3.5rem;
 }
 
-.fa-circle-up{
-    position: fixed;
-    right: 40px;
-    bottom: 20px;
-    color: #721121;
-  
-}
-
-/* Estilos para el botón de desplazamiento hacia arriba */
-#iconoScrollToTop{
-    display: none; /* Ocultar el botón por defecto */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-}
-
 
 @media (min-width: 768px) {
 }
@@ -110,4 +86,20 @@
     .icono-up{
         margin: auto;
     }
+
+
+/* Estilos para el botón de desplazamiento hacia arriba en el footer */
+  
+  #scrollToTopBtnFooter {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 20%;
+    height: auto;
+    border: none;
+    outline: none;
+    color: #721121;
+    cursor: pointer;
+  }
+  
 }
