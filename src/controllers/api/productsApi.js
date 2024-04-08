@@ -22,7 +22,8 @@ const controller = {
             return resultadoFinal;
           })
           .catch(error => {
-            return res.send('Error:', error);
+            console.error('Error:', error);
+            return res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' })
           });
 
         let products = await Product.findAll({
