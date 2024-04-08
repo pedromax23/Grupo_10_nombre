@@ -2,6 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
+    // "password": '123456' --> para que lo puedo ejecutar Nicolas Gerlero en su PC,
     "database": "cerveceria",
     "host": "127.0.0.1",
     "dialect": "mysql"
