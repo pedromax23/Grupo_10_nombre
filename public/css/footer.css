@@ -94,12 +94,12 @@
     position: fixed;
     bottom: 20px;
     right: 30px;
-    width: 20%;
-    height: auto;
     border: none;
     outline: none;
     color: #721121;
     cursor: pointer;
+    
   }
+
   
 }
