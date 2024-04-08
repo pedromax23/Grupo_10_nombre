@@ -22,7 +22,7 @@ const controller = {
             return resultadoFinal;
           })
           .catch(error => {
-            res.send('Error:', error);
+            return res.send('Error:', error);
           });
 
         let products = await Product.findAll({
