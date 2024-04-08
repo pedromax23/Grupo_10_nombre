@@ -23,7 +23,7 @@ const controller = {
           })
           .catch(error => {
             console.error('Error:', error);
-            return res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' })
+            res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' })
           });
 
         let products = await Product.findAll({

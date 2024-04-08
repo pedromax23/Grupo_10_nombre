@@ -57,6 +57,10 @@
             <div class="fecha-nacimiento">
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
                 <input type="date"  name="birth_date" id="fecha-nacimiento"/>
+
+                <% if (locals.errors && errors.birth_date) { %>
+                    <p class="errores_register"><%= errors.birth_date.msg %></p>
+                <% } %>
             </div>
 
             <!-- CAMPO DOMICILIO -->

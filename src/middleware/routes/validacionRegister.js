@@ -25,6 +25,10 @@ const validacionRegister = [
     .isLength({min:2})
     .withMessage("Debe tener como mínimo 2 caracteres"), 
 
+    check ("birth_date")
+    .notEmpty()
+    .withMessage("El campo fecha no puede estra vacío"),
+
     check ("email")
     .notEmpty()
     .withMessage("EL campo email no puede estar vacío")
